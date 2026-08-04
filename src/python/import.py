@@ -31,6 +31,7 @@ class ValueLabel(BaseModel):
 
 
 class Dimension(BaseModel):
+    required: bool
     dimension_id: str = Field(pattern=r"^dim_\d+$")
     dimension_mode: Literal["fixed", "typed"]
     dimension_title: str
@@ -56,10 +57,11 @@ class Datapoint(BaseModel):
     dimensions: Cube | None = None
 
 
-dps = pl.read_excel("taxonomy_excel.xlsx", sheet_name="datapoints")
-enums = pl.read_excel("taxonomy_excel.xlsx", sheet_name="enumerations")
-dimensions = pl.read_excel("taxonomy_excel.xlsx", sheet_name="dimensions")
-dim_members = pl.read_excel("taxonomy_excel.xlsx", sheet_name="members")
+source_wb = "src/python/taxonomy_excel.xlsx"
+dps = pl.read_excel(source=source_wb, sheet_name="datapoints")
+enums = pl.read_excel(source=source_wb, sheet_name="enumerations")
+dimensions = pl.read_excel(source=source_wb, sheet_name="dimensions")
+dim_members = pl.read_excel(source=source_wb, sheet_name="members")
 
 
 def build_enum(enum_id: str | None) -> Enumeration | None:
@@ -85,40 +87,54 @@ def build_enum(enum_id: str | None) -> Enumeration | None:
     )
 
 
-def build_dimensions(dimension_ids: str | None) -> Cube | None:
-    if dimension_ids is None:
+def build_single_dimension(dimension_id: str, req: bool) -> Dimension | None:
+    if not dimension_id:
+        return None
+
+    dimension_rows = dimensions.filter(pl.col("dimension_id") == dimension_id)
+    if dimension_rows.is_empty():
+        return None
+
+    dimension_row = dimension_rows.row(0, named=True)
+    dimension_members = []
+    dim_members_filtered = dim_members.filter(pl.col("dimension_id") == dimension_id)
+    for row in dim_members_filtered.iter_rows(named=True):
+        dimension_members.append(
+            ValueLabel(
+                value=row["dim_value"],
+                label=row["dim_label"],
+            )
+        )
+
+    return Dimension(
+        required=req,
+        dimension_id=dimension_row["dimension_id"],
+        dimension_mode=dimension_row["dimension_type"],
+        dimension_title=dimension_row["dimension_name"],
+        dimension_members=dimension_members or None,
+    )
+
+
+def build_dimensions(required_ids: str | None, optional_ids: str | None) -> Cube | None:
+    if required_ids is None and optional_ids is None:
         return None
 
     parsed_dimensions = []
-    for dimension_id in (part.strip() for part in dimension_ids.split(",")):
-        if not dimension_id:
-            continue
+    if required_ids:
+        for dimension_id in (part.strip() for part in required_ids.split(",")):
+            single_dim = build_single_dimension(dimension_id, True)
+            if single_dim:
+                parsed_dimensions.append(single_dim)
+            else:
+                continue
 
-        dimension_rows = dimensions.filter(pl.col("dimension_id") == dimension_id)
-        if dimension_rows.is_empty():
-            continue
-
-        dimension_row = dimension_rows.row(0, named=True)
-        dimension_members = []
-        dim_members_filtered = dim_members.filter(
-            pl.col("dimension_id") == dimension_id
-        )
-        for row in dim_members_filtered.iter_rows(named=True):
-            dimension_members.append(
-                ValueLabel(
-                    value=row["dim_value"],
-                    label=row["dim_label"],
-                )
-            )
-
-        parsed_dimensions.append(
-            Dimension(
-                dimension_id=dimension_row["dimension_id"],
-                dimension_mode=dimension_row["dimension_type"],
-                dimension_title=dimension_row["dimension_name"],
-                dimension_members=dimension_members or None,
-            )
-        )
+    if optional_ids:
+        for dimension_id in (part.strip() for part in optional_ids.split(",")):
+            single_dim = build_single_dimension(dimension_id, False)
+            if single_dim:
+                parsed_dimensions.append(single_dim)
+            else:
+                continue
 
     if not parsed_dimensions:
         return None
@@ -131,10 +147,12 @@ def write_json_file(data, filename):
         raise TypeError("Data must be a dictionary or list to be serialized to JSON.")
 
     try:
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
+
         with open(filename, "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False)
 
-        print(f"✅ JSON data successfully written to '{os.path.abspath(filename)}'")
+        print(f"✅ JSON data successfully written to '{filename}'")
 
     except OSError as e:
         print(f"❌ File error: {e}")
@@ -156,7 +174,7 @@ for row in dps.iter_rows(named=True):
     if enum is not None:
         datapoint_kwargs["enum"] = enum
 
-    cube = build_dimensions(row["dimensions_ids"])
+    cube = build_dimensions(row["dimensions_required"], row["dimensions_optional"])
     if cube is not None:
         datapoint_kwargs["dimensions"] = cube
 
@@ -164,4 +182,4 @@ for row in dps.iter_rows(named=True):
 
 
 dps_dict_list = [dp.model_dump(exclude_none=True) for dp in list_dps]
-write_json_file(dps_dict_list, "taxonomy.json")
+write_json_file(dps_dict_list, "src/python/taxonomy.json")
