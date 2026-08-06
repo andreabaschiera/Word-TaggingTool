@@ -7,11 +7,15 @@ import {
 
 import {
   Dimension,
-  TagType,
-  TaxonomyTag,
-  TaxonomyValue,
-  taxonomy
+  Datapoint,
+  Datatype,
+  ValueLabel,
+  taxonomy,
+  valueLabelPairs,
+  dimensionIDLabelPairs
 } from "./datamodel";
+
+let flashMessageTimer: number | undefined;
 
 
 Office.onReady((info) => {
@@ -36,31 +40,53 @@ function populateTagSelector() {
     "tag-select"
   ) as HTMLSelectElement;
 
-  taxonomy.tags.forEach((tag) => {
+  taxonomy.datapoints.forEach((dp) => {
     const option = document.createElement("option");
 
-    option.value = tag.id;
-    option.textContent = tag.name;
+    option.value = dp.reference;
+    option.textContent = dp.name;
 
     select.appendChild(option);
   });
 }
 
-function getSelectedTag(): TaxonomyTag | undefined {
+function getSelectedDatapoint(): Datapoint | undefined {
   const select = document.getElementById(
     "tag-select"
   ) as HTMLSelectElement;
 
-  return taxonomy.tags.find(tag => tag.id === select.value);
+  return taxonomy.datapoints.find(dp => dp.reference === select.value);
 }
 
-function getSelectedValue(
-  tag: TaxonomyTag
+function showFlashMessage(message: string) {
+  const flashMessage = document.getElementById("flash-message");
+
+  if (!flashMessage) {
+    console.log(message);
+    return;
+  }
+
+  flashMessage.textContent = message;
+  flashMessage.classList.add("is-visible");
+
+  if (flashMessageTimer !== undefined) {
+    window.clearTimeout(flashMessageTimer);
+  }
+
+  flashMessageTimer = window.setTimeout(() => {
+    flashMessage.textContent = "";
+    flashMessage.classList.remove("is-visible");
+    flashMessageTimer = undefined;
+  }, 4000);
+}
+
+function getSelectedChoice(
+  dp: Datapoint
 ): string | string[] | undefined {
 
-  switch (tag.type) {
+  switch (dp.datatype) {
 
-    case "textBlock":
+    case "narrative":
     case "string":
       return undefined;
 
@@ -85,7 +111,7 @@ function getSelectedValue(
       return undefined;
     }
 
-    case "enumerationSet": {
+    case "enumerationset": {
       const checkboxes = Array.from(
         document.querySelectorAll(
           'input[name="tag-values"]:checked'
@@ -113,9 +139,14 @@ function getSelectedValue(
       return input?.value || undefined;
     }
 
-    case "numeric":
+    case "integer":
     case "decimal":
-    case "percentage": {
+    case "percent":
+    case "monetary":
+    case "mass":
+    case "volume":
+    case "energy":
+    case "ghgemissions": {
       const input = document.getElementById(
         "tag-value-number"
       ) as HTMLInputElement | null;
@@ -125,43 +156,90 @@ function getSelectedValue(
   }
 }
 
-function getSelectedDimensionMember(tag: TaxonomyTag):
-  DimensionMemberSelection | undefined {
+function getSelectedDimensionMembers(dp: Datapoint):
+  DimensionMemberSelection[] | undefined {
 
-  if (!tag?.dimension) {
+  if (!dp?.dimensions) {
     return undefined;
   }
 
-  const dimension = tag.dimension;
+  let annotated_dimensions: Array<DimensionMemberSelection> = [];
+  const dimensions = dp.dimensions;
 
-  if (dimension.mode === "explicit") {
+  dimensions.forEach((dim) => {
+    if (dim.dimension_mode === "fixed") {
 
-    const selected = document.querySelector(
-      'input[name="dimension-member"]:checked'
-    ) as HTMLInputElement | null;
+      const selectedRadio = document.querySelector(
+        `input[name="dimension-member_${dim.dimension_id}"]:checked`
+      ) as HTMLInputElement | null;
 
-    if (!selected) {
-      return undefined;
+      let selectedValue: string | undefined = selectedRadio?.value;
+
+      if (!selectedValue) {
+        const selectedDropdown = document.getElementById(
+          `dimension-member_${dim.dimension_id}`
+        ) as HTMLSelectElement | null;
+
+        if (selectedDropdown && selectedDropdown.value.trim()) {
+          selectedValue = selectedDropdown.value;
+        }
+      }
+
+      if (!selectedValue) {
+        return;
+      }
+
+      const selected_dim: DimensionMemberSelection = {
+        id: dim.dimension_id,
+        mode: "fixed",
+        memberValue: selectedValue
+      };
+
+      annotated_dimensions.push(selected_dim);
+      return;
     }
 
-    return {
-      mode: "explicit",
-      memberId: selected.value
+
+    const input = document.getElementById(
+      `dimension-member-input_${dim.dimension_id}`
+    ) as HTMLInputElement | null;
+
+    if (!input || !input.value.trim()) {
+      return;
+    }
+
+    const typed_dim: DimensionMemberSelection = {
+      id: dim.dimension_id,
+      mode: "typed",
+      memberLabel: input.value.trim()
     };
+
+    annotated_dimensions.push(typed_dim);
+  });
+
+  return annotated_dimensions;
+}
+
+function areRequiredDimensionsPresent(dp: Datapoint, selected_dims?: DimensionMemberSelection[]): string[] {
+  if (!dp.dimensions) {
+    return [];
   }
 
-  const input = document.getElementById(
-    "dimension-member-input"
-  ) as HTMLInputElement | null;
+  const dimensions = dp.dimensions;
+  const required_ids: Array<string> = [];
 
-  if (!input || !input.value.trim()) {
-    return undefined;
+  dimensions.forEach((dimension) => {
+    if (dimension.required === true) {
+      required_ids.push(dimension.dimension_id);
+    }
+  });
+
+  if (!selected_dims) {
+    return required_ids;
   }
+  const annotated_ids = new Set(selected_dims.map(dim => dim.id));
 
-  return {
-    mode: "typed",
-    memberLabel: input.value.trim()
-  };
+  return required_ids.filter(item => !annotated_ids.has(item));
 }
 
 // async function getSelectedContentControl():
@@ -188,38 +266,49 @@ function getSelectedDimensionMember(tag: TaxonomyTag):
 
 export async function applyTag() {
 
-  const selectedTag = getSelectedTag();
+  const selectedDatapoint = getSelectedDatapoint();
 
-  if (!selectedTag) {
-    console.log("No tag selected.");
+  if (!selectedDatapoint) {
+    showFlashMessage("No datapoint selected.");
     return;
   }
 
-  const selectedValue = getSelectedValue(selectedTag);
+  const selectedEnumerations = getSelectedChoice(selectedDatapoint);
 
-  const selectedDimension = getSelectedDimensionMember(selectedTag);
+  const selectedDimensions = getSelectedDimensionMembers(selectedDatapoint);
 
-  // Values are mandatory only for these types.
   if (
     (
-      selectedTag.type === "boolean" ||
-      selectedTag.type === "enumeration" ||
-      selectedTag.type === "enumerationSet"
+      selectedDatapoint.datatype === "boolean" ||
+      selectedDatapoint.datatype === "enumeration" ||
+      selectedDatapoint.datatype === "enumerationset"
     ) &&
     (
-      selectedValue === undefined ||
-      (Array.isArray(selectedValue) && selectedValue.length === 0)
+      selectedEnumerations === undefined ||
+      (Array.isArray(selectedEnumerations) && selectedEnumerations.length === 0)
     )
   ) {
-    console.log("A value must be selected.");
+    showFlashMessage("At least one enumeration value must be selected.");
+    return;
+  }
+  
+  if ((
+    ["integer", "decimal", "percent", "monetary", "mass", "volume", "energy", "ghgemissions", "year", "date"].includes(selectedDatapoint.datatype)
+  ) &&
+  (
+    selectedEnumerations === undefined
+  )) {
+    showFlashMessage("One number/date must be picked.");
     return;
   }
 
-  if (
-    selectedTag.dimension &&
-    !selectedDimension
-  ) {
-    console.log("A dimension member must be selected.");
+  const missing_dims = areRequiredDimensionsPresent(selectedDatapoint, selectedDimensions);
+
+  if (missing_dims.length !== 0) {
+    console.log(`Misssing dim IDs: ${missing_dims}`)
+    const missing_dims_labels = missing_dims.map(dimID => dimensionIDLabelPairs[dimID]);
+    console.log(`Misssing dim labels: ${missing_dims_labels}`)
+    showFlashMessage(`A dimension member for each of the required dimensions must be selected. Missing choices for dimensions: ${missing_dims_labels.join(", ")}`);
     return;
   }
 
@@ -231,14 +320,14 @@ export async function applyTag() {
     await context.sync();
 
     if (!range.text.trim()) {
-      console.log("No text selected.");
+      showFlashMessage("No text selected.");
       return;
     }
 
     const annotation: TagAnnotation = {
-      tagId: selectedTag.id,
-      value: selectedValue,
-      dimensionMember: selectedDimension
+      tagId: selectedDatapoint.reference,
+      valueChosen: selectedEnumerations,
+      dimensions: selectedDimensions
     };
 
     // const existingControl = await getSelectedContentControl();
@@ -258,7 +347,7 @@ export async function applyTag() {
       Word.ContentControlType.richText
     );
 
-    contentControl.title = selectedTag.name;
+    contentControl.title = selectedDatapoint.reference;
     contentControl.tag = serializeAnnotation(annotation);
     contentControl.appearance =
       Word.ContentControlAppearance.boundingBox;
@@ -304,9 +393,7 @@ async function inspectSelectedTag() {
       : selectedContentControl;
 
     if (!control) {
-      details.textContent =
-        "The current selection is not tagged.";
-
+      showFlashMessage("The current selection is not tagged.");
       return;
     }
 
@@ -314,34 +401,33 @@ async function inspectSelectedTag() {
       parseAnnotation(control.tag);
 
     if (!annotation) {
-      details.textContent =
-        "Content control found, but it is not a taxonomy annotation.";
-
+      showFlashMessage("Content control found, but it is not a taxonomy annotation.");
       return;
     }
 
-    const tag = taxonomy.tags.find(
-      t => t.id === annotation.tagId
+    const dp = taxonomy.datapoints.find(
+      dp => dp.reference === annotation.tagId
     );
 
-    if (!tag) {
-      details.textContent =
-        `Unknown taxonomy ID: ${annotation.tagId}`;
-
+    if (!dp) {
+      showFlashMessage(`Unknown taxonomy ID: ${annotation.tagId}`);
       return;
     }
 
     loadAnnotationIntoUI(
       annotation,
-      tag
+      dp
     );
 
+    // console.log(annotation)
+
     renderInspectionDetails(details, {
-      title: tag.name,
-      type: tag.type,
+      title: dp.name,
+      type: dp.datatype,
       text: control.text,
-      value: formatAnnotationValue(annotation.value),
-      dimension: formatAnnotationDimension(annotation.dimensionMember)
+      value: annotation.valueChosen,
+      defined_dims: dp.dimensions,
+      dimensions: annotation.dimensions ? annotation.dimensions : undefined
     });
   });
 }
@@ -350,10 +436,11 @@ function renderInspectionDetails(
   container: HTMLElement,
   details: {
     title: string;
-    type: string;
+    type: Datatype;
     text: string;
-    value?: string;
-    dimension?: string;
+    value?: string | string[];
+    defined_dims?: Dimension[];
+    dimensions?: DimensionMemberSelection[];
   }
 ) {
   container.innerHTML = "";
@@ -390,15 +477,80 @@ function renderInspectionDetails(
   body.appendChild(textLine);
 
   if (details.value !== undefined) {
+
+    const labelS = extractLabelsFromValues(details.value);
+
     const valueLine = document.createElement("div");
-    valueLine.textContent = `Value: ${details.value}`;
+    switch (details.type) {
+      case "boolean":
+        valueLine.textContent = `Choice: ${details.value}`;
+        break;
+      case "enumeration":
+        valueLine.textContent = `Choice: ${labelS}`;
+        break;
+      case "enumerationset":
+        valueLine.classList.add("inspection-details-value--list");
+
+        const choicesLabel = document.createElement("div");
+        choicesLabel.className = "inspection-details-list-label";
+        choicesLabel.textContent = "Choices:";
+
+        const list = document.createElement("ul");
+        list.className = "inspection-details-list";
+
+        labelS.forEach(label => {
+          const li = document.createElement("li");
+          li.textContent = label;
+          list.appendChild(li);
+        });
+
+        valueLine.append(choicesLabel, list);
+        break;
+      case "date":
+        valueLine.textContent = `Date selected: ${details.value}`;
+        break;
+      case "year":
+        valueLine.textContent = `Year selected: ${details.value}`;
+        break;
+      case "integer":
+      case "decimal":
+      case "percent":
+      case "monetary":
+      case "mass":
+      case "volume":
+      case "energy":
+      case "ghgemissions":
+        valueLine.textContent = `Number inputted: ${details.value}`;
+        break;
+      default:
+        valueLine.textContent = `There is a problem.`;
+    }
     body.appendChild(valueLine);
   }
 
-  if (details.dimension !== undefined) {
-    const dimensionLine = document.createElement("div");
-    dimensionLine.textContent = `Dimension: ${details.dimension}`;
-    body.appendChild(dimensionLine);
+  if (details.dimensions !== undefined && details.dimensions.length > 0 && details.defined_dims) {
+    const dimensionsDiv = document.createElement("div");
+
+    const ids = details.defined_dims.map(dim => dim.dimension_id);
+    const titles = details.defined_dims.map(dim => dim.dimension_title);
+    const dims: Record<string, string> = Object.fromEntries(
+      ids.map((key, index) => [key, titles[index]])
+    );
+
+    details.dimensions.forEach(dim => {
+      const dimensionLine = document.createElement("p");
+
+      const title = dims[dim.id];
+
+      if (dim.mode == "fixed") {
+        dimensionLine.innerHTML = `Dimension: ${title}<br>Dimension member selected: ${dim.memberValue}`;
+      } else {
+        dimensionLine.innerHTML = `Dimension: ${title}<br>Dimension member typed: ${dim.memberLabel}`;
+      }
+
+      dimensionsDiv.appendChild(dimensionLine);
+    });
+    body.appendChild(dimensionsDiv);
   }
 
   box.appendChild(header);
@@ -410,52 +562,34 @@ function clearInspectionDetails(container: HTMLElement) {
   container.innerHTML = "";
 }
 
-function formatAnnotationValue(
-  value: TagAnnotation["value"]
-): string | undefined {
-
-  if (value === undefined) {
-    return undefined;
+function extractLabelsFromValues(values: string | string[]): string | string[] {
+  if (typeof values === "string") {
+    return valueLabelPairs[values];
   }
-
-  return Array.isArray(value)
-    ? value.join(", ")
-    : value;
-}
-
-function formatAnnotationDimension(
-  dimensionMember: TagAnnotation["dimensionMember"]
-): string | undefined {
-
-  if (!dimensionMember) {
-    return undefined;
+  if (Array.isArray(values)) {
+    return values.map(val => valueLabelPairs[val]);
   }
-
-  if (dimensionMember.mode === "explicit") {
-    return `Dimension member: ${dimensionMember.memberId}`;
-  }
-
-  return `Dimension member: ${dimensionMember.memberLabel}`;
+  throw new Error(`Unexpected type for values: ${typeof values}`);
 }
 
 function loadAnnotationIntoUI(
   annotation: TagAnnotation,
-  tag: TaxonomyTag
+  dp: Datapoint
 ) {
   const select = document.getElementById(
     "tag-select"
   ) as HTMLSelectElement;
 
-  select.value = tag.id;
+  select.value = dp.reference;
 
   updateValueSelector();
 
   // Value
-  if (annotation.value !== undefined) {
+  if (annotation.valueChosen !== undefined) {
 
-    const values = Array.isArray(annotation.value)
-      ? annotation.value
-      : [annotation.value];
+    const values = Array.isArray(annotation.valueChosen)
+      ? annotation.valueChosen
+      : [annotation.valueChosen];
     
     // attribute selector
     document
@@ -490,34 +624,40 @@ function loadAnnotationIntoUI(
       });
   }
 
-  // Dimension
-  if (annotation.dimensionMember) {
-
-    if (
-      annotation.dimensionMember.mode === "explicit"
-    ) {
-      const radio = document.querySelector(
-        `input[name="dimension-member"][value="${annotation.dimensionMember.memberId}"]`
-      ) as HTMLInputElement | null;
-
-      if (radio) {
-        radio.checked = true;
-      }
-    }
-
-    if (
-      annotation.dimensionMember.mode === "typed"
-    ) {
-      const input =
-        document.getElementById(
-          "dimension-member-input"
+  // Dimensions
+  const annotated_dims = annotation.dimensions;
+  if (annotated_dims) {
+    annotated_dims.forEach(dim => {
+      if (dim.mode === "fixed") {
+        const radio = document.querySelector(
+          `input[name="dimension-member_${dim.id}"][value="${dim.memberValue}"]`
         ) as HTMLInputElement | null;
 
-      if (input) {
-        input.value =
-          annotation.dimensionMember.memberLabel ?? "";
+        if (radio) {
+          radio.checked = true;
+          return;
+        }
+
+        const dropdown = document.getElementById(
+          `dimension-member_${dim.id}`
+        ) as HTMLSelectElement | null;
+
+        if (dropdown && dim.memberValue) {
+          dropdown.value = dim.memberValue;
+        }
       }
-    }
+
+      if (dim.mode === "typed") {
+        const input =
+          document.getElementById(
+            `dimension-member-input_${dim.id}`
+          ) as HTMLInputElement | null;
+
+        if (input) {
+          input.value = dim.memberLabel ?? "";
+        }
+      }
+    });
   }
 }
 
@@ -547,6 +687,7 @@ async function removeSelectedTag() {
       : selectedContentControl;
 
     if (!control) {
+      showFlashMessage("No content control selected to remove.")
       return;
     }
 
@@ -557,9 +698,10 @@ async function removeSelectedTag() {
   });
 }
 
+// the update function for enums here controls also the update for dimensions
 function updateValueSelector() {
-  const tag = getSelectedTag();
-  const container = document.getElementById("value-container");
+  const dp = getSelectedDatapoint();
+  const container = document.getElementById("enum-container");
 
   if (!container) {
     return;
@@ -567,24 +709,25 @@ function updateValueSelector() {
 
   container.innerHTML = "";
 
-  if (!tag) {
+  if (!dp) {
     updateDimensionSelector();
+    updateOptionalDimensionSelector();
     return;
   }
 
-  switch (tag.type) {
-    case "textBlock":
+  switch (dp.datatype) {
+    case "narrative":
     case "string":
       // No additional value is required.
       break;
 
     case "boolean":
     case "enumeration":
-      renderSingleChoice(tag, container);
+      renderSingleChoice(dp, container);
       break;
 
-    case "enumerationSet":
-      renderMultipleChoice(tag, container);
+    case "enumerationset":
+      renderMultipleChoice(dp, container);
       break;
 
     case "date":
@@ -595,19 +738,25 @@ function updateValueSelector() {
       renderYearInput(container);
       break;
 
-    case "numeric":
+    case "integer":
     case "decimal":
-    case "percentage":
-      renderNumberInput(tag.type, container);
+    case "percent":
+    case "monetary":
+    case "mass":
+    case "volume":
+    case "energy":
+    case "ghgemissions":
+      renderNumberInput(dp.datatype, container);
       break;
-  }
+    }
 
   updateDimensionSelector();
+  updateOptionalDimensionSelector();
 }
 
 function updateDimensionSelector() {
-  const tag = getSelectedTag();
-  const container = document.getElementById("dimension-container");
+  const dp = getSelectedDatapoint();
+  const container = document.getElementById("dimensions-container");
 
   if (!container) {
     return;
@@ -615,62 +764,105 @@ function updateDimensionSelector() {
 
   container.innerHTML = "";
 
-  if (!tag?.dimension) {
+  if (!dp?.dimensions) {
     return;
   }
 
-  const dimension = tag.dimension;
+  const dimensions = Array.isArray(dp.dimensions)
+    ? dp.dimensions.filter(dimension => dimension.required === true)
+    : [];
 
-  const heading = document.createElement("div");
-  heading.textContent = `Dimension: ${dimension.axis}`;
-  container.appendChild(heading);
+  dimensions.forEach((dimension) => {
+    const heading = document.createElement("div");
+    heading.textContent = `Required dimension: ${dimension.dimension_title}`;
+    container.appendChild(heading);
 
-  if (dimension.mode === "explicit") {
-    renderExplicitDimension(dimension, container);
-  } else {
-    renderTypedDimension(container);
+    if (dimension.dimension_mode === "fixed") {
+      renderExplicitDimension(dimension, container);
+    } else {
+      renderTypedDimension(dimension.dimension_id, container);
+    }
+  });
+}
+
+function updateOptionalDimensionSelector() {
+  const dp = getSelectedDatapoint();
+  const container = document.getElementById("dimensions-container");
+
+  if (!container) {
+    return;
   }
+
+  // Do not clear the container here — required dimensions are already rendered
+
+  if (!dp?.dimensions) {
+    return;
+  }
+
+  const dimensions = Array.isArray(dp.dimensions)
+    ? dp.dimensions.filter(dimension => dimension.required === false)
+    : [];
+
+  dimensions.forEach((dimension) => {
+    const heading = document.createElement("div");
+    heading.textContent = `Optional dimension: ${dimension.dimension_title}`;
+    container.appendChild(heading);
+
+    if (dimension.dimension_mode === "fixed") {
+      renderExplicitDimension(dimension, container);
+    } else {
+      renderTypedDimension(dimension.dimension_id, container);
+    }
+  });
 }
 
 function renderSingleChoice(
-  tag: TaxonomyTag,
+  dp: Datapoint,
   container: HTMLElement
 ) {
-  if (!tag.values) {
-    return;
-  }
-
   const label = document.createElement("div");
-  label.textContent = "Value:";
+  label.textContent = dp.datatype === "boolean" ? "Boolean choice:" : "Enumeration choice:";
   container.appendChild(label);
 
-  if (tag.type === "boolean") {
-    tag = {
-      ...tag,
-      values: [
-        { id: "YES", label: "Yes" },
-        { id: "NO", label: "No" }
-      ]
-    };
-  }
-
-  if (tag.type === "enumeration" && tag.values.length > 4) {
-    renderDropdown(tag.values, container);
+  if (dp.datatype === "boolean") {
+    if (!dp.enum) {
+      dp = {
+        ...dp,
+        enum: {
+          enum_id: "enum_bool",
+          enum_members: [
+            { value: "True", label: "Yes" },
+            { value: "False", label: "No" }
+          ]
+        }
+      };
+    }
+  } else if (!dp.enum) {
     return;
   }
 
-  tag.values.forEach((value) => {
+  const enum_choices = dp.enum?.enum_members;
+  if (!enum_choices) {
+    return;
+  }
+
+  if (dp.datatype === "enumeration" && enum_choices.length > 4) {
+    renderDropdown(enum_choices, container);
+    return;
+  }
+
+  enum_choices.forEach((choice) => {
     const wrapper = document.createElement("div");
 
     const radio = document.createElement("input");
     radio.type = "radio";
     radio.name = "tag-value";
-    radio.value = value.id;
-    radio.id = `value-${value.id}`;
+    radio.value = choice.value;
+    radio.id = `value-${choice.value}`;
 
     const valueLabel = document.createElement("label");
     valueLabel.htmlFor = radio.id;
-    valueLabel.textContent = value.label;
+    valueLabel.textContent = choice.label;
 
     wrapper.appendChild(radio);
     wrapper.appendChild(valueLabel);
@@ -680,23 +872,30 @@ function renderSingleChoice(
 }
 
 function renderDropdown(
-  values: TaxonomyValue[],
-  container: HTMLElement
+  choices: ValueLabel[],
+  container: HTMLElement,
+  dimension_id?: string,
 ) {
   const select = document.createElement("select");
-  select.id = "tag-value-select";
+
+  if (dimension_id) {
+    select.id = `dimension-member_${dimension_id}`
+  } else {
+    select.id = "tag-value-select";
+  }
 
   const placeholder = document.createElement("option");
   placeholder.value = "";
-  placeholder.textContent = "-- Select a value --";
+  const text_content = dimension_id ? "-- Select an enumeration choice --" : "-- Select a member --";
+  placeholder.textContent = text_content;
 
   select.appendChild(placeholder);
 
-  values.forEach((value) => {
+  choices.forEach((choice) => {
     const option = document.createElement("option");
 
-    option.value = value.id;
-    option.textContent = value.label;
+    option.value = choice.value;
+    option.textContent = choice.label;
 
     select.appendChild(option);
   });
@@ -705,29 +904,30 @@ function renderDropdown(
 }
 
 function renderMultipleChoice(
-  tag: TaxonomyTag,
+  dp: Datapoint,
   container: HTMLElement
 ) {
-  if (!tag.values) {
+  const enum_choices = dp.enum?.enum_members;
+  if (!enum_choices) {
     return;
   }
 
   const label = document.createElement("div");
-  label.textContent = "Values:";
+  label.textContent = "Multiple choices:";
   container.appendChild(label);
 
-  tag.values.forEach((value) => {
+  enum_choices.forEach((choice) => {
     const wrapper = document.createElement("div");
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.name = "tag-values";
-    checkbox.value = value.id;
-    checkbox.id = `value-${value.id}`;
+    checkbox.value = choice.value;
+    checkbox.id = `value-${choice.value}`;
 
     const valueLabel = document.createElement("label");
     valueLabel.htmlFor = checkbox.id;
-    valueLabel.textContent = value.label;
+    valueLabel.textContent = choice.label;
 
     wrapper.appendChild(checkbox);
     wrapper.appendChild(valueLabel);
@@ -764,22 +964,42 @@ function renderYearInput(container: HTMLElement) {
 }
 
 function renderNumberInput(
-  type: TagType,
+  type: Datatype,
   container: HTMLElement
 ) {
   const label = document.createElement("label");
 
   switch (type) {
-    case "numeric":
-      label.textContent = "Number:";
+    case "integer":
+      label.textContent = "Integer:";
       break;
 
     case "decimal":
       label.textContent = "Decimal:";
       break;
 
-    case "percentage":
+    case "percent":
       label.textContent = "Percentage:";
+      break;
+
+    case "monetary":
+      label.textContent = "Monetary amount:";
+      break;
+
+    case "mass":
+      label.textContent = "Mass (in kg):";
+      break;
+
+    case "volume":
+      label.textContent = "Volume (in L3):";
+      break;
+
+    case "energy":
+      label.textContent = "Energy (in MWh):";
+      break;
+    
+    case "ghgemissions":
+      label.textContent = "GHG emissions (in tCo2eq):";
       break;
   }
 
@@ -787,11 +1007,9 @@ function renderNumberInput(
   input.type = "number";
   input.id = "tag-value-number";
 
-  if (type === "numeric") {
+  if (type === "integer") {
     input.step = "1";
-  } else if (type === "decimal") {
-    input.step = "any";
-  } else if (type === "percentage") {
+  } else {
     input.step = "any";
   }
 
@@ -803,33 +1021,39 @@ function renderExplicitDimension(
   dimension: Dimension,
   container: HTMLElement
 ) {
-  if (!dimension.members) {
+  const members = dimension.dimension_members;
+  if (!members) {
     return;
   }
 
-  dimension.members.forEach((member) => {
+  if (members.length < 5) {
+    members.forEach((member) => {
     const wrapper = document.createElement("div");
 
     const radio = document.createElement("input");
 
     radio.type = "radio";
-    radio.name = "dimension-member";
-    radio.value = member.memberId;
-    radio.id = `dimension-${member.memberId}`;
+    radio.name = `dimension-member_${dimension.dimension_id}`;
+    radio.value = member.value;
+    radio.id = `dimension-${member.value}`;
 
     const label = document.createElement("label");
 
     label.htmlFor = radio.id;
-    label.textContent = member.memberLabel;
+    label.textContent = member.label;
 
     wrapper.appendChild(radio);
     wrapper.appendChild(label);
 
     container.appendChild(wrapper);
-  });
+    });
+  } else {
+    renderDropdown(members, container, dimension.dimension_id);
+  }
 }
 
 function renderTypedDimension(
+  dimension_id: string,
   container: HTMLElement
 ) {
   const label = document.createElement("label");
@@ -839,7 +1063,7 @@ function renderTypedDimension(
   const input = document.createElement("input");
 
   input.type = "text";
-  input.id = "dimension-member-input";
+  input.id = `dimension-member-input_${dimension_id}`;
 
   container.appendChild(label);
   container.appendChild(input);
