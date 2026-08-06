@@ -1,9 +1,15 @@
+# In[1]:
+
 import os
+import sys
 from enum import StrEnum
 from typing import Literal
 import polars as pl
 from pydantic import BaseModel, Field
 import json
+
+
+# In[2]:
 
 
 class Datatype(StrEnum):
@@ -32,31 +38,28 @@ class ValueLabel(BaseModel):
 
 class Dimension(BaseModel):
     required: bool
-    dimension_id: str = Field(pattern=r"^dim_\d+$")
+    dimension_id: str = Field(pattern=r"^dim\d+$")
     dimension_mode: Literal["fixed", "typed"]
     dimension_title: str
     dimension_members: list[ValueLabel] | None = None
 
 
-class Cube(BaseModel):
-    dimensions: list[Dimension]
-
-
 class Enumeration(BaseModel):
-    enum_id: str = Field(pattern=r"^enum_\d+$")
+    enum_id: str = Field(pattern=r"^enum\d+$")
     enum_members: list[ValueLabel]
 
 
 class Datapoint(BaseModel):
-    reference: str = Field(max_length=15)
+    reference: str = Field(max_length=20)
     dr: str
     datatype: Datatype
     name: str
     qname: str
     enum: Enumeration | None = None
-    dimensions: Cube | None = None
+    dimensions: list[Dimension] | None = None
 
 
+# In[3]:
 source_wb = "src/python/taxonomy_excel.xlsx"
 dps = pl.read_excel(source=source_wb, sheet_name="datapoints")
 enums = pl.read_excel(source=source_wb, sheet_name="enumerations")
@@ -64,6 +67,7 @@ dimensions = pl.read_excel(source=source_wb, sheet_name="dimensions")
 dim_members = pl.read_excel(source=source_wb, sheet_name="members")
 
 
+# In[4]:
 def build_enum(enum_id: str | None) -> Enumeration | None:
     if enum_id is None:
         return None
@@ -115,7 +119,9 @@ def build_single_dimension(dimension_id: str, req: bool) -> Dimension | None:
     )
 
 
-def build_dimensions(required_ids: str | None, optional_ids: str | None) -> Cube | None:
+def build_dimensions(
+    required_ids: str | None, optional_ids: str | None
+) -> list[Dimension] | None:
     if required_ids is None and optional_ids is None:
         return None
 
@@ -139,7 +145,7 @@ def build_dimensions(required_ids: str | None, optional_ids: str | None) -> Cube
     if not parsed_dimensions:
         return None
 
-    return Cube(dimensions=parsed_dimensions)
+    return parsed_dimensions
 
 
 def write_json_file(data, filename):
@@ -183,3 +189,54 @@ for row in dps.iter_rows(named=True):
 
 dps_dict_list = [dp.model_dump(exclude_none=True) for dp in list_dps]
 write_json_file(dps_dict_list, "src/python/taxonomy.json")
+
+# In[5]:
+# unique list of value / label entries (from enums and dim_members)
+enum_pairs = enums.select(pl.col("enum_value", "enum_label")).rename(
+    {"enum_value": "value", "enum_label": "label"}
+)
+dim_pairs = dim_members.select(pl.col("dim_value", "dim_label")).rename(
+    {"dim_value": "value", "dim_label": "label"}
+)
+pairs = pl.concat(
+    [
+        enum_pairs,
+        dim_pairs,
+    ],
+    how="vertical",
+)
+wrongs_df = (
+    pairs.select(pl.col("value", "label").is_duplicated())
+    .with_columns(wrongs=pl.col("value") != pl.col("label"))
+    .select(pl.col("wrongs"))
+)
+pairs = pl.concat(
+    [
+        pairs,
+        wrongs_df,
+    ],
+    how="horizontal_extend",
+)
+problems = pl.col("wrongs") == True
+if len(pairs.filter(problems)) != 0:
+    sys.exit(
+        f"The following value-label pairs contain some duplicates:\n{
+            pairs.filter(problems)
+        }"
+    )
+
+uniques = pairs.unique(subset=["value", "label"]).select(pl.col("value", "label"))
+
+dest = "src/python/ValueLabels.json"
+uniques.write_json(dest)
+print(f"✅ value-label pairs JSON successfully written to '{dest}'.")
+
+
+# In[6]:
+# unique list of dimension IDs and their labels
+dimensions_IDs_labels = dimensions.select(pl.col("dimension_id", "dimension_name"))
+dest = "src/python/dimensionLabels.json"
+dimensions_IDs_labels.write_json(dest)
+print(f"✅ dimensions ID-labels JSON successfully written to '{dest}'.")
+
+# %%

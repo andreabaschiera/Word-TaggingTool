@@ -1,0 +1,861 @@
+[
+  { "value": "united_states", "label": "United States" },
+  { "value": "S1-14", "label": "S1-14 – Work-life balance metrics" },
+  { "value": "gambia", "label": "Gambia" },
+  {
+    "value": "information_SVHC_for_users_of_articles_for_first_fy_of_reporting",
+    "label": "Information related to Substances of Very High Concern for users of articles for first FY of reporting"
+  },
+  {
+    "value": "E1-2",
+    "label": "E1-2 – Identification of climate-related risks and scenario analysis"
+  },
+  { "value": "target", "label": "Target" },
+  { "value": "estonia", "label": "Estonia" },
+  { "value": "australia", "label": "Australia" },
+  { "value": "cameroon", "label": "Cameroon" },
+  { "value": "S1-1", "label": "S1-1 – Policies related to own workforce" },
+  { "value": "barbados", "label": "Barbados" },
+  { "value": "honduras", "label": "Honduras" },
+  { "value": "wholesale_retail_trade", "label": "Wholesale and retail trade" },
+  { "value": "E2-1", "label": "E2-1 – Policies related to pollution" },
+  { "value": "new_zealand", "label": "New Zealand" },
+  { "value": "S3-1", "label": "S3-1 – Policies related to affected communities" },
+  { "value": "E1-1", "label": "E1-1 – Transition plan for climate change mitigation" },
+  { "value": "s3_prior_to_fy_2027", "label": "S3 prior to FY 2027" },
+  {
+    "value": "other_laboutrelated_rights",
+    "label": "Other labour-related human rights (including child labour, forced labour, privacy and adequate housing)"
+  },
+  { "value": "lebanon", "label": "Lebanon" },
+  { "value": "apparel,_accessories_footwear", "label": "Apparel, Accessories & Footwear" },
+  { "value": "thailand", "label": "Thailand" },
+  {
+    "value": "exclusion_joint_operations_from_environmental_metrics",
+    "label": "Relief to exclude joint operations from environmental metrics"
+  },
+  { "value": "tuvalu", "label": "Tuvalu" },
+  {
+    "value": "water_supply_sewerage_waste_management_remediation_activities",
+    "label": "E Water supply; sewerage, waste management and remediation activities"
+  },
+  { "value": "guinea-bissau", "label": "Guinea-Bissau" },
+  { "value": "greece", "label": "Greece" },
+  { "value": "kosovo", "label": "Kosovo" },
+  { "value": "japan", "label": "Japan" },
+  { "value": "esrs_set_1", "label": "ESRS Set 1" },
+  { "value": "methane", "label": "Methane (CH4)" },
+  { "value": "E5-3", "label": "E5-3 – Targets related to resource use and circular economy" },
+  { "value": "air_freight_and_logistics", "label": "Air freight and logistics" },
+  { "value": "G1-6", "label": "G1-6 – Metrics related to payment practices" },
+  { "value": "iraq", "label": "Iraq" },
+  { "value": "energy", "label": "Energy" },
+  {
+    "value": "wind_technology_project_developers",
+    "label": "Wind Technology & Project Developers"
+  },
+  { "value": "transportation_infrastructure", "label": "Transportation infrastructure" },
+  { "value": "croatia", "label": "Croatia" },
+  { "value": "industrial_machinery_goods", "label": "Industrial Machinery & Goods" },
+  { "value": "ghana", "label": "Ghana" },
+  { "value": "portugal", "label": "Portugal" },
+  { "value": "automotive", "label": "Automotive" },
+  { "value": "semiconductors", "label": "Semiconductors" },
+  { "value": "oil_gas_midstream", "label": "Oil & Gas - Midstream" },
+  { "value": "preparation_for_reuse", "label": "Preparation for reuse" },
+  { "value": "lithuania", "label": "Lithuania" },
+  { "value": "samoa", "label": "Samoa" },
+  { "value": "automobiles", "label": "Automobiles" },
+  { "value": "own_employees", "label": "Own employees" },
+  { "value": "carcinogenicity_categories_1_and_2", "label": "Carcinogenicity categories 1 and 2" },
+  { "value": "sao_tome_and_principe", "label": "Sao Tome and Principe" },
+  {
+    "value": "human_health_social_work_activities",
+    "label": "Q Human health and social work activities"
+  },
+  { "value": "consolidated_group", "label": "Consolidated group" },
+  { "value": "switzerland", "label": "Switzerland" },
+  { "value": "S2-4", "label": "S2-4 – Targets related to workers in the value chain" },
+  { "value": "food_beverages", "label": "Food and beverages" },
+  { "value": "mauritius", "label": "Mauritius" },
+  { "value": "aerospace_defense", "label": "Aerospace & Defense" },
+  { "value": "solomon_islands", "label": "Solomon Islands" },
+  { "value": "senegal", "label": "Senegal" },
+  { "value": "marine_transportation", "label": "Marine Transportation" },
+  { "value": "E1", "label": "ESRS E1 Climate change" },
+  {
+    "value": "accommodation_food_service_activities",
+    "label": "I Accommodation and food service activities"
+  },
+  { "value": "poland", "label": "Poland" },
+  { "value": "recreation_leisure", "label": "Recreation and leisure" },
+  {
+    "value": "exclusion_of_activities_notsignificantdriversofiros_from_metriccalculation",
+    "label": "Relief to exclude from the calculation of a metric activities that are not significant drivers of IROs"
+  },
+  { "value": "all_workers_in_value_chain", "label": "All workers in value chain" },
+  { "value": "perfluorocarbons", "label": "Perfluorocarbons (PFCs)" },
+  { "value": "insurance", "label": "Insurance" },
+  {
+    "value": "activities_of_households_as_employers_undifferentiated_producing_activities_of_households_for_own_use",
+    "label": "T Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use"
+  },
+  {
+    "value": "professional_scientific_technical_activities",
+    "label": "M Professional, scientific and technical activities"
+  },
+  { "value": "own_workforce", "label": "Own workforce" },
+  { "value": "taiwan", "label": "Taiwan" },
+  { "value": "zambia", "label": "Zambia" },
+  { "value": "egypt", "label": "Egypt" },
+  { "value": "hungary", "label": "Hungary" },
+  { "value": "milestone", "label": "Milestone" },
+  { "value": "kenya", "label": "Kenya" },
+  { "value": "employee_commuting", "label": "Employee Commuting" },
+  { "value": "uruguay", "label": "Uruguay" },
+  { "value": "algeria", "label": "Algeria" },
+  {
+    "value": "electronic_manufacturing_services_original_design_manufacturing",
+    "label": "Electronic Manufacturing Services & Original Design Manufacturing"
+  },
+  { "value": "capital_markets", "label": "Capital markets" },
+  { "value": "nicaragua", "label": "Nicaragua" },
+  { "value": "nepal", "label": "Nepal" },
+  { "value": "cambodia", "label": "Cambodia" },
+  { "value": "security_commodity_exchanges", "label": "Security & Commodity Exchanges" },
+  { "value": "micronesia", "label": "Micronesia" },
+  { "value": "hotels", "label": "Hotels" },
+  {
+    "value": "water_use",
+    "label": "Water use, including withdrawal, consumption, discharges and storage"
+  },
+  { "value": "costa_rica", "label": "Costa Rica" },
+  { "value": "equatorial_guinea", "label": "Equatorial Guinea" },
+  { "value": "oil_gas", "label": "Oil and gas" },
+  { "value": "g1_prior_to_fy_2027", "label": "G1 prior to FY 2027" },
+  { "value": "transition_risk", "label": "Transition risk" },
+  { "value": "S2-1", "label": "S2-1 – Policies related to workers in the value chain" },
+  { "value": "dominican_republic", "label": "Dominican Republic" },
+  { "value": "biotechnology_pharmaceuticals", "label": "Biotechnology & Pharmaceuticals" },
+  { "value": "aerospace_and_defense", "label": "Aerospace and defense" },
+  { "value": "sudan", "label": "Sudan" },
+  { "value": "iron_steel_producers", "label": "Iron & Steel Producers" },
+  {
+    "value": "S2-3",
+    "label": "S2-3 – Actions and resources related to workers in the value chain"
+  },
+  { "value": "montenegro", "label": "Montenegro" },
+  { "value": "bolivia", "label": "Bolivia" },
+  { "value": "bulgaria", "label": "Bulgaria" },
+  {
+    "value": "impacts_consumers_users",
+    "label": "Information-related impacts for consumers or users (including privacy, access to information, freedom of expression)"
+  },
+  {
+    "value": "electric_utilities_power_generators",
+    "label": "Electric Utilities & Power Generators"
+  },
+  { "value": "mali", "label": "Mali" },
+  { "value": "road_transportation", "label": "Road Transportation" },
+  { "value": "educational_services", "label": "Educational services" },
+  { "value": "microplastics", "label": "Microplastics" },
+  { "value": "tunisia", "label": "Tunisia" },
+  { "value": "pharmaceuticals", "label": "Pharmaceuticals" },
+  {
+    "value": "BP-1",
+    "label": "ESRS 2 BP-1 – Basis for preparation of the sustainability statement"
+  },
+  { "value": "el_salvador", "label": "El Salvador" },
+  { "value": "papua_new_guinea", "label": "Papua New Guinea" },
+  { "value": "f_construction", "label": "F Construction" },
+  {
+    "value": "changes_in_preparation_or_presentation",
+    "label": "Changes in preparation or presentation of sustainability information"
+  },
+  {
+    "value": "public_administration_defence_compulsory_social_security",
+    "label": "O Public administration and defence; compulsory social security"
+  },
+  { "value": "benin", "label": "Benin" },
+  { "value": "zimbabwe", "label": "Zimbabwe" },
+  {
+    "value": "E5-2",
+    "label": "E5-2 – Actions and resources related to resource use and circular economy"
+  },
+  { "value": "agricultural_products", "label": "Agricultural Products" },
+  { "value": "belgium", "label": "Belgium" },
+  {
+    "value": "specific_target_organ_toxicity_single_exposure_categories_1_and_2",
+    "label": "Specific target organ toxicity – single exposure categories 1 and 2"
+  },
+  { "value": "niger", "label": "Niger" },
+  { "value": "singapore", "label": "Singapore" },
+  { "value": "panama", "label": "Panama" },
+  { "value": "china", "label": "China" },
+  { "value": "franchises", "label": "Franchises" },
+  { "value": "absolute_target", "label": "Absolute target" },
+  { "value": "waste_management", "label": "Waste Management" },
+  { "value": "telecommunication_services", "label": "Telecommunication Services" },
+  {
+    "value": "omission_of_required_information_if_applicable",
+    "label": "Omission of required information if applicable law or regulations prohibit the disclosure of such information or allow the omission of such disclosure"
+  },
+  { "value": "ethiopia", "label": "Ethiopia" },
+  {
+    "value": "E1-5",
+    "label": "E1-5 – Actions and resources in relation to climate change mitigation and adaptation"
+  },
+  { "value": "nigeria", "label": "Nigeria" },
+  { "value": "recycling", "label": "Recycling" },
+  { "value": "oil", "label": "Oil" },
+  { "value": "palau", "label": "Palau" },
+  { "value": "consolidated", "label": "Consolidated" },
+  { "value": "gas", "label": "Gas" },
+  { "value": "djibouti", "label": "Djibouti" },
+  { "value": "E5-4", "label": "E5-4 – Resource inflows" },
+  { "value": "S2", "label": "ESRS S2 Workers in value chain" },
+  {
+    "value": "S1-6",
+    "label": "S1-6 – Characteristics of non-employees in the undertaking’s own workforce"
+  },
+  { "value": "appliance_manufacturing", "label": "Appliance Manufacturing" },
+  { "value": "haiti", "label": "Haiti" },
+  { "value": "construction_materials_lowercase", "label": "Construction materials" },
+  { "value": "finland", "label": "Finland" },
+  { "value": "canada", "label": "Canada" },
+  { "value": "madagascar", "label": "Madagascar" },
+  { "value": "s4_prior_to_fy_2027", "label": "S4 prior to FY 2027" },
+  {
+    "value": "extent_cond_ecosyst",
+    "label": "The extent and condition of terrestrial and marine ecosystems"
+  },
+  { "value": "india", "label": "India" },
+  { "value": "forestry_management", "label": "Forestry Management" },
+  { "value": "spain", "label": "Spain" },
+  {
+    "value": "activities_of_extraterritorial_organisations_bodies",
+    "label": "U Activities of extraterritorial organisations and bodies"
+  },
+  { "value": "banking", "label": "Banking" },
+  { "value": "andorra", "label": "Andorra" },
+  {
+    "value": "communities_civil_pol_rights",
+    "label": "Communities’ civil and political rights (including freedom of expression, freedom of assembly, impacts on human rights defenders)"
+  },
+  { "value": "incineration", "label": "Incineration" },
+  { "value": "italy", "label": "Italy" },
+  {
+    "value": "S2-2",
+    "label": "S2-2 – Engagement with workers in the value chain, existence of channels for workers in the value chain to raise concerns or needs and approaches to remedy"
+  },
+  { "value": "e4_prior_to_fy_2027", "label": "E4 prior to FY 2027" },
+  { "value": "oil_gas_refining_marketing", "label": "Oil & Gas - Refining & Marketing" },
+  { "value": "S1-15", "label": "S1-15 – Remuneration metrics" },
+  { "value": "coal_operations", "label": "Coal Operations" },
+  { "value": "oil_gas_services", "label": "Oil & Gas - Services" },
+  {
+    "value": "lack_of_reliable_data_metricpartialreportingboundary",
+    "label": "Relief to report a partial reporting boundary for a metric due to lack of reliable data"
+  },
+  { "value": "non_reported", "label": "Non reported" },
+  { "value": "S1-12", "label": "S1-12 – Training and skills development metrics" },
+  { "value": "S4-4", "label": "S4-4 – Targets related to consumers and end-users" },
+  { "value": "trinidad_and_tobago", "label": "Trinidad and Tobago" },
+  { "value": "tajikistan", "label": "Tajikistan" },
+  { "value": "adaptation", "label": "Climate change adaptation" },
+  { "value": "processed_foods", "label": "Processed Foods" },
+  { "value": "information_communication", "label": "J Information and communication" },
+  { "value": "all_of_its_own_workforce", "label": "All of its own workforce" },
+  { "value": "colombia", "label": "Colombia" },
+  { "value": "mauritania", "label": "Mauritania" },
+  {
+    "value": "relationship_suppliers",
+    "label": "Management of relationships with suppliers, including payment practices especially late payment to small- and medium-sized undertakings (SMEs)"
+  },
+  { "value": "S1-9", "label": "S1-9 – Adequate wages" },
+  { "value": "medical_equipment_supplies", "label": "Medical Equipment & Supplies" },
+  { "value": "upstream_leased_assets", "label": "Upstream Leased Assets" },
+  { "value": "G1-4", "label": "G1-4 – Metrics related to corruption or bribery" },
+  {
+    "value": "hazard_to_the_aquatic_environment_categories_chronic_1_to_4",
+    "label": "Hazard to the aquatic environment – categories chronic 1 to 4"
+  },
+  {
+    "value": "corporate_culture",
+    "label": "Corporate culture, including anti-corruption and bribery, the protection of whistle-blowers and animal welfare"
+  },
+  { "value": "textiles_apparel", "label": "Textiles and apparel" },
+  { "value": "casinos_gaming", "label": "Casinos & Gaming" },
+  { "value": "water_waste_services", "label": "Water and waste services" },
+  {
+    "value": "downstream_transport_distribution",
+    "label": "Downstream Transportation and Distribution"
+  },
+  { "value": "E2-3", "label": "E2-3 – Targets related to pollution" },
+  { "value": "pulp_paper_products", "label": "Pulp & Paper Products" },
+  { "value": "purchased_goods_services", "label": "Purchased Goods and Services" },
+  {
+    "value": "S4-2",
+    "label": "S4-2 – Engagement with consumers and end-users, existence of channels for consumers and end-users to raise concerns or needs and approaches to remedy"
+  },
+  { "value": "E2", "label": "ESRS E2 Pollution" },
+  { "value": "car_rental_leasing", "label": "Car Rental & Leasing" },
+  {
+    "value": "adjustments_to_comparative_information",
+    "label": "Adjustments to comparative information"
+  },
+  { "value": "kiribati", "label": "Kiribati" },
+  { "value": "eswatini", "label": "Eswatini" },
+  { "value": "united_arab_emirates", "label": "United Arab Emirates" },
+  { "value": "liechtenstein", "label": "Liechtenstein" },
+  {
+    "value": "GDR",
+    "label": "General Disclosure Requirements (‘GDR’) for policies, actions, metrics and targets"
+  },
+  { "value": "monaco", "label": "Monaco" },
+  { "value": "leisure_facilities", "label": "Leisure Facilities" },
+  { "value": "electrical_electronic_equipment", "label": "Electrical & Electronic Equipment" },
+  { "value": "vanuatu", "label": "Vanuatu" },
+  { "value": "chemicals", "label": "Chemicals" },
+  { "value": "household_personal_products", "label": "Household & Personal Products" },
+  { "value": "non-profit_organizations", "label": "Non-profit organizations" },
+  { "value": "somalia", "label": "Somalia" },
+  { "value": "botswana", "label": "Botswana" },
+  {
+    "value": "quantitative_SoC_prior_to_fy_2030",
+    "label": "Quantitative information related to Substances of Concern prior to FY 2030"
+  },
+  {
+    "value": "solar_technology_project_developers",
+    "label": "Solar Technology & Project Developers"
+  },
+  { "value": "meat_poultry_dairy", "label": "Meat, Poultry & Dairy" },
+  { "value": "belize", "label": "Belize" },
+  { "value": "affected_communities", "label": "Affected communities" },
+  { "value": "long-term", "label": "Long-term" },
+  { "value": "commercial_services", "label": "Commercial services" },
+  { "value": "others", "label": "Others" },
+  { "value": "burundi", "label": "Burundi" },
+  { "value": "sulphur_hexafluoride", "label": "Sulphur Hexafluoride (SF6)" },
+  { "value": "venezuela", "label": "Venezuela" },
+  {
+    "value": "IRO-1",
+    "label": "ESRS 2 IRO-1 – Description of the process to identify and assess material impacts, risks and opportunities and material information to be reported"
+  },
+  { "value": "chad", "label": "Chad" },
+  { "value": "uzbekistan", "label": "Uzbekistan" },
+  { "value": "eritrea", "label": "Eritrea" },
+  {
+    "value": "persistent,_bioaccumulative_and_toxic_or_very_persistent_very_bioaccumulative_properties",
+    "label": "Persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties"
+  },
+  { "value": "fiji", "label": "Fiji" },
+  { "value": "kyrgyzstan", "label": "Kyrgyzstan" },
+  { "value": "chile", "label": "Chile" },
+  { "value": "relief_acquisitions_disposals", "label": "Relief for acquisitions and disposals" },
+  { "value": "united_kingdom", "label": "United Kingdom" },
+  { "value": "gas_utilities_distributors", "label": "Gas Utilities & Distributors" },
+  { "value": "north_korea", "label": "North Korea" },
+  { "value": "E1-3", "label": "E1-3 – Resilience in relation to climate change" },
+  { "value": "education", "label": "Education" },
+  { "value": "health_care_delivery", "label": "Health Care Delivery" },
+  { "value": "south_sudan", "label": "South Sudan" },
+  { "value": "bhutan", "label": "Bhutan" },
+  {
+    "value": "communities_ec_soc_cult_rights",
+    "label": "Communities’ economic, social and cultural rights (including land related impacts, security-related impacts, adequate housing and food, water and sanitation)"
+  },
+  {
+    "value": "wholesale_retail_trade_repair_of_motor_vehicles_motorcycles",
+    "label": "G Wholesale and retail trade; repair of motor vehicles and motorcycles"
+  },
+  { "value": "S1-4", "label": "S1-4 – Targets related to own workforce" },
+  { "value": "health_care_distributors", "label": "Health Care Distributors" },
+  {
+    "value": "E4-3",
+    "label": "E4-3 – Actions and resources related to biodiversity and ecosystems"
+  },
+  { "value": "hazardous_to_the_ozone_layer", "label": "Hazardous to the ozone layer" },
+  {
+    "value": "respiratory_sensitisation_category_1",
+    "label": "Respiratory sensitisation category 1"
+  },
+  { "value": "alcoholic_beverages", "label": "Alcoholic Beverages" },
+  { "value": "internet_media_services", "label": "Internet Media & Services" },
+  { "value": "E4-4", "label": "E4-4 – Targets related to biodiversity and ecosystems" },
+  { "value": "GOV-3", "label": "ESRS 2 GOV-3 – Statement on due diligence" },
+  { "value": "p_education", "label": "P Education" },
+  { "value": "E2-2", "label": "E2-2 – Actions and resources related to pollution" },
+  { "value": "guatemala", "label": "Guatemala" },
+  { "value": "hotels_lodging", "label": "Hotels & Lodging" },
+  { "value": "marshall_islands", "label": "Marshall Islands" },
+  { "value": "latvia", "label": "Latvia" },
+  { "value": "E4-2", "label": "E4-2 – Policies related to biodiversity and ecosystems" },
+  { "value": "cuba", "label": "Cuba" },
+  { "value": "ecuador", "label": "Ecuador" },
+  { "value": "germany", "label": "Germany" },
+  { "value": "GDR-T", "label": "GDR-T – General Disclosure Requirement for targets" },
+  { "value": "s4_for_first_2_fy_of_reporting", "label": "S4 for first 2 FY of reporting" },
+  { "value": "reporting_errors_in_prior_periods", "label": "Reporting errors in prior periods" },
+  { "value": "mozambique", "label": "Mozambique" },
+  { "value": "S1-13", "label": "S1-13 – Health and safety metrics" },
+  { "value": "downstream_leased_assets", "label": "Downstream Leased Assets" },
+  { "value": "advertising_marketing", "label": "Advertising & Marketing" },
+  { "value": "hydro-fluorocarbons", "label": "Hydro-fluorocarbons (HFCs)" },
+  { "value": "E5-1", "label": "E5-1 – Policies related to resource use and circular economy" },
+  { "value": "liberia", "label": "Liberia" },
+  { "value": "security_services", "label": "Security services" },
+  { "value": "S3-4", "label": "S3-4 – Targets related to affected communities" },
+  { "value": "russia", "label": "Russia" },
+  { "value": "brazil", "label": "Brazil" },
+  { "value": "inflows", "label": "Resource inflows" },
+  { "value": "other_emissions", "label": "Other emissions not in consolidated accounting group" },
+  { "value": "ecosyst_services", "label": "Ecosystem services" },
+  {
+    "value": "multiline_specialty_retailers_distributors",
+    "label": "Multiline and Specialty Retailers & Distributors"
+  },
+  { "value": "S4-1", "label": "S4-1 – Policies related to consumers and end-users" },
+  { "value": "forestry", "label": "Forestry" },
+  { "value": "south_korea", "label": "South Korea" },
+  { "value": "saudi_arabia", "label": "Saudi Arabia" },
+  {
+    "value": "safety_consumers_users",
+    "label": "Personal safety of consumers or end-users (including health and safety, protection of children, security of a person)"
+  },
+  { "value": "syria", "label": "Syria" },
+  { "value": "san_marino", "label": "San Marino" },
+  { "value": "air_freight_logistics", "label": "Air Freight & Logistics" },
+  {
+    "value": "quantitative_anticipated_financial_effects_for_first_4_fy_of_reporting",
+    "label": "Quantitative information about anticipated financial effects for first 4 FY of reporting"
+  },
+  { "value": "north_macedonia", "label": "North Macedonia" },
+  { "value": "lesotho", "label": "Lesotho" },
+  { "value": "e4_for_first_2_fy_of_reporting", "label": "E4 for first 2 FY of reporting" },
+  {
+    "value": "SBM-3",
+    "label": "ESRS 2 SBM-3 – Interaction of material impacts risks and opportunities with strategy and business model, and financial effects"
+  },
+  { "value": "seychelles", "label": "Seychelles" },
+  { "value": "qatar", "label": "Qatar" },
+  { "value": "armenia", "label": "Armenia" },
+  { "value": "use_sold_products", "label": "Use of Sold Products" },
+  { "value": "non_employees", "label": "Non employees" },
+  {
+    "value": "anticipated_financial_effects_for_first_2_fy_of_reporting",
+    "label": "Information about anticipated financial effects for first 2 FY of reporting"
+  },
+  { "value": "transportation_storage", "label": "H Transportation and storage" },
+  { "value": "consumers and end-users", "label": "Consumers and end-users" },
+  {
+    "value": "transition_plan_not_adopted_adoption_not_planned",
+    "label": "Transition plan not adopted and adoption not planned"
+  },
+  {
+    "value": "E1-4",
+    "label": "E1-4 – Policies related to climate change mitigation and adaptation"
+  },
+  { "value": "state_species", "label": "State of species" },
+  { "value": "kazakhstan", "label": "Kazakhstan" },
+  { "value": "pollution_air", "label": "Pollution of air" },
+  { "value": "capital_goods", "label": "Capital Goods" },
+  { "value": "E3", "label": "ESRS E3 Water and marine resources" },
+  { "value": "relative_target", "label": "Relative target" },
+  { "value": "s1_prior_to_fy_2027", "label": "S1 prior to FY 2027" },
+  {
+    "value": "S1-16",
+    "label": "S1-16 – Incidents of discrimination and other human rights incidents"
+  },
+  { "value": "other_disposal_operations", "label": "Other disposal operations" },
+  { "value": "draft_simplified_esrs", "label": "Draft Simplified ESRS" },
+  { "value": "carbon_dioxide", "label": "Carbon Dioxide (CO2)" },
+  { "value": "bahamas", "label": "Bahamas" },
+  { "value": "water_transportation", "label": "Water transportation" },
+  { "value": "iceland", "label": "Iceland" },
+  { "value": "suriname", "label": "Suriname" },
+  { "value": "argentina", "label": "Argentina" },
+  { "value": "cyprus", "label": "Cyprus" },
+  { "value": "maldives", "label": "Maldives" },
+  { "value": "sri_lanka", "label": "Sri Lanka" },
+  { "value": "laos", "label": "Laos" },
+  { "value": "waste", "label": "Resource outflows (waste)" },
+  { "value": "hazardous", "label": "Hazardous" },
+  { "value": "slovenia", "label": "Slovenia" },
+  { "value": "yemen", "label": "Yemen" },
+  {
+    "value": "specific_groups_within_own_workforce",
+    "label": "Specific groups within own workforce"
+  },
+  {
+    "value": "quantitative_anticipated_financial_effects_prior_to_fy_2030",
+    "label": "Quantitative information about anticipated financial effects prior to FY 2030"
+  },
+  { "value": "burkina_faso", "label": "Burkina Faso" },
+  {
+    "value": "endocrine_disruption_for_human_health_categories_1_and_2",
+    "label": "Endocrine disruption for human health categories 1 and 2"
+  },
+  { "value": "sierra_leone", "label": "Sierra Leone" },
+  {
+    "value": "soc_dialogue_collective_barg",
+    "label": "Social dialogue and collective bargaining, freedom of association, information and consultation rights of workers, including through works councils"
+  },
+  {
+    "value": "power_production_energy_utilities",
+    "label": "Power production and energy utilities"
+  },
+  { "value": "E1-7", "label": "E1-7 – Energy consumption and mix" },
+  { "value": "guinea", "label": "Guinea" },
+  {
+    "value": "upstream_transport_distribution",
+    "label": "Upstream Transportation and Distribution"
+  },
+  {
+    "value": "persistent,_mobile_and_toxic_or_very_persistent_very_mobile_properties",
+    "label": "Persistent, mobile and toxic or very persistent, very mobile properties"
+  },
+  { "value": "other_recovery_operations", "label": "Other recovery operations" },
+  { "value": "G1-2", "label": "G1-2 – Actions related to business conduct" },
+  { "value": "palestine", "label": "Palestine" },
+  { "value": "E3-3", "label": "E3-3 – Targets related to water" },
+  { "value": "mitigation", "label": "Climate change mitigation" },
+  { "value": "non-hazardous", "label": "Non-hazardous" },
+  { "value": "ground_transportation", "label": "Ground transportation" },
+  { "value": "real_estate_lowercase", "label": "Real estate" },
+  { "value": "E3-4", "label": "E3-4 – Water metrics" },
+  { "value": "E5", "label": "ESRS E5 Resource use and circular economy" },
+  { "value": "bahrain", "label": "Bahrain" },
+  { "value": "real_estate_services", "label": "Real Estate Services" },
+  {
+    "value": "specific_groups_of_workers_within_value_chain",
+    "label": "Specific groups of workers within value chain"
+  },
+  {
+    "value": "working_conditions",
+    "label": "Working conditions (including adequate wages, work-life balance, working time, secure employment) and social protection"
+  },
+  { "value": "medical_equipment", "label": "Medical equipment" },
+  { "value": "czechia", "label": "Czechia" },
+  { "value": "construction", "label": "Construction" },
+  { "value": "managed_care", "label": "Managed Care" },
+  { "value": "end-of-life_treatment", "label": "End-of-Life Treatment of Sold Products" },
+  { "value": "kuwait", "label": "Kuwait" },
+  { "value": "SBM-2", "label": "ESRS 2 SBM-2 – Interests and views of stakeholders" },
+  {
+    "value": "GOV-4",
+    "label": "ESRS 2 GOV-4 – Risk management and internal controls over sustainability reporting"
+  },
+  { "value": "E1-6", "label": "E1-6 – Targets related to climate change" },
+  { "value": "moldova", "label": "Moldova" },
+  { "value": "revised_esrs", "label": "Revised ESRS" },
+  { "value": "ireland", "label": "Ireland" },
+  { "value": "S1-3", "label": "S1-3 – Actions and resources related to own workforce" },
+  { "value": "building_products_furnishings", "label": "Building Products & Furnishings" },
+  { "value": "turkmenistan", "label": "Turkmenistan" },
+  {
+    "value": "other_laboutrelated_rights_s2",
+    "label": "Other labour-related human rights (including child labour, forced labour, privacy and adequate housing, water and sanitation)"
+  },
+  { "value": "software_it_services", "label": "Software & IT Services" },
+  { "value": "mining", "label": "Mining" },
+  { "value": "coal", "label": "Coal" },
+  { "value": "restaurants", "label": "Restaurants" },
+  { "value": "all_consumers_end-users", "label": "All consumers and end-users" },
+  {
+    "value": "E1-11",
+    "label": "E1-11 – Anticipated financial effects from material physical and transition risks and potential climate-related opportunities"
+  },
+  {
+    "value": "drivers_biodiv_ecosyst",
+    "label": "Drivers of biodiversity and ecosystem change (including terrestrial and marine habitat change, invasive species)"
+  },
+  { "value": "nitrous_oxide", "label": "Nitrous Oxide (N2O)" },
+  { "value": "uganda", "label": "Uganda" },
+  { "value": "S3", "label": "ESRS S3 Affected communities" },
+  {
+    "value": "fuel_energy_related",
+    "label": "Fuel- and Energy-Related Activities (Not Included in scope 1 or scope 2)"
+  },
+  { "value": "E2-4", "label": "E2-4 – Pollution of air, water and soil" },
+  { "value": "health_services", "label": "Health services" },
+  { "value": "other_service_activities", "label": "S Other service activities" },
+  { "value": "cruise_lines", "label": "Cruise Lines" },
+  { "value": "e5_prior_to_fy_2027", "label": "E5 prior to FY 2027" },
+  { "value": "real_estate_activities", "label": "L Real estate activities" },
+  { "value": "software", "label": "Software" },
+  { "value": "romania", "label": "Romania" },
+  { "value": "GDR-P", "label": "GDR-P General Disclosure Requirement for policies" },
+  { "value": "libya", "label": "Libya" },
+  { "value": "E4", "label": "ESRS E4 Biodiversity and ecosystems" },
+  {
+    "value": "specific_target_organ_toxicity_repeated_exposure_categories_1_and_2",
+    "label": "Specific target organ toxicity – repeated exposure categories 1 and 2"
+  },
+  { "value": "serbia", "label": "Serbia" },
+  { "value": "norway", "label": "Norway" },
+  { "value": "engineering_construction_services", "label": "Engineering & Construction Services" },
+  { "value": "toys_sporting_goods", "label": "Toys & Sporting Goods" },
+  { "value": "home_builders", "label": "Home Builders" },
+  { "value": "saint_kitts_and_nevis", "label": "Saint Kitts and Nevis" },
+  { "value": "sweden", "label": "Sweden" },
+  { "value": "s2_for_first_2_fy_of_reporting", "label": "S2 for first 2 FY of reporting" },
+  { "value": "drug_retailers", "label": "Drug Retailers" },
+  { "value": "rail_transportation", "label": "Rail Transportation" },
+  {
+    "value": "reproductive_toxicity_categories_1_and_2",
+    "label": "Reproductive toxicity categories 1 and 2"
+  },
+  { "value": "short-term", "label": "Short-term" },
+  { "value": "e1_prior_to_fy_2027", "label": "E1 prior to FY 2027" },
+  {
+    "value": "transition_plan_expected_to_be_adopted",
+    "label": "Transition plan expected to be adopted"
+  },
+  {
+    "value": "s1_information_related_to_drs_specified_in_esrs_1_par_125(f)_for_first_fy_of_reporting",
+    "label": "S1 information related to DRs specified in ESRS 1 par 125(f) for first FY of reporting"
+  },
+  { "value": "health_safety", "label": "Health and safety" },
+  { "value": "turkey", "label": "Turkey" },
+  { "value": "jordan", "label": "Jordan" },
+  { "value": "males", "label": "Males" },
+  { "value": "antigua_and_barbuda", "label": "Antigua and Barbuda" },
+  { "value": "afghanistan", "label": "Afghanistan" },
+  { "value": "south_africa", "label": "South Africa" },
+  { "value": "vietnam", "label": "Vietnam" },
+  {
+    "value": "electricity_gas_steam_air_conditioning_supply",
+    "label": "D Electricity, gas, steam and air conditioning supply"
+  },
+  { "value": "commercial_banks", "label": "Commercial Banks" },
+  { "value": "GDR-A", "label": "GDR-A – General Disclosure Requirement for actions and resources" },
+  {
+    "value": "s1_information_related_to_drs_specified_in_esrs_1_par_125(f)_prior_to_fy_2027",
+    "label": "S1 information related to DRs specified in ESRS 1 par 125(f) prior to FY 2027"
+  },
+  { "value": "G1-1", "label": "G1-1 – Policies related to business conduct" },
+  { "value": "pollution_soil", "label": "Pollution of soil" },
+  { "value": "S1-11", "label": "S1-11 – Persons with disabilities" },
+  { "value": "malaysia", "label": "Malaysia" },
+  { "value": "consumer_finance", "label": "Consumer Finance" },
+  { "value": "S1-10", "label": "S1-10 – Social protection" },
+  { "value": "timor-leste", "label": "Timor-Leste" },
+  { "value": "financial_insurance_activities", "label": "K Financial and insurance activities" },
+  { "value": "biofuels", "label": "Biofuels" },
+  {
+    "value": "indigenous_rights",
+    "label": "Rights of indigenous peoples (including free, prior and informed consent (FPIC), self-determination, cultural rights)"
+  },
+  { "value": "georgia", "label": "Georgia" },
+  { "value": "rwanda", "label": "Rwanda" },
+  { "value": "E3-1", "label": "E3-1 – Policies related to water" },
+  {
+    "value": "GOV-1",
+    "label": "ESRS 2 GOV-1 – The role of the administrative, management and supervisory bodies in relation to sustainability"
+  },
+  { "value": "E5-5", "label": "E5-5 – Resource outflows" },
+  { "value": "media_communication", "label": "Media and communication" },
+  { "value": "E1-8", "label": "E1-8 – Gross scope 1, 2, 3 GHG emissions" },
+  {
+    "value": "diversity_eqtreatment",
+    "label": "Diversity and equal treatment (including gender equality, equal pay for work of equal value, employment and inclusion of people with disabilities, non-discrimination, anti-harassment, measures against violence)"
+  },
+  { "value": "manufacturing", "label": "C Manufacturing" },
+  {
+    "value": "anticipated_financial_effects_prior_to_fy_2028",
+    "label": "Information about anticipated financial effects prior to FY 2028"
+  },
+  { "value": "s2_prior_to_fy_2027", "label": "S2 prior to FY 2027" },
+  { "value": "paraguay", "label": "Paraguay" },
+  {
+    "value": "specific_groups_of_consumers_end-users",
+    "label": "Specific groups of consumers and end-users"
+  },
+  { "value": "food_retailers_distributors", "label": "Food Retailers & Distributors" },
+  { "value": "construction_materials_propercase", "label": "Construction Materials" },
+  { "value": "arts_entertainment_recreation", "label": "R Arts, entertainment and recreation" },
+  { "value": "investments", "label": "Investments" },
+  { "value": "cabo_verde", "label": "Cabo Verde" },
+  {
+    "value": "inclusion_consumers_users",
+    "label": "Social inclusion of consumers or end-users (including, access to products and services, responsible marketing practices, non-discrimination)"
+  },
+  { "value": "austria", "label": "Austria" },
+  { "value": "bangladesh", "label": "Bangladesh" },
+  { "value": "azerbaijan", "label": "Azerbaijan" },
+  { "value": "household_goods", "label": "Household goods" },
+  { "value": "agriculture_aquaculture_fishing", "label": "Agriculture, aquaculture, and fishing" },
+  { "value": "nitrogen_trifluoride", "label": "Nitrogen Trifluoride (NF3)" },
+  { "value": "pol_influence", "label": "Political influence, including lobbying activities" },
+  { "value": "S1", "label": "ESRS S1 Own workforce" },
+  {
+    "value": "E1-9",
+    "label": "E1-9 – GHG removals and GHG mitigation projects financed through carbon credits"
+  },
+  { "value": "other_ghg", "label": "Other GHG category" },
+  { "value": "pakistan", "label": "Pakistan" },
+  { "value": "landfill", "label": "Landfill" },
+  { "value": "S1-5", "label": "S1-5 – Characteristics of the undertaking’s employees" },
+  {
+    "value": "G1-5",
+    "label": "G1-5 – Metrics related to political influence, including lobbying activities"
+  },
+  { "value": "processing_sold_products", "label": "Processing of Sold Products" },
+  { "value": "malawi", "label": "Malawi" },
+  { "value": "G1", "label": "ESRS G1 Business conduct" },
+  { "value": "E2-5", "label": "E2-5 – Substances of concern and substances of very high concern" },
+  { "value": "mining_quarrying", "label": "B Mining and quarrying" },
+  { "value": "real_estate_uppercase", "label": "Real Estate" },
+  { "value": "physical_risk", "label": "Physical risk" },
+  { "value": "s3_for_first_2_fy_of_reporting", "label": "S3 for first 2 FY of reporting" },
+  { "value": "belarus", "label": "Belarus" },
+  { "value": "central_african_republic", "label": "Central African Republic" },
+  {
+    "value": "material_judgement_and_significant_uncertainties",
+    "label": "Application of material judgement and information subject to significant uncertainties"
+  },
+  { "value": "investment_banking_brokerage", "label": "Investment Banking & Brokerage" },
+  { "value": "mexico", "label": "Mexico" },
+  { "value": "ozone", "label": "Ozone (O3)" },
+  {
+    "value": "information_SVHC_for_users_of_articles_prior_to_fy_2028",
+    "label": "Information related to Substances of Very High Concern for users of articles prior to FY 2028"
+  },
+  { "value": "G1-3", "label": "G1-3 – Targets related to business conduct" },
+  { "value": "grenada", "label": "Grenada" },
+  { "value": "S4", "label": "ESRS S4 Consumers and end-users" },
+  { "value": "slovakia", "label": "Slovakia" },
+  { "value": "philippines", "label": "Philippines" },
+  { "value": "e-commerce", "label": "E-Commerce" },
+  { "value": "metals_mining", "label": "Metals & Mining" },
+  {
+    "value": "SoC_SVHC",
+    "label": "Substances of concern, including substances of very high concern"
+  },
+  { "value": "professional_commercial_services", "label": "Professional & Commercial Services" },
+  { "value": "albania", "label": "Albania" },
+  { "value": "vatican_city", "label": "Vatican City (Holy See)" },
+  { "value": "S1-7", "label": "S1-7 – Collective bargaining coverage and social dialogue" },
+  { "value": "e3_prior_to_fy_2027", "label": "E3 prior to FY 2027" },
+  { "value": "auto_parts", "label": "Auto Parts" },
+  { "value": "specific_affected_communities", "label": "Specific affected communities" },
+  {
+    "value": "BP-2",
+    "label": "ESRS 2 BP-2 – Specific information if the undertaking uses phasing-in options"
+  },
+  { "value": "myanmar", "label": "Myanmar" },
+  { "value": "denmark", "label": "Denmark" },
+  { "value": "medium-term", "label": "Medium-term" },
+  { "value": "pollution_water", "label": "Pollution of water" },
+  {
+    "value": "significant_limitations_undue_cost_or_effort_provision",
+    "label": "Significant limitations affecting the reported information under the undue cost or effort provision for specific datapoints"
+  },
+  { "value": "indonesia", "label": "Indonesia" },
+  { "value": "brunei", "label": "Brunei" },
+  { "value": "tanzania", "label": "Tanzania" },
+  { "value": "luxembourg", "label": "Luxembourg" },
+  { "value": "transition_plan_adopted", "label": "Transition plan adopted" },
+  {
+    "value": "S3-2",
+    "label": "S3-2 – Engagement with affected communities, existence of channels for affected communities to raise concerns or needs and approaches to remedy"
+  },
+  { "value": "guyana", "label": "Guyana" },
+  { "value": "netherlands", "label": "Netherlands" },
+  { "value": "E4-1", "label": "E4-1 – Biodiversity and ecosystems transition plan" },
+  { "value": "SBM-1", "label": "ESRS 2 SBM-1 – Strategy, business model and value chain" },
+  { "value": "malta", "label": "Malta" },
+  { "value": "E3-2", "label": "E3-2 – Actions and resources related to water" },
+  {
+    "value": "deviation_from_predefined_timehorizons",
+    "label": "Deviation from pre-defined time horizons"
+  },
+  { "value": "individual", "label": "Individual" },
+  { "value": "mortgage_finance", "label": "Mortgage Finance" },
+  {
+    "value": "IRO-2",
+    "label": "ESRS 2 IRO-2 – Material impacts, risks and opportunities and disclosure requirements included in the sustainability statement"
+  },
+  { "value": "agriculture_forestry_fishing", "label": "A Agriculture, forestry and fishing" },
+  { "value": "saint_lucia", "label": "Saint Lucia" },
+  { "value": "angola", "label": "Angola" },
+  {
+    "value": "S1-2",
+    "label": "S1-2 – Engagement with own workforce and workers’ representatives, existence of channels for own workforce to raise concerns or needs and approaches to remedy"
+  },
+  { "value": "nauru", "label": "Nauru" },
+  { "value": "namibia", "label": "Namibia" },
+  { "value": "comoros", "label": "Comoros" },
+  { "value": "iran", "label": "Iran" },
+  {
+    "value": "asset_management_custody_activities",
+    "label": "Asset Management & Custody Activities"
+  },
+  { "value": "outflows", "label": "Resource outflows related to products and services" },
+  { "value": "oil_gas_exploration_production", "label": "Oil & Gas - Exploration & Production" },
+  { "value": "mongolia", "label": "Mongolia" },
+  {
+    "value": "germ_cell_mutagenicity_categories_1_and_2",
+    "label": "Germ cell mutagenicity categories 1 and 2"
+  },
+  {
+    "value": "GOV-2",
+    "label": "ESRS 2 GOV-2 – Integration of sustainability-related performance in incentive schemes"
+  },
+  { "value": "fuel_cells_industrial_batteries", "label": "Fuel Cells & Industrial Batteries" },
+  { "value": "S1-8", "label": "S1-8 – Diversity metrics" },
+  { "value": "containers_packaging", "label": "Containers & Packaging" },
+  { "value": "jamaica", "label": "Jamaica" },
+  { "value": "ukraine", "label": "Ukraine" },
+  { "value": "republic_of_the_congo", "label": "Congo (Republic of the)" },
+  { "value": "oman", "label": "Oman" },
+  { "value": "saint_vincent_and_the_grenadines", "label": "Saint Vincent and the Grenadines" },
+  { "value": "e2_prior_to_fy_2027", "label": "E2 prior to FY 2027" },
+  { "value": "non-alcoholic_beverages", "label": "Non-Alcoholic Beverages" },
+  { "value": "peru", "label": "Peru" },
+  { "value": "democratic_republic_of_the_congo", "label": "Democratic Republic of the Congo" },
+  { "value": "metal_processing", "label": "Metal processing" },
+  { "value": "tobacco", "label": "Tobacco" },
+  { "value": "skin_sensitisation_category_1", "label": "Skin sensitisation category 1" },
+  {
+    "value": "endocrine_disruption_for_the_environment_categories_1_and_2",
+    "label": "Endocrine disruption for the environment categories 1 and 2"
+  },
+  { "value": "tonga", "label": "Tonga" },
+  { "value": "all_affected_communities", "label": "All affected communities" },
+  {
+    "value": "quantitative_SoC_for_first_3_fy_of_reporting",
+    "label": "Quantitative information related to Substances of Concern for first 3 FY of reporting"
+  },
+  { "value": "electronics", "label": "Electronics" },
+  {
+    "value": "administrative_support_service_activities",
+    "label": "N Administrative and support service activities"
+  },
+  { "value": "S4-3", "label": "S4-3 – Actions and resources related to consumers and end-users" },
+  { "value": "israel", "label": "Israel" },
+  { "value": "morocco", "label": "Morocco" },
+  { "value": "airlines", "label": "Airlines" },
+  { "value": "france", "label": "France" },
+  { "value": "E4-5", "label": "E4-5 – Metrics related to biodiversity and ecosystems change" },
+  { "value": "S3-3", "label": "S3-3 – Actions and resources related to affected communities" },
+  { "value": "business_travel", "label": "Business Travel" },
+  { "value": "water_utilities_services", "label": "Water Utilities & Services" },
+  {
+    "value": "update_of_disclosures_for_events_after_reporting_period",
+    "label": "Update of disclosures for events after the end of the reporting period"
+  },
+  { "value": "machinery_equipment", "label": "Machinery and equipment" },
+  { "value": "dominica", "label": "Dominica" },
+  { "value": "togo", "label": "Togo" },
+  { "value": "waste_generated", "label": "Waste Generated in Operations" },
+  { "value": "gabon", "label": "Gabon" },
+  { "value": "media_entertainment", "label": "Media & Entertainment" },
+  { "value": "females", "label": "Females" },
+  { "value": "E1-10", "label": "E1-10 – Internal carbon pricing" },
+  { "value": "GDR-M", "label": "GDR-M – General Disclosure Requirement for metrics" },
+  { "value": "bosnia_herzegovina", "label": "Bosnia and Herzegovina" },
+  { "value": "baseline", "label": "Baseline" },
+  { "value": "hardware", "label": "Hardware" }
+]
