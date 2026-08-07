@@ -11,6 +11,31 @@
      padding: 0;
      background-color: lightgray;
  }
+
+.tag-picker {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tag-picker__filters {
+    display: grid;
+    grid-template-columns: minmax(160px, 220px) minmax(220px, 1fr);
+    gap: 8px 12px;
+    align-items: end;
+}
+
+.tag-picker__label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tag-picker__select,
+.tag-picker__filters select,
+.tag-picker__filters input {
+    width: 100%;
+    box-sizing: border-box;
+}
  
  ul {
      margin: 0;

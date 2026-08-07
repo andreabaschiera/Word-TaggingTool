@@ -581,8 +581,7 @@ function loadAnnotationIntoUI(
   ) as HTMLSelectElement;
 
   select.value = dp.reference;
-
-  updateValueSelector();
+  select.dispatchEvent(new Event("change", { bubbles: true }));
 
   // Value
   if (annotation.valueChosen !== undefined) {
