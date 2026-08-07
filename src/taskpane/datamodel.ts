@@ -22,6 +22,7 @@ export interface Taxonomy {
 
 export interface Datapoint {
   reference: string;
+  standard: string;
   dr: string;
   datatype: Datatype;
   name: string;

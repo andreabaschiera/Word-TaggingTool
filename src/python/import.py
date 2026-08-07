@@ -51,6 +51,7 @@ class Enumeration(BaseModel):
 
 class Datapoint(BaseModel):
     reference: str = Field(max_length=20)
+    standard: str
     dr: str
     datatype: Datatype
     name: str
@@ -170,6 +171,7 @@ list_dps: list[Datapoint] = []
 for row in dps.iter_rows(named=True):
     datapoint_kwargs = {
         "reference": row["reference"],
+        "standard": row["standard"],
         "dr": row["DR"],
         "datatype": row["type"],
         "name": row["name"],
