@@ -468,10 +468,10 @@ function renderInspectionDetails(
   body.className = "inspection-details-body";
 
   const typeLine = document.createElement("div");
-  typeLine.textContent = `Type: ${details.type}`;
+  appendDescriptorValueLine(typeLine, "Type", details.type, "descriptor-text--type");
 
   const textLine = document.createElement("div");
-  textLine.textContent = `Text: ${details.text}`;
+  appendDescriptorValueLine(textLine, "Text", details.text, "descriptor-text--text");
 
   body.appendChild(typeLine);
   body.appendChild(textLine);
@@ -483,17 +483,17 @@ function renderInspectionDetails(
     const valueLine = document.createElement("div");
     switch (details.type) {
       case "boolean":
-        valueLine.textContent = `Choice: ${details.value}`;
+        appendDescriptorValueLine(valueLine, "Choice", details.value, "descriptor-text--choice");
         break;
       case "enumeration":
-        valueLine.textContent = `Choice: ${labelS}`;
+        appendDescriptorValueLine(valueLine, "Choice", labelS, "descriptor-text--choice");
         break;
       case "enumerationset":
         valueLine.classList.add("inspection-details-value--list");
 
         const choicesLabel = document.createElement("div");
         choicesLabel.className = "inspection-details-list-label";
-        choicesLabel.textContent = "Choices:";
+        appendDescriptorSpan(choicesLabel, "Choices", "descriptor-text--choices");
 
         const list = document.createElement("ul");
         list.className = "inspection-details-list";
@@ -507,10 +507,10 @@ function renderInspectionDetails(
         valueLine.append(choicesLabel, list);
         break;
       case "date":
-        valueLine.textContent = `Date selected: ${details.value}`;
+        appendDescriptorValueLine(valueLine, "Date selected", details.value, "descriptor-text--date");
         break;
       case "year":
-        valueLine.textContent = `Year selected: ${details.value}`;
+        appendDescriptorValueLine(valueLine, "Year selected", details.value, "descriptor-text--date");
         break;
       case "integer":
       case "decimal":
@@ -520,7 +520,7 @@ function renderInspectionDetails(
       case "volume":
       case "energy":
       case "ghgemissions":
-        valueLine.textContent = `Number inputted: ${details.value}`;
+        appendDescriptorValueLine(valueLine, "Number inputted", details.value, "descriptor-text--number");
         break;
       default:
         valueLine.textContent = `There is a problem.`;
@@ -543,9 +543,13 @@ function renderInspectionDetails(
       const title = dims[dim.id];
 
       if (dim.mode == "fixed") {
-        dimensionLine.innerHTML = `Dimension: ${title}<br>Dimension member selected: ${dim.memberValue}`;
+        appendDescriptorValueLine(dimensionLine, "Dimension", title, "descriptor-text--dimension");
+        dimensionLine.appendChild(document.createElement("br"));
+        appendDescriptorValueLine(dimensionLine, "Dimension member selected", dim.memberValue ?? "", "descriptor-text--member");
       } else {
-        dimensionLine.innerHTML = `Dimension: ${title}<br>Dimension member typed: ${dim.memberLabel}`;
+        appendDescriptorValueLine(dimensionLine, "Dimension", title, "descriptor-text--dimension");
+        dimensionLine.appendChild(document.createElement("br"));
+        appendDescriptorValueLine(dimensionLine, "Dimension member typed", dim.memberLabel ?? "", "descriptor-text--member");
       }
 
       dimensionsDiv.appendChild(dimensionLine);
@@ -570,6 +574,33 @@ function extractLabelsFromValues(values: string | string[]): string | string[] {
     return values.map(val => valueLabelPairs[val]);
   }
   throw new Error(`Unexpected type for values: ${typeof values}`);
+}
+
+function appendDescriptorSpan(
+  container: HTMLElement,
+  descriptor: string,
+  className?: string
+): HTMLSpanElement {
+  const span = document.createElement("span");
+  span.className = className ? `descriptor-text ${className}` : "descriptor-text";
+  span.textContent = `${descriptor}:`;
+  container.appendChild(span);
+  return span;
+}
+
+function appendDescriptorValueLine(
+  container: HTMLElement,
+  descriptor: string,
+  value: string | string[],
+  className?: string
+) {
+  appendDescriptorSpan(container, descriptor, className);
+
+  const valueSpan = document.createElement("span");
+  valueSpan.className = "value-text";
+  valueSpan.textContent = typeof value === "string" ? value : value.join(", ");
+  container.appendChild(document.createTextNode(" "));
+  container.appendChild(valueSpan);
 }
 
 function loadAnnotationIntoUI(
@@ -773,7 +804,15 @@ function updateDimensionSelector() {
 
   dimensions.forEach((dimension) => {
     const heading = document.createElement("div");
-    heading.textContent = `Required dimension: ${dimension.dimension_title}`;
+    heading.className = "choice-heading choice-heading--required";
+    const descriptor = document.createElement("span");
+    descriptor.className = "descriptor-text descriptor-text--required";
+    descriptor.textContent = "Required dimension:";
+    const title = document.createElement("span");
+    title.className = "value-text";
+    title.textContent = ` ${dimension.dimension_title}`;
+    heading.appendChild(descriptor);
+    heading.appendChild(title);
     container.appendChild(heading);
 
     if (dimension.dimension_mode === "fixed") {
@@ -804,7 +843,15 @@ function updateOptionalDimensionSelector() {
 
   dimensions.forEach((dimension) => {
     const heading = document.createElement("div");
-    heading.textContent = `Optional dimension: ${dimension.dimension_title}`;
+    heading.className = "choice-heading choice-heading--optional";
+    const descriptor = document.createElement("span");
+    descriptor.className = "descriptor-text descriptor-text--optional";
+    descriptor.textContent = "Optional dimension:";
+    const title = document.createElement("span");
+    title.className = "value-text";
+    title.textContent = ` ${dimension.dimension_title}`;
+    heading.appendChild(descriptor);
+    heading.appendChild(title);
     container.appendChild(heading);
 
     if (dimension.dimension_mode === "fixed") {
@@ -820,7 +867,8 @@ function renderSingleChoice(
   container: HTMLElement
 ) {
   const label = document.createElement("div");
-  label.textContent = dp.datatype === "boolean" ? "Boolean choice:" : "Enumeration choice:";
+  label.className = "choice-heading";
+  appendDescriptorSpan(label, dp.datatype === "boolean" ? "Boolean choice" : "Enumeration choice");
   container.appendChild(label);
 
   if (dp.datatype === "boolean") {
@@ -852,6 +900,7 @@ function renderSingleChoice(
 
   enum_choices.forEach((choice) => {
     const wrapper = document.createElement("div");
+    wrapper.className = "choice-row";
 
     const radio = document.createElement("input");
     radio.type = "radio";
@@ -912,11 +961,13 @@ function renderMultipleChoice(
   }
 
   const label = document.createElement("div");
-  label.textContent = "Multiple choices:";
+  label.className = "choice-heading";
+  appendDescriptorSpan(label, "Multiple choices");
   container.appendChild(label);
 
   enum_choices.forEach((choice) => {
     const wrapper = document.createElement("div");
+    wrapper.className = "choice-row";
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -936,20 +987,29 @@ function renderMultipleChoice(
 }
 
 function renderDateInput(container: HTMLElement) {
+  const row = document.createElement("div");
+  row.className = "field-row field-row--compact";
+
   const label = document.createElement("label");
-  label.textContent = "Date:";
+  appendDescriptorSpan(label, "Date");
 
   const input = document.createElement("input");
   input.type = "date";
   input.id = "tag-value-date";
+  input.className = "field-input";
 
-  container.appendChild(label);
-  container.appendChild(input);
+  label.appendChild(document.createTextNode(" "));
+  row.appendChild(label);
+  row.appendChild(input);
+  container.appendChild(row);
 }
 
 function renderYearInput(container: HTMLElement) {
+  const row = document.createElement("div");
+  row.className = "field-row field-row--compact";
+
   const label = document.createElement("label");
-  label.textContent = "Year:";
+  appendDescriptorSpan(label, "Year");
 
   const input = document.createElement("input");
   input.type = "number";
@@ -957,48 +1017,54 @@ function renderYearInput(container: HTMLElement) {
   input.min = "1";
   input.max = "9999";
   input.step = "1";
+  input.className = "field-input";
 
-  container.appendChild(label);
-  container.appendChild(input);
+  label.appendChild(document.createTextNode(" "));
+  row.appendChild(label);
+  row.appendChild(input);
+  container.appendChild(row);
 }
 
 function renderNumberInput(
   type: Datatype,
   container: HTMLElement
 ) {
+  const row = document.createElement("div");
+  row.className = "field-row field-row--compact";
+
   const label = document.createElement("label");
 
   switch (type) {
     case "integer":
-      label.textContent = "Integer:";
+      appendDescriptorSpan(label, "Integer");
       break;
 
     case "decimal":
-      label.textContent = "Decimal:";
+      appendDescriptorSpan(label, "Decimal");
       break;
 
     case "percent":
-      label.textContent = "Percentage:";
+      appendDescriptorSpan(label, "Percentage");
       break;
 
     case "monetary":
-      label.textContent = "Monetary amount:";
+      appendDescriptorSpan(label, "Monetary amount");
       break;
 
     case "mass":
-      label.textContent = "Mass (in kg):";
+      appendDescriptorSpan(label, "Mass (in kg)");
       break;
 
     case "volume":
-      label.textContent = "Volume (in L3):";
+      appendDescriptorSpan(label, "Volume (in L3)");
       break;
 
     case "energy":
-      label.textContent = "Energy (in MWh):";
+      appendDescriptorSpan(label, "Energy (in MWh)");
       break;
     
     case "ghgemissions":
-      label.textContent = "GHG emissions (in tCo2eq):";
+      appendDescriptorSpan(label, "GHG emissions (in tCo2eq)");
       break;
   }
 
@@ -1012,8 +1078,12 @@ function renderNumberInput(
     input.step = "any";
   }
 
-  container.appendChild(label);
-  container.appendChild(input);
+  input.className = "field-input";
+  label.appendChild(document.createTextNode(" "));
+
+  row.appendChild(label);
+  row.appendChild(input);
+  container.appendChild(row);
 }
 
 function renderExplicitDimension(
@@ -1027,24 +1097,23 @@ function renderExplicitDimension(
 
   if (members.length < 5) {
     members.forEach((member) => {
-    const wrapper = document.createElement("div");
+      const wrapper = document.createElement("div");
+      wrapper.className = "choice-row";
 
-    const radio = document.createElement("input");
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = `dimension-member_${dimension.dimension_id}`;
+      radio.value = member.value;
+      radio.id = `dimension-${member.value}`;
 
-    radio.type = "radio";
-    radio.name = `dimension-member_${dimension.dimension_id}`;
-    radio.value = member.value;
-    radio.id = `dimension-${member.value}`;
+      const label = document.createElement("label");
+      label.htmlFor = radio.id;
+      label.textContent = member.label;
 
-    const label = document.createElement("label");
+      wrapper.appendChild(radio);
+      wrapper.appendChild(label);
 
-    label.htmlFor = radio.id;
-    label.textContent = member.label;
-
-    wrapper.appendChild(radio);
-    wrapper.appendChild(label);
-
-    container.appendChild(wrapper);
+      container.appendChild(wrapper);
     });
   } else {
     renderDropdown(members, container, dimension.dimension_id);
@@ -1055,15 +1124,19 @@ function renderTypedDimension(
   dimension_id: string,
   container: HTMLElement
 ) {
-  const label = document.createElement("label");
+  const row = document.createElement("div");
+  row.className = "field-row field-row--compact";
 
-  label.textContent = "Dimension member:";
+  const label = document.createElement("label");
+  appendDescriptorSpan(label, "Member to type");
 
   const input = document.createElement("input");
-
   input.type = "text";
   input.id = `dimension-member-input_${dimension_id}`;
+  input.className = "field-input";
 
-  container.appendChild(label);
-  container.appendChild(input);
+  label.appendChild(document.createTextNode(" "));
+  row.appendChild(label);
+  row.appendChild(input);
+  container.appendChild(row);
 }
