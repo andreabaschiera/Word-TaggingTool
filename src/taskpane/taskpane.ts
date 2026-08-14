@@ -6,7 +6,7 @@ import { taxonomy } from "./datamodel";
 import { TagPicker } from "./tagpicker";
 
 function syncSelectedTag(reference: string) {
-	const select = document.getElementById("tag-select") as HTMLSelectElement | null;
+	const select = document.getElementById("tag-picker-select") as HTMLSelectElement | null;
 
 	if (!select) {
 		return;

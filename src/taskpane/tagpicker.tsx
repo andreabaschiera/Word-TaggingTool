@@ -75,35 +75,56 @@ function compareDrs(standard: string, left: string, right: string): number {
   return left.localeCompare(right);
 }
 
-function getHiddenTagSelect(): HTMLSelectElement | null {
-  return document.getElementById("tag-select") as HTMLSelectElement | null;
+function getTagPickerSelect(): HTMLSelectElement | null {
+  return document.getElementById("tag-picker-select") as HTMLSelectElement | null;
 }
 
-function readHiddenTagSelectValue(): string {
-  return getHiddenTagSelect()?.value || "";
+function readTagPickerSelectValue(): string {
+  return getTagPickerSelect()?.value || "";
 }
 
 export function TagPicker({ concepts, onSelect }: TagPickerProps) {
   const [selectedStandard, setSelectedStandard] = React.useState<string>("all");
   const [query, setQuery] = React.useState("");
-  const [selectedReference, setSelectedReference] = React.useState<string>(readHiddenTagSelectValue());
+  const [selectedReference, setSelectedReference] = React.useState<string>(readTagPickerSelectValue());
 
   React.useEffect(() => {
-    const select = getHiddenTagSelect();
+    let cleanup: (() => void) | undefined;
 
-    if (!select) {
-      return;
-    }
+    const attachListener = () => {
+      const select = getTagPickerSelect();
 
-    const handleChange = () => {
-      setSelectedReference(select.value);
+      if (!select) {
+        return false;
+      }
+
+      const handleChange = () => {
+        setSelectedReference(select.value);
+      };
+
+      handleChange();
+      select.addEventListener("change", handleChange);
+      cleanup = () => select.removeEventListener("change", handleChange);
+      return true;
     };
 
-    handleChange();
-    select.addEventListener("change", handleChange);
+    const select = getTagPickerSelect();
+
+    if (select) {
+      attachListener();
+    } else {
+      const observer = new MutationObserver(() => {
+        if (attachListener()) {
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+      cleanup = () => observer.disconnect();
+    }
 
     return () => {
-      select.removeEventListener("change", handleChange);
+      cleanup?.();
     };
   }, []);
 

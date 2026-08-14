@@ -18,14 +18,41 @@ import {
 let flashMessageTimer: number | undefined;
 
 
+function getTagPickerSelect(): HTMLSelectElement | null {
+  return document.getElementById("tag-picker-select") as HTMLSelectElement | null;
+}
+
+function bindTagPickerSelection() {
+  const attachListener = () => {
+    const select = getTagPickerSelect();
+
+    if (!select) {
+      return false;
+    }
+
+    select.onchange = updateValueSelector;
+    return true;
+  };
+
+  if (attachListener()) {
+    return;
+  }
+
+  const observer = new MutationObserver(() => {
+    if (attachListener()) {
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
 Office.onReady((info) => {
   if (info.host === Office.HostType.Word) {
     document.getElementById("sideload-msg").style.display = "none";
     // document.getElementById("app-body").style.display = "flex";
 
-    populateTagSelector();
-
-    document.getElementById("tag-select").onchange = updateValueSelector;
+    bindTagPickerSelection();
 
     document.getElementById("apply-tag").onclick = applyTag;
 
@@ -35,25 +62,12 @@ Office.onReady((info) => {
   }
 });
 
-function populateTagSelector() {
-  const select = document.getElementById(
-    "tag-select"
-  ) as HTMLSelectElement;
-
-  taxonomy.datapoints.forEach((dp) => {
-    const option = document.createElement("option");
-
-    option.value = dp.reference;
-    option.textContent = dp.name;
-
-    select.appendChild(option);
-  });
-}
-
 function getSelectedDatapoint(): Datapoint | undefined {
-  const select = document.getElementById(
-    "tag-select"
-  ) as HTMLSelectElement;
+  const select = getTagPickerSelect();
+
+  if (!select) {
+    return undefined;
+  }
 
   return taxonomy.datapoints.find(dp => dp.reference === select.value);
 }
@@ -607,9 +621,11 @@ function loadAnnotationIntoUI(
   annotation: TagAnnotation,
   dp: Datapoint
 ) {
-  const select = document.getElementById(
-    "tag-select"
-  ) as HTMLSelectElement;
+  const select = getTagPickerSelect();
+
+  if (!select) {
+    return;
+  }
 
   select.value = dp.reference;
   select.dispatchEvent(new Event("change", { bubbles: true }));
