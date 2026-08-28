@@ -15,7 +15,9 @@ import {
   dimensionIDLabelPairs
 } from "./datamodel";
 
-let flashMessageTimer: number | undefined;
+import exportData from "./fastexport";
+
+import showFlashMessage from "./flashmessage";
 
 
 function getTagPickerSelect(): HTMLSelectElement | null {
@@ -59,6 +61,8 @@ Office.onReady((info) => {
     document.getElementById("inspect-tag").onclick = inspectSelectedTag;
 
     document.getElementById("remove-tag").onclick = removeSelectedTag;
+
+    document.getElementById("export-data").onclick = exportData;
   }
 });
 
@@ -70,28 +74,6 @@ function getSelectedDatapoint(): Datapoint | undefined {
   }
 
   return taxonomy.datapoints.find(dp => dp.reference === select.value);
-}
-
-function showFlashMessage(message: string) {
-  const flashMessage = document.getElementById("flash-message");
-
-  if (!flashMessage) {
-    console.log(message);
-    return;
-  }
-
-  flashMessage.textContent = message;
-  flashMessage.classList.add("is-visible");
-
-  if (flashMessageTimer !== undefined) {
-    window.clearTimeout(flashMessageTimer);
-  }
-
-  flashMessageTimer = window.setTimeout(() => {
-    flashMessage.textContent = "";
-    flashMessage.classList.remove("is-visible");
-    flashMessageTimer = undefined;
-  }, 4000);
 }
 
 function getSelectedChoice(
