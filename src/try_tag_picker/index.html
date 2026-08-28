@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tag Picker — Step 4</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system,
+          Segoe UI,
+          sans-serif;
+        max-width: 320px;
+        margin: 40px auto;
+        padding: 16px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 12px;
+        color: #333;
+      }
+
+      #group-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-bottom: 10px;
+      }
+      .tab {
+        font-size: 11px;
+        padding: 4px 8px;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        background: #fff;
+        cursor: pointer;
+        user-select: none;
+      }
+      .tab:hover {
+        background: #f0f0f0;
+      }
+      .tab.active {
+        background: #2b579a;
+        color: #fff;
+        border-color: #2b579a;
+      }
+
+      #search-box {
+        width: 100%;
+        padding: 6px 8px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      #search-box:focus {
+        outline: none;
+        border-color: #2b579a;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+
+      /* subgroup header — not clickable, purely a visual label */
+      li.subgroup-header {
+        padding: 6px 10px 4px;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #888;
+        background: #fafafa;
+        position: sticky; /* stays visible while its items scroll under it */
+        top: 0;
+      }
+
+      li.concept-item {
+        padding: 8px 10px 8px 16px; /* extra left padding to nest visually under its header */
+        border-bottom: 1px solid #f0f0f0;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      li.concept-item:hover {
+        background: #f5f5f5;
+      }
+      mark {
+        background: #ffe58a;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Select a tag</h1>
+
+    <div id="group-tabs"></div>
+    <input type="text" id="search-box" placeholder="Search concepts…" />
+    <ul id="concept-list"></ul>
+
+    <script>
+      // --- mock data (unchanged) ---
+
+      const groups = [
+        { id: "g1", label: "Environment" },
+        { id: "g2", label: "Economy" },
+        { id: "g3", label: "Health" },
+        { id: "g4", label: "Education" },
+        { id: "g5", label: "Technology" },
+        { id: "g6", label: "Governance" },
+        { id: "g7", label: "Culture" },
+        { id: "g8", label: "Infrastructure" },
+        { id: "g9", label: "Agriculture" },
+        { id: "g10", label: "Security" },
+        { id: "g11", label: "Migration" },
+      ];
+
+      const subgroups = [
+        { id: "s1", groupId: "g1", label: "Climate" },
+        { id: "s2", groupId: "g1", label: "Biodiversity" },
+        { id: "s3", groupId: "g2", label: "Trade" },
+        { id: "s4", groupId: "g2", label: "Labor" },
+        { id: "s5", groupId: "g3", label: "Public Health" },
+        { id: "s6", groupId: "g3", label: "Mental Health" },
+      ];
+
+      const concepts = [
+        { id: "c1", label: "Carbon emissions", groupId: "g1", subgroupId: "s1" },
+        { id: "c2", label: "Renewable energy", groupId: "g1", subgroupId: "s1" },
+        { id: "c3", label: "Deforestation", groupId: "g1", subgroupId: "s2" },
+        { id: "c4", label: "Species extinction", groupId: "g1", subgroupId: "s2" },
+        { id: "c5", label: "Tariffs", groupId: "g2", subgroupId: "s3" },
+        { id: "c6", label: "Supply chains", groupId: "g2", subgroupId: "s3" },
+        { id: "c7", label: "Minimum wage", groupId: "g2", subgroupId: "s4" },
+        { id: "c8", label: "Vaccination", groupId: "g3", subgroupId: "s5" },
+        { id: "c9", label: "Epidemics", groupId: "g3", subgroupId: "s5" },
+        { id: "c10", label: "Anxiety disorders", groupId: "g3", subgroupId: "s6" },
+      ];
+
+      // Quick lookup so we don't do subgroups.find(...) inside a loop over 300 items.
+      // Small optimization, but a good habit once data sizes grow.
+      const subgroupById = new Map(subgroups.map((s) => [s.id, s]));
+      console.log(subgroupById);
+
+      // --- state ---
+      let selectedGroupId = "all";
+      let searchQuery = "";
+
+      // --- render: group tabs (unchanged) ---
+
+      function renderTabs() {
+        const container = document.getElementById("group-tabs");
+        container.innerHTML = "";
+
+        const allTab = document.createElement("div");
+        allTab.className = "tab" + (selectedGroupId === "all" ? " active" : "");
+        allTab.textContent = "All";
+        allTab.dataset.groupId = "all";
+        container.appendChild(allTab);
+
+        groups.forEach((group) => {
+          const tab = document.createElement("div");
+          tab.className = "tab" + (selectedGroupId === group.id ? " active" : "");
+          tab.textContent = group.label;
+          tab.dataset.groupId = group.id;
+          container.appendChild(tab);
+        });
+      }
+
+      document.getElementById("group-tabs").addEventListener("click", (event) => {
+        const tab = event.target.closest(".tab");
+        if (!tab) return;
+
+        selectedGroupId = tab.dataset.groupId;
+        renderTabs();
+        renderList();
+      });
+
+      document.getElementById("search-box").addEventListener("input", (event) => {
+        searchQuery = event.target.value;
+        renderList();
+      });
+
+      // --- filtering (unchanged) ---
+
+      function getFilteredConcepts() {
+        let items = concepts;
+
+        if (selectedGroupId !== "all") {
+          items = items.filter((c) => c.groupId === selectedGroupId);
+        }
+
+        const q = searchQuery.trim().toLowerCase();
+        if (q) {
+          items = items.filter((c) => c.label.toLowerCase().includes(q));
+        }
+
+        return items;
+      }
+
+      function highlightMatch(label, query) {
+        if (!query) return label;
+        const idx = label.toLowerCase().indexOf(query.toLowerCase());
+        if (idx === -1) return label;
+        const before = label.slice(0, idx);
+        const match = label.slice(idx, idx + query.length);
+        const after = label.slice(idx + query.length);
+        return `${before}<mark>${match}</mark>${after}`;
+      }
+
+      // --- new: group the filtered concepts by subgroup ---
+      // Input:  a flat array of concepts (already filtered)
+      // Output: a Map of subgroupId -> array of concepts, insertion-ordered
+      //
+      // Using a Map (not a plain object) because Maps preserve insertion order
+      // reliably and don't have the footguns plain objects have with keys.
+      function groupBySubgroup(items) {
+        const map = new Map();
+        items.forEach((concept) => {
+          const key = concept.subgroupId;
+          if (!map.has(key)) map.set(key, []);
+          map.get(key).push(concept);
+        });
+        return map;
+      }
+
+      function renderList() {
+        const ul = document.getElementById("concept-list");
+        ul.innerHTML = "";
+        const items = getFilteredConcepts();
+
+        if (items.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No matching concepts.";
+          li.style.color = "#999";
+          li.style.cursor = "default";
+          ul.appendChild(li);
+          return;
+        }
+
+        const grouped = groupBySubgroup(items);
+
+        // grouped.forEach gives you [value, key] — careful, it's (value, key), not (key, value)
+        grouped.forEach((conceptsInSubgroup, subgroupId) => {
+          const subgroup = subgroupById.get(subgroupId);
+
+          const header = document.createElement("li");
+          header.className = "subgroup-header";
+          header.textContent = subgroup ? subgroup.label : "Other";
+          ul.appendChild(header);
+
+          conceptsInSubgroup.forEach((concept) => {
+            const li = document.createElement("li");
+            li.className = "concept-item";
+            li.innerHTML = highlightMatch(concept.label, searchQuery.trim());
+            li.dataset.id = concept.id;
+            ul.appendChild(li);
+          });
+        });
+      }
+
+      // Delegation still works the same way — headers don't have a data-id,
+      // so the "if (!li || !li.dataset.id) return" guard skips them for free.
+      document.getElementById("concept-list").addEventListener("click", (event) => {
+        const li = event.target.closest("li");
+        if (!li || !li.dataset.id) return;
+
+        const concept = concepts.find((c) => c.id === li.dataset.id);
+        alert("Selected: " + concept.label);
+      });
+
+      // --- initial render ---
+      renderTabs();
+      renderList();
+    </script>
+  </body>
+</html>
