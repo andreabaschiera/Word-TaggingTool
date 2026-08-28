@@ -163,7 +163,7 @@ b {
 
 .inspection-details-box {
     position: relative;
-    padding: 12px 36px 12px 12px;
+    padding: 12px 36px 6px 12px;
     border: 1px solid #c8c8c8;
     border-radius: 6px;
     margin-bottom: 12px;
