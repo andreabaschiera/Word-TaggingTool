@@ -347,6 +347,48 @@ export async function applyTag() {
     contentControl.tag = serializeAnnotation(annotation);
     contentControl.appearance =
       Word.ContentControlAppearance.boundingBox;
+    
+    switch (selectedDatapoint.datatype) {
+      case "narrative":
+        contentControl.color = '#5ab4ec';
+        break;
+      case "string":
+        contentControl.color = '#8bcff7';
+        break;
+      case "boolean":
+        contentControl.color = '#f8bc6e';
+        break;
+      case "enumeration":
+        contentControl.color = '#dd8741';
+        break;
+      case "enumerationset":
+        contentControl.color = '#df6807';
+        break;
+      case "integer":
+      case "decimal":
+      case "percent":
+        contentControl.color = '#d4a404';
+        break;
+      case "monetary":
+        contentControl.color = '#f0412a';
+        break;
+      case "mass":
+        contentControl.color = '#d92af0';
+        break;
+      case "volume":
+        contentControl.color = '#0324dffb';
+        break;
+      case "energy":
+        contentControl.color = '#86db24';
+        break;
+      case "ghgemissions":
+        contentControl.color = '#10c246';
+        break;
+      case "year":
+      case "date":
+        contentControl.color = '#2ae3f0';
+        break;
+    }
 
     await context.sync();
 
