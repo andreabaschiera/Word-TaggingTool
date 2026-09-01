@@ -15,6 +15,7 @@
 .tag-picker {
     display: grid;
     gap: 8px;
+    margin-bottom: 12px;
 }
 
 .tag-picker__filters {
@@ -46,11 +47,11 @@
 
 .choice-heading,
 .field-row {
-    margin: 2px 0 4px;
+    margin: 8px 0 4px;
 }
 
 .choice-row {
-    margin: 2px 0;
+    margin: 4px 0;
 }
 
 .field-input {
