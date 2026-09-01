@@ -15,7 +15,6 @@
 .tag-picker {
     display: grid;
     gap: 8px;
-    margin-bottom: 12px;
 }
 
 .tag-picker__filters {
@@ -47,11 +46,11 @@
 
 .choice-heading,
 .field-row {
-    margin: 8px 0 4px;
+    margin: 2px 0 4px;
 }
 
 .choice-row {
-    margin: 4px 0;
+    margin: 2px 0;
 }
 
 .field-input {
@@ -91,6 +90,10 @@
     color: #1f1f1f;
 }
 
+#apply-tag {
+    margin-top: 10px;
+}
+
 .inspection-details-body > div,
 .inspection-details-body > p {
     margin: 0 0 8px;
@@ -122,10 +125,6 @@
 
 .inspection-details-box .descriptor-text--date {
     color: #126c94;
-}
-
-.inspection-details-box .descriptor-text--number {
-    color: #8a3f6b;
 }
 
 .inspection-details-box .descriptor-text--dimension {

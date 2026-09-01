@@ -25,7 +25,7 @@ interface ExportFile {
 }
 
 interface Tag {
-    text: string;
+    text?: string;
     value?: string | string[];
     dimensions?: Record<string, Dimension>;
     contentControlId: number;
@@ -45,6 +45,17 @@ interface TaxonomyMetadata {
     DR: string;
     type: Datatype;
 }
+
+const numericTypes = [
+  "percent",
+  "monetary",
+  "ghgemissions",
+  "decimal",
+  "energy",
+  "mass",
+  "volume",
+  "integer",
+] as const
 
 
 export default function Export() {
@@ -77,7 +88,6 @@ export default function Export() {
             }
 
             const tag: Tag = {
-                text: contentControl.text,
                 contentControlId: contentControl.id,
                 taxonomyFields: {
                     conceptId: annotation.tagId,
@@ -87,6 +97,13 @@ export default function Export() {
                     DR: currentTaxonomyFields.dr,
                     type: currentTaxonomyFields.datatype,
                 }
+            }
+
+            // adding CC text to value only when it's a number 
+            if ((numericTypes as readonly string[]).includes(tag.taxonomyFields.type)) {
+                tag.value = contentControl.text.trim() 
+            } else {
+                tag.text = contentControl.text.trim()
             }
 
             // adding choices if applicable

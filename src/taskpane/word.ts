@@ -134,21 +134,6 @@ function getSelectedChoice(
 
       return input?.value || undefined;
     }
-
-    case "integer":
-    case "decimal":
-    case "percent":
-    case "monetary":
-    case "mass":
-    case "volume":
-    case "energy":
-    case "ghgemissions": {
-      const input = document.getElementById(
-        "tag-value-number"
-      ) as HTMLInputElement | null;
-
-      return input?.value || undefined;
-    }
   }
 }
 
@@ -289,12 +274,12 @@ export async function applyTag() {
   }
   
   if ((
-    ["integer", "decimal", "percent", "monetary", "mass", "volume", "energy", "ghgemissions", "year", "date"].includes(selectedDatapoint.datatype)
+    ["year", "date"].includes(selectedDatapoint.datatype)
   ) &&
   (
     selectedEnumerations === undefined
   )) {
-    showFlashMessage("One number/date must be picked.");
+    showFlashMessage("One year/date must be picked.");
     return;
   }
 
@@ -506,10 +491,10 @@ function renderInspectionDetails(
   body.className = "inspection-details-body";
 
   const typeLine = document.createElement("div");
-  appendDescriptorValueLine(typeLine, "Type", details.type, "descriptor-text--type");
+  appendDescriptorValueLine(typeLine, "Type:", details.type, "descriptor-text--type");
 
   const textLine = document.createElement("div");
-  appendDescriptorValueLine(textLine, "Text", details.text, "descriptor-text--text");
+  appendDescriptorValueLine(textLine, "Text:", details.text, "descriptor-text--text");
 
   body.appendChild(typeLine);
   body.appendChild(textLine);
@@ -521,10 +506,10 @@ function renderInspectionDetails(
     const valueLine = document.createElement("div");
     switch (details.type) {
       case "boolean":
-        appendDescriptorValueLine(valueLine, "Choice", details.value, "descriptor-text--choice");
+        appendDescriptorValueLine(valueLine, "Choice:", details.value, "descriptor-text--choice");
         break;
       case "enumeration":
-        appendDescriptorValueLine(valueLine, "Choice", labelS, "descriptor-text--choice");
+        appendDescriptorValueLine(valueLine, "Choice:", labelS, "descriptor-text--choice");
         break;
       case "enumerationset":
         valueLine.classList.add("inspection-details-value--list");
@@ -545,20 +530,10 @@ function renderInspectionDetails(
         valueLine.append(choicesLabel, list);
         break;
       case "date":
-        appendDescriptorValueLine(valueLine, "Date selected", details.value, "descriptor-text--date");
+        appendDescriptorValueLine(valueLine, "Date selected:", details.value, "descriptor-text--date");
         break;
       case "year":
-        appendDescriptorValueLine(valueLine, "Year selected", details.value, "descriptor-text--date");
-        break;
-      case "integer":
-      case "decimal":
-      case "percent":
-      case "monetary":
-      case "mass":
-      case "volume":
-      case "energy":
-      case "ghgemissions":
-        appendDescriptorValueLine(valueLine, "Number inputted", details.value, "descriptor-text--number");
+        appendDescriptorValueLine(valueLine, "Year selected:", details.value, "descriptor-text--date");
         break;
       default:
         valueLine.textContent = `There is a problem.`;
@@ -581,13 +556,13 @@ function renderInspectionDetails(
       const title = dims[dim.id];
 
       if (dim.mode == "fixed") {
-        appendDescriptorValueLine(dimensionLine, "Dimension", title, "descriptor-text--dimension");
+        appendDescriptorValueLine(dimensionLine, "Dimension:", title, "descriptor-text--dimension");
         dimensionLine.appendChild(document.createElement("br"));
-        appendDescriptorValueLine(dimensionLine, "Dimension member selected", dim.memberValue ?? "", "descriptor-text--member");
+        appendDescriptorValueLine(dimensionLine, "Dimension member selected:", dim.memberValue ?? "", "descriptor-text--member");
       } else {
-        appendDescriptorValueLine(dimensionLine, "Dimension", title, "descriptor-text--dimension");
+        appendDescriptorValueLine(dimensionLine, "Dimension:", title, "descriptor-text--dimension");
         dimensionLine.appendChild(document.createElement("br"));
-        appendDescriptorValueLine(dimensionLine, "Dimension member typed", dim.memberLabel ?? "", "descriptor-text--member");
+        appendDescriptorValueLine(dimensionLine, "Dimension member typed:", dim.memberLabel ?? "", "descriptor-text--member");
       }
 
       dimensionsDiv.appendChild(dimensionLine);
@@ -621,7 +596,7 @@ function appendDescriptorSpan(
 ): HTMLSpanElement {
   const span = document.createElement("span");
   span.className = className ? `descriptor-text ${className}` : "descriptor-text";
-  span.textContent = `${descriptor}:`;
+  span.textContent = `${descriptor}`;
   container.appendChild(span);
   return span;
 }
@@ -816,7 +791,7 @@ function updateValueSelector() {
     case "volume":
     case "energy":
     case "ghgemissions":
-      renderNumberInput(dp.datatype, container);
+      renderNumberHelper(dp.datatype, container);
       break;
     }
 
@@ -908,7 +883,7 @@ function renderSingleChoice(
 ) {
   const label = document.createElement("div");
   label.className = "choice-heading";
-  appendDescriptorSpan(label, dp.datatype === "boolean" ? "Boolean choice" : "Enumeration choice");
+  appendDescriptorSpan(label, dp.datatype === "boolean" ? "Boolean choice:" : "Enumeration choice:");
   container.appendChild(label);
 
   if (dp.datatype === "boolean") {
@@ -1002,7 +977,7 @@ function renderMultipleChoice(
 
   const label = document.createElement("div");
   label.className = "choice-heading";
-  appendDescriptorSpan(label, "Multiple choices");
+  appendDescriptorSpan(label, "Multiple choices:");
   container.appendChild(label);
 
   enum_choices.forEach((choice) => {
@@ -1031,7 +1006,7 @@ function renderDateInput(container: HTMLElement) {
   row.className = "field-row field-row--compact";
 
   const label = document.createElement("label");
-  appendDescriptorSpan(label, "Date");
+  appendDescriptorSpan(label, "Date:");
 
   const input = document.createElement("input");
   input.type = "date";
@@ -1049,7 +1024,7 @@ function renderYearInput(container: HTMLElement) {
   row.className = "field-row field-row--compact";
 
   const label = document.createElement("label");
-  appendDescriptorSpan(label, "Year");
+  appendDescriptorSpan(label, "Year:");
 
   const input = document.createElement("input");
   input.type = "number";
@@ -1065,64 +1040,51 @@ function renderYearInput(container: HTMLElement) {
   container.appendChild(row);
 }
 
-function renderNumberInput(
+function renderNumberHelper(
   type: Datatype,
   container: HTMLElement
 ) {
   const row = document.createElement("div");
   row.className = "field-row field-row--compact";
 
-  const label = document.createElement("label");
+  const helper = document.createElement("p");
+  helper.style.margin = "0";
 
   switch (type) {
     case "integer":
-      appendDescriptorSpan(label, "Integer");
+      appendDescriptorSpan(helper, "Integer type");
       break;
 
     case "decimal":
-      appendDescriptorSpan(label, "Decimal");
+      appendDescriptorSpan(helper, "Decimal type");
       break;
 
     case "percent":
-      appendDescriptorSpan(label, "Percentage");
+      appendDescriptorSpan(helper, "Percentage type");
       break;
 
     case "monetary":
-      appendDescriptorSpan(label, "Monetary amount");
+      appendDescriptorSpan(helper, "Monetary type");
       break;
 
     case "mass":
-      appendDescriptorSpan(label, "Mass (in kg)");
+      appendDescriptorSpan(helper, "Mass type");
       break;
 
     case "volume":
-      appendDescriptorSpan(label, "Volume (in L3)");
+      appendDescriptorSpan(helper, "Volume type");
       break;
 
     case "energy":
-      appendDescriptorSpan(label, "Energy (in MWh)");
+      appendDescriptorSpan(helper, "Energy type");
       break;
     
     case "ghgemissions":
-      appendDescriptorSpan(label, "GHG emissions (in tCo2eq)");
+      appendDescriptorSpan(helper, "GHG emissions type");
       break;
   }
 
-  const input = document.createElement("input");
-  input.type = "number";
-  input.id = "tag-value-number";
-
-  if (type === "integer") {
-    input.step = "1";
-  } else {
-    input.step = "any";
-  }
-
-  input.className = "field-input";
-  label.appendChild(document.createTextNode(" "));
-
-  row.appendChild(label);
-  row.appendChild(input);
+  row.appendChild(helper);
   container.appendChild(row);
 }
 
