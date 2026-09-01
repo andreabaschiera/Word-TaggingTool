@@ -57,6 +57,21 @@ const numericTypes = [
   "integer",
 ] as const
 
+function getDimensionSignature(dimensions?: Record<string, Dimension>) {
+    if (!dimensions || Object.keys(dimensions).length === 0) {
+        return "";
+    }
+
+    return Object.entries(dimensions)
+        .sort(([leftId], [rightId]) => leftId.localeCompare(rightId))
+        .map(([dimensionId, dimension]) => `${dimensionId}:${dimension.member}`)
+        .join("|");
+}
+
+function getTagUniquenessKey(tag: Tag) {
+    return `${tag.taxonomyFields.conceptId}|${getDimensionSignature(tag.dimensions)}`;
+}
+ 
 
 export default function Export() {
     const exportData: ExportFile = {
@@ -71,20 +86,21 @@ export default function Export() {
         contentControls.load('items');
 
         let tagIndex = 1
+        const seenTagKeys = new Set<string>();
 
         await context.sync();
             
-        contentControls.items.forEach((contentControl) => {
+        for (const contentControl of contentControls.items) {
             const annotation: TagAnnotation | undefined = parseAnnotation(contentControl.tag)
             // skip other content controls
             if (annotation === undefined) {
-                return;
+                continue;
             }
 
             const currentTaxonomyFields = taxonomyMap.get(annotation.tagId);
             if (!currentTaxonomyFields) {
-                console.log(`cannot find metadata for ${annotation.tagId}`);
-                return;
+                showFlashMessage(`Invalid datapoint: '${annotation.tagId}'`);
+                continue;
             }
 
             const tag: Tag = {
@@ -100,8 +116,13 @@ export default function Export() {
             }
 
             // adding CC text to value only when it's a number 
+            const text = contentControl.text.trim()
             if ((numericTypes as readonly string[]).includes(tag.taxonomyFields.type)) {
-                tag.value = contentControl.text.trim() 
+                if (isNaN(Number(text))) {
+                    showFlashMessage(`'${text}' is not a valid number`);
+                    continue;
+                }
+                tag.value = text;
             } else {
                 tag.text = contentControl.text.trim()
             }
@@ -125,6 +146,10 @@ export default function Export() {
 
                     dims.forEach(dim => {
                         const dimFields = dimMap.get(dim.id);
+                        if(!dimFields) {
+                            showFlashMessage(`'${dim.id}' is an invalid dimension for datapoint '${annotation.tagId}'`);
+                            return;
+                        }
 
                         const title = (dimFields) ? dimFields.dimension_title : undefined;
                         const member = (dim.memberValue) ? dim.memberValue : ((dim.memberLabel) ? dim.memberLabel : undefined);
@@ -140,10 +165,17 @@ export default function Export() {
                 }
             }
 
+            const uniquenessKey = getTagUniquenessKey(tag);
+            if (seenTagKeys.has(uniquenessKey)) {
+                showFlashMessage(`Duplicate tag detected for ${tag.taxonomyFields.conceptId}`);
+                return;
+            }
+
+            seenTagKeys.add(uniquenessKey);
             exportData.tags[`tag${tagIndex}`] = tag;
 
             tagIndex += 1;
-        });
+        }
 
         const tagCount = Object.keys(exportData.tags).length;
             
