@@ -37,7 +37,7 @@ function compareStandards(left: string, right: string): number {
 }
 
 function compareDrs(standard: string, left: string, right: string): number {
-  if (standard === "ESRS2") {
+  if (standard === "ESRS2" || standard === "ESRS 2") {
     const leftIndex = ESRS2_DR_ORDER_MAP.get(left);
     const rightIndex = ESRS2_DR_ORDER_MAP.get(right);
 
@@ -56,20 +56,23 @@ function compareDrs(standard: string, left: string, right: string): number {
     return left.localeCompare(right);
   }
 
-  const standardPrefix = `${standard}-`;
-  const leftMatch = left.startsWith(standardPrefix) ? Number(left.slice(standardPrefix.length)) : Number.NaN;
-  const rightMatch = right.startsWith(standardPrefix) ? Number(right.slice(standardPrefix.length)) : Number.NaN;
+  // Try numeric sorting for DR names with numeric suffixes
+  // Extract the standard code from the full standard name (e.g., "ESRS E1" -> "E1")
+  const standardCode = standard.split(" ").pop() || standard;
+  const standardPrefix = `${standardCode}-`;
+  
+  // Check if both start with the standard prefix
+  if (left.startsWith(standardPrefix) && right.startsWith(standardPrefix)) {
+    const leftSuffix = left.slice(standardPrefix.length);
+    const rightSuffix = right.slice(standardPrefix.length);
+    
+    const leftNum = Number(leftSuffix);
+    const rightNum = Number(rightSuffix);
 
-  if (!Number.isNaN(leftMatch) && !Number.isNaN(rightMatch)) {
-    return leftMatch - rightMatch;
-  }
-
-  if (!Number.isNaN(leftMatch)) {
-    return -1;
-  }
-
-  if (!Number.isNaN(rightMatch)) {
-    return 1;
+    // If both suffixes are valid numbers, compare numerically
+    if (!Number.isNaN(leftNum) && !Number.isNaN(rightNum)) {
+      return leftNum - rightNum;
+    }
   }
 
   return left.localeCompare(right);
@@ -183,7 +186,7 @@ export function TagPicker({ concepts, onSelect }: TagPickerProps) {
       if (standardOrder !== 0) {
         return standardOrder;
       }
-
+      console.log("ciao");
       return compareDrs(left.standard, left.label, right.label);
     });
   }, [filtered]);
