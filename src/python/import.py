@@ -39,7 +39,7 @@ class ValueLabel(BaseModel):
 class Dimension(BaseModel):
     required: bool
     dimension_id: str = Field(pattern=r"^dim\d+$")
-    dimension_mode: Literal["fixed", "typed"]
+    dimension_mode: Literal["fixed", "typed", "default"]
     dimension_title: str
     dimension_members: list[ValueLabel] | None = None
 
@@ -50,7 +50,7 @@ class Enumeration(BaseModel):
 
 
 class Datapoint(BaseModel):
-    reference: str = Field(max_length=20)
+    reference: str = Field(max_length=30)
     standard: str
     dr: str
     datatype: Datatype
@@ -102,14 +102,17 @@ def build_single_dimension(dimension_id: str, req: bool) -> Dimension | None:
 
     dimension_row = dimension_rows.row(0, named=True)
     dimension_members = []
-    dim_members_filtered = dim_members.filter(pl.col("dimension_id") == dimension_id)
-    for row in dim_members_filtered.iter_rows(named=True):
-        dimension_members.append(
-            ValueLabel(
-                value=row["dim_value"],
-                label=row["dim_label"],
-            )
+    if dimension_id != "dim44":
+        dim_members_filtered = dim_members.filter(
+            pl.col("dimension_id") == dimension_id
         )
+        for row in dim_members_filtered.iter_rows(named=True):
+            dimension_members.append(
+                ValueLabel(
+                    value=row["dim_value"],
+                    label=row["dim_label"],
+                )
+            )
 
     return Dimension(
         required=req,
@@ -121,12 +124,13 @@ def build_single_dimension(dimension_id: str, req: bool) -> Dimension | None:
 
 
 def build_dimensions(
-    required_ids: str | None, optional_ids: str | None
+    required_ids: str | None, optional_ids: str | None, default_ids: str | None
 ) -> list[Dimension] | None:
-    if required_ids is None and optional_ids is None:
+    if required_ids is None and optional_ids is None and default_ids is None:
         return None
 
     parsed_dimensions = []
+
     if required_ids:
         for dimension_id in (part.strip() for part in required_ids.split(",")):
             single_dim = build_single_dimension(dimension_id, True)
@@ -138,6 +142,14 @@ def build_dimensions(
     if optional_ids:
         for dimension_id in (part.strip() for part in optional_ids.split(",")):
             single_dim = build_single_dimension(dimension_id, False)
+            if single_dim:
+                parsed_dimensions.append(single_dim)
+            else:
+                continue
+
+    if default_ids:
+        for dimension_id in (part.strip() for part in default_ids.split(",")):
+            single_dim = build_single_dimension(dimension_id, True)
             if single_dim:
                 parsed_dimensions.append(single_dim)
             else:
@@ -182,7 +194,11 @@ for row in dps.iter_rows(named=True):
     if enum is not None:
         datapoint_kwargs["enum"] = enum
 
-    cube = build_dimensions(row["dimensions_required"], row["dimensions_optional"])
+    cube = build_dimensions(
+        row["dimensions_required"],
+        row["dimensions_optional"],
+        row["dimensions_default"],
+    )
     if cube is not None:
         datapoint_kwargs["dimensions"] = cube
 

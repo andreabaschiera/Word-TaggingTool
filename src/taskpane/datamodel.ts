@@ -44,7 +44,7 @@ export interface Enumeration {
 export interface Dimension {
   required: boolean;
   dimension_id: string;
-  dimension_mode: "fixed" | "typed";
+  dimension_mode: "fixed" | "typed" | "default";
   dimension_title: string;
   dimension_members?: ValueLabel[];
 }

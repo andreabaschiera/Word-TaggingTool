@@ -6,7 +6,7 @@ export interface TagAnnotation {
 
 export interface DimensionMemberSelection {
   id: string;
-  mode: "fixed" | "typed";
+  mode: "fixed" | "typed" | "default";
   memberValue?: string;
   memberLabel?: string;
 }

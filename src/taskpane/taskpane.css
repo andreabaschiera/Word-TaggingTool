@@ -74,6 +74,13 @@
     font-weight: 500;
 }
 
+.descriptor-text--helper {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    color: #d409c0;
+}
+
 .choice-heading--optional {
     margin-bottom: 1px;
 }
@@ -220,4 +227,76 @@ b {
 
 .flash-message.is-visible {
     display: block;
+}
+
+/* Default Dimensions Styling */
+.default-dimensions-wrapper {
+    margin-top: 12px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.default-dimensions-toggle {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: #5f5f5f;
+    cursor: pointer;
+    margin: 8px 0 0 0;
+}
+
+.default-dimensions-toggle:hover {
+    text-decoration: underline;
+}
+
+.default-dimensions-content {
+    padding: 8px 0;
+}
+
+.default-dimension-item {
+    margin-bottom: 8px;
+}
+
+.default-dimension-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #5f5f5f;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.default-dimension-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.default-dimension-radio {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.default-dimension-radio input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.default-dimension-input-wrapper {
+    display: flex;
+}
+
+.default-dimension-year-input {
+    width: 70px;
+    padding: 4px 6px;
+    font-size: 11px;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
 }

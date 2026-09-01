@@ -148,7 +148,7 @@ function getSelectedDimensionMembers(dp: Datapoint):
   const dimensions = dp.dimensions;
 
   dimensions.forEach((dim) => {
-    if (dim.dimension_mode === "fixed") {
+    if (dim.dimension_mode === "fixed" || dim.dimension_mode === "default") {
 
       const selectedRadio = document.querySelector(
         `input[name="dimension-member_${dim.dimension_id}"]:checked`
@@ -163,6 +163,17 @@ function getSelectedDimensionMembers(dp: Datapoint):
 
         if (selectedDropdown && selectedDropdown.value.trim()) {
           selectedValue = selectedDropdown.value;
+        }
+      }
+
+      // Special handling for year picker (dim44)
+      if (!selectedValue && dim.dimension_id === "dim44") {
+        const yearInput = document.getElementById(
+          `dimension-member-input_${dim.dimension_id}`
+        ) as HTMLInputElement | null;
+
+        if (yearInput && yearInput.value.trim()) {
+          selectedValue = yearInput.value.trim();
         }
       }
 
@@ -797,6 +808,25 @@ function updateValueSelector() {
 
   updateDimensionSelector();
   updateOptionalDimensionSelector();
+  updateDefaultDimensionSelector();
+}
+
+function capitalizeFirstLetter(val: string) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
+function appendDimension(container: HTMLElement, dimTitle: string, type: string) {
+  const heading = document.createElement("div");
+  heading.className = `choice-heading choice-heading--${type}`;
+  const descriptor = document.createElement("span");
+  descriptor.className = `descriptor-text descriptor-text--${type}`;
+  descriptor.textContent = `${capitalizeFirstLetter(type)} dimension:`;
+  const title = document.createElement("span");
+  title.className = "value-text";
+  title.textContent = ` ${dimTitle}`;
+  heading.appendChild(descriptor);
+  heading.appendChild(title);
+  container.appendChild(heading);
 }
 
 function updateDimensionSelector() {
@@ -814,21 +844,11 @@ function updateDimensionSelector() {
   }
 
   const dimensions = Array.isArray(dp.dimensions)
-    ? dp.dimensions.filter(dimension => dimension.required === true)
+    ? dp.dimensions.filter(dimension => dimension.required === true && dimension.dimension_mode !== "default")
     : [];
 
   dimensions.forEach((dimension) => {
-    const heading = document.createElement("div");
-    heading.className = "choice-heading choice-heading--required";
-    const descriptor = document.createElement("span");
-    descriptor.className = "descriptor-text descriptor-text--required";
-    descriptor.textContent = "Required dimension:";
-    const title = document.createElement("span");
-    title.className = "value-text";
-    title.textContent = ` ${dimension.dimension_title}`;
-    heading.appendChild(descriptor);
-    heading.appendChild(title);
-    container.appendChild(heading);
+    appendDimension(container, dimension.dimension_title, "required");
 
     if (dimension.dimension_mode === "fixed") {
       renderExplicitDimension(dimension, container);
@@ -853,21 +873,11 @@ function updateOptionalDimensionSelector() {
   }
 
   const dimensions = Array.isArray(dp.dimensions)
-    ? dp.dimensions.filter(dimension => dimension.required === false)
+    ? dp.dimensions.filter(dimension => dimension.required === false && dimension.dimension_mode !== "default")
     : [];
 
   dimensions.forEach((dimension) => {
-    const heading = document.createElement("div");
-    heading.className = "choice-heading choice-heading--optional";
-    const descriptor = document.createElement("span");
-    descriptor.className = "descriptor-text descriptor-text--optional";
-    descriptor.textContent = "Optional dimension:";
-    const title = document.createElement("span");
-    title.className = "value-text";
-    title.textContent = ` ${dimension.dimension_title}`;
-    heading.appendChild(descriptor);
-    heading.appendChild(title);
-    container.appendChild(heading);
+    appendDimension(container, dimension.dimension_title, "optional");
 
     if (dimension.dimension_mode === "fixed") {
       renderExplicitDimension(dimension, container);
@@ -875,6 +885,136 @@ function updateOptionalDimensionSelector() {
       renderTypedDimension(dimension.dimension_id, container);
     }
   });
+}
+
+function updateDefaultDimensionSelector() {
+  const dp = getSelectedDatapoint();
+  const container = document.getElementById("dimensions-container");
+
+  if (!container) {
+    return;
+  }
+
+  if (!dp?.dimensions) {
+    return;
+  }
+
+  const dimensions = Array.isArray(dp.dimensions)
+    ? dp.dimensions.filter(dimension => dimension.dimension_mode === "default")
+    : [];
+
+  if (dimensions.length === 0) {
+    return;
+  }
+
+  // Create collapsible wrapper for default dimensions
+  const wrapper = document.createElement("div");
+  wrapper.className = "default-dimensions-wrapper";
+
+  const toggleButton = document.createElement("button");
+  toggleButton.type = "button";
+  toggleButton.className = "default-dimensions-toggle";
+  toggleButton.textContent = "Defaults ▼";
+  toggleButton.setAttribute("aria-expanded", "false");
+
+  const content = document.createElement("div");
+  content.className = "default-dimensions-content";
+  content.style.display = "none";
+
+  toggleButton.onclick = () => {
+    const isExpanded = content.style.display !== "none";
+    content.style.display = isExpanded ? "none" : "block";
+    toggleButton.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+    toggleButton.textContent = isExpanded ? "Defaults ▼" : "Defaults ▲";
+  };
+
+  dimensions.forEach((dimension) => {
+    if (dimension.dimension_id === "dim44") {
+      // Special handling for years dimension
+      renderYearPickerDimension(dimension, content);
+    } else {
+      // Regular horizontal radio buttons with smaller font
+      renderDefaultDimension(dimension, content);
+    }
+  });
+
+  wrapper.appendChild(toggleButton);
+  wrapper.appendChild(content);
+  container.appendChild(wrapper);
+}
+
+function renderDefaultDimension(
+  dimension: Dimension,
+  container: HTMLElement
+) {
+  const members = dimension.dimension_members;
+  if (!members || members.length === 0) {
+    return;
+  }
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "default-dimension-item";
+
+  const label = document.createElement("div");
+  label.className = "default-dimension-label";
+  label.textContent = dimension.dimension_title + ":";
+
+  const optionsContainer = document.createElement("div");
+  optionsContainer.className = "default-dimension-options";
+
+  members.forEach((member) => {
+    const radioWrapper = document.createElement("label");
+    radioWrapper.className = "default-dimension-radio";
+
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.name = `dimension-member_${dimension.dimension_id}`;
+    radio.value = member.value;
+
+    // Check default values
+    if (member.value === "current_year" || member.value === "_2026" || member.value === "currently_stated") {
+      radio.checked = true;
+    }
+
+    radioWrapper.appendChild(radio);
+    radioWrapper.appendChild(document.createTextNode(member.label));
+    optionsContainer.appendChild(radioWrapper);
+  });
+
+  wrapper.appendChild(label);
+  wrapper.appendChild(optionsContainer);
+  container.appendChild(wrapper);
+}
+
+function renderYearPickerDimension(
+  dimension: Dimension,
+  container: HTMLElement
+) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "default-dimension-item";
+
+  const label = document.createElement("div");
+  label.className = "default-dimension-label";
+  label.textContent = dimension.dimension_title + ":";
+
+  const inputWrapper = document.createElement("div");
+  inputWrapper.className = "default-dimension-input-wrapper";
+
+  const input = document.createElement("input");
+  input.type = "number";
+  input.id = `dimension-member-input_${dimension.dimension_id}`;
+  input.min = "1900";
+  input.max = "2100";
+  input.step = "1";
+  input.value = "2026"
+  input.className = "default-dimension-year-input";
+  input.placeholder = "Enter year";
+  input.value = new Date().getFullYear().toString(); // Default to current year
+
+  inputWrapper.appendChild(input);
+  wrapper.appendChild(label);
+  wrapper.appendChild(inputWrapper);
+  container.appendChild(wrapper);
 }
 
 function renderSingleChoice(
@@ -1048,39 +1188,40 @@ function renderNumberHelper(
   row.className = "field-row field-row--compact";
 
   const helper = document.createElement("p");
-  helper.style.margin = "0";
+  const classHelper = "descriptor-text--helper"
+  helper.style.margin = "0px 0 8px";
 
   switch (type) {
     case "integer":
-      appendDescriptorSpan(helper, "Integer type");
+      appendDescriptorSpan(helper, "Integer type", classHelper);
       break;
 
     case "decimal":
-      appendDescriptorSpan(helper, "Decimal type");
+      appendDescriptorSpan(helper, "Decimal type", classHelper);
       break;
 
     case "percent":
-      appendDescriptorSpan(helper, "Percentage type");
+      appendDescriptorSpan(helper, "Percentage type", classHelper);
       break;
 
     case "monetary":
-      appendDescriptorSpan(helper, "Monetary type");
+      appendDescriptorSpan(helper, "Monetary type", classHelper);
       break;
 
     case "mass":
-      appendDescriptorSpan(helper, "Mass type");
+      appendDescriptorSpan(helper, "Mass type", classHelper);
       break;
 
     case "volume":
-      appendDescriptorSpan(helper, "Volume type");
+      appendDescriptorSpan(helper, "Volume type", classHelper);
       break;
 
     case "energy":
-      appendDescriptorSpan(helper, "Energy type");
+      appendDescriptorSpan(helper, "Energy type", classHelper);
       break;
     
     case "ghgemissions":
-      appendDescriptorSpan(helper, "GHG emissions type");
+      appendDescriptorSpan(helper, "GHG emissions type", classHelper);
       break;
   }
 
@@ -1090,14 +1231,15 @@ function renderNumberHelper(
 
 function renderExplicitDimension(
   dimension: Dimension,
-  container: HTMLElement
+  container: HTMLElement,
+  is_default: boolean = false
 ) {
   const members = dimension.dimension_members;
   if (!members) {
     return;
   }
 
-  if (members.length < 5) {
+  if (members.length < 5 || is_default) {
     members.forEach((member) => {
       const wrapper = document.createElement("div");
       wrapper.className = "choice-row";
@@ -1111,6 +1253,11 @@ function renderExplicitDimension(
       const label = document.createElement("label");
       label.htmlFor = radio.id;
       label.textContent = member.label;
+
+      // when there are default dimensions, these values are checked by default
+      if (member.value == "current_year" || member.value == "_2026" || member.value == "currently_stated") {
+        radio.checked = true;
+      }
 
       wrapper.appendChild(radio);
       wrapper.appendChild(label);
