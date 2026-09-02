@@ -42,8 +42,8 @@
   { "dimension_id": "dim43", "dimension_name": "Location in undertaking's own operations" },
   { "dimension_id": "dim44", "dimension_name": "Year" },
   { "dimension_id": "dim45", "dimension_name": "Defined target years" },
-  { "dimension_id": "dim46", "dimension_name": "Entity-specific metric years" },
-  { "dimension_id": "dim47", "dimension_name": "Defined non-topical target years" },
+  { "dimension_id": "dim46", "dimension_name": "Years related to the metric" },
+  { "dimension_id": "dim47", "dimension_name": "Years related to target values" },
   { "dimension_id": "dim47", "dimension_name": "Type of beneficiary" },
   { "dimension_id": "dim50", "dimension_name": "Reporting period" }
 ]

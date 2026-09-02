@@ -16824,11 +16824,11 @@
         "required": true,
         "dimension_id": "dim47",
         "dimension_mode": "fixed",
-        "dimension_title": "Defined non-topical target years",
+        "dimension_title": "Years related to target values",
         "dimension_members": [
-          { "value": "target_baseline_year", "label": "Baseline year of non-topical target" },
-          { "value": "target_milestone_year", "label": "Milestone year of non-topical target" },
-          { "value": "target_target_year", "label": "Target year of non-topical target" }
+          { "value": "target_baseline_year", "label": "Baseline year (of non-topical target)" },
+          { "value": "target_milestone_year", "label": "Milestone year (of non-topical target)" },
+          { "value": "target_target_year", "label": "Target year (of non-topical target)" }
         ]
       },
       {
