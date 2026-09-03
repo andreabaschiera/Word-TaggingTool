@@ -372,7 +372,7 @@ export async function applyTag() {
         contentControl.color = '#d92af0';
         break;
       case "volume":
-        contentControl.color = '#0324dffb';
+        contentControl.color = '#2d1ce6';
         break;
       case "energy":
         contentControl.color = '#86db24';
@@ -532,11 +532,17 @@ function renderInspectionDetails(
         const list = document.createElement("ul");
         list.className = "inspection-details-list";
 
-        labelS.forEach(label => {
+        if (typeof labelS === "string") {
+          const li = document.createElement("li");
+          li.textContent = labelS;
+          list.appendChild(li);
+        } else {
+          labelS.forEach(label => {
           const li = document.createElement("li");
           li.textContent = label;
           list.appendChild(li);
         });
+        }
 
         valueLine.append(choicesLabel, list);
         break;

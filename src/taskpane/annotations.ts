@@ -31,7 +31,7 @@ export function serializeAnnotation(
   const dimensions = annotation.dimensions;
 
   dimensions?.forEach((dimension) => {
-    if (dimension.mode === "fixed" && dimension.memberValue) {
+    if ((dimension.mode === "fixed" && dimension.memberValue) || (dimension.mode === "default" && dimension.memberValue)) {
       parts.push(
         `${dimension.id}_memberValue=${encodeURIComponent(
           dimension.memberValue
@@ -39,7 +39,7 @@ export function serializeAnnotation(
       );
     }
 
-    if (dimension.mode === "typed" && dimension.memberLabel) {
+    if ((dimension.mode === "typed" && dimension.memberLabel) || (dimension.mode === "default" && dimension.memberLabel)) {
       parts.push(
         `${dimension.id}_memberLabel=${encodeURIComponent(
           dimension.memberLabel

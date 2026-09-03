@@ -92,6 +92,7 @@ export default function Export() {
             
         for (const contentControl of contentControls.items) {
             const annotation: TagAnnotation | undefined = parseAnnotation(contentControl.tag)
+            console.log(annotation);
             // skip other content controls
             if (annotation === undefined) {
                 continue;

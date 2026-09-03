@@ -186,7 +186,6 @@ export function TagPicker({ concepts, onSelect }: TagPickerProps) {
       if (standardOrder !== 0) {
         return standardOrder;
       }
-      console.log("ciao");
       return compareDrs(left.standard, left.label, right.label);
     });
   }, [filtered]);

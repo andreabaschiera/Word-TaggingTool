@@ -2638,6 +2638,36 @@
     ]
   },
   {
+    "reference": "ESRS26_GDR_IroName",
+    "standard": "ESRS 2",
+    "dr": "IRO-2",
+    "datatype": "string",
+    "name": "Name of impact, risk or opportunity",
+    "qname": "esrs:NameOfImpactRiskOrOpportunity",
+    "dimensions": [
+      {
+        "required": true,
+        "dimension_id": "dim4",
+        "dimension_mode": "typed",
+        "dimension_title": "Identifier of impact, risk or opportunity"
+      },
+      {
+        "required": true,
+        "dimension_id": "dim50",
+        "dimension_mode": "default",
+        "dimension_title": "Reporting period",
+        "dimension_members": [
+          { "value": "previously_stated", "label": "Previously stated" },
+          {
+            "value": "currently_stated_corrected_revised",
+            "label": "Currently stated, corrected or revised"
+          },
+          { "value": "currently_stated", "label": "Currently stated" }
+        ]
+      }
+    ]
+  },
+  {
     "reference": "ESRS26_IRO-2_01",
     "standard": "ESRS 2",
     "dr": "IRO-2",
@@ -4701,6 +4731,16 @@
       },
       {
         "required": true,
+        "dimension_id": "dim46",
+        "dimension_mode": "fixed",
+        "dimension_title": "Years related to the metric",
+        "dimension_members": [
+          { "value": "metric_previous_year", "label": "Previous year (of entity-specific metric)" },
+          { "value": "metric_current_year", "label": "Current year (of entity-specific metric)" }
+        ]
+      },
+      {
+        "required": true,
         "dimension_id": "dim50",
         "dimension_mode": "default",
         "dimension_title": "Reporting period",
@@ -4712,6 +4752,12 @@
           },
           { "value": "currently_stated", "label": "Currently stated" }
         ]
+      },
+      {
+        "required": true,
+        "dimension_id": "dim44",
+        "dimension_mode": "default",
+        "dimension_title": "Year"
       }
     ]
   },
@@ -4731,6 +4777,16 @@
       },
       {
         "required": true,
+        "dimension_id": "dim46",
+        "dimension_mode": "fixed",
+        "dimension_title": "Years related to the metric",
+        "dimension_members": [
+          { "value": "metric_previous_year", "label": "Previous year (of entity-specific metric)" },
+          { "value": "metric_current_year", "label": "Current year (of entity-specific metric)" }
+        ]
+      },
+      {
+        "required": true,
         "dimension_id": "dim50",
         "dimension_mode": "default",
         "dimension_title": "Reporting period",
@@ -4742,6 +4798,12 @@
           },
           { "value": "currently_stated", "label": "Currently stated" }
         ]
+      },
+      {
+        "required": true,
+        "dimension_id": "dim44",
+        "dimension_mode": "default",
+        "dimension_title": "Year"
       }
     ]
   },
@@ -4761,6 +4823,16 @@
       },
       {
         "required": true,
+        "dimension_id": "dim46",
+        "dimension_mode": "fixed",
+        "dimension_title": "Years related to the metric",
+        "dimension_members": [
+          { "value": "metric_previous_year", "label": "Previous year (of entity-specific metric)" },
+          { "value": "metric_current_year", "label": "Current year (of entity-specific metric)" }
+        ]
+      },
+      {
+        "required": true,
         "dimension_id": "dim50",
         "dimension_mode": "default",
         "dimension_title": "Reporting period",
@@ -4772,6 +4844,12 @@
           },
           { "value": "currently_stated", "label": "Currently stated" }
         ]
+      },
+      {
+        "required": true,
+        "dimension_id": "dim44",
+        "dimension_mode": "default",
+        "dimension_title": "Year"
       }
     ]
   },
@@ -4791,6 +4869,16 @@
       },
       {
         "required": true,
+        "dimension_id": "dim46",
+        "dimension_mode": "fixed",
+        "dimension_title": "Years related to the metric",
+        "dimension_members": [
+          { "value": "metric_previous_year", "label": "Previous year (of entity-specific metric)" },
+          { "value": "metric_current_year", "label": "Current year (of entity-specific metric)" }
+        ]
+      },
+      {
+        "required": true,
         "dimension_id": "dim50",
         "dimension_mode": "default",
         "dimension_title": "Reporting period",
@@ -4802,6 +4890,12 @@
           },
           { "value": "currently_stated", "label": "Currently stated" }
         ]
+      },
+      {
+        "required": true,
+        "dimension_id": "dim44",
+        "dimension_mode": "default",
+        "dimension_title": "Year"
       }
     ]
   },
@@ -5765,6 +5859,17 @@
       },
       {
         "required": true,
+        "dimension_id": "dim47",
+        "dimension_mode": "fixed",
+        "dimension_title": "Years related to target values",
+        "dimension_members": [
+          { "value": "target_baseline_year", "label": "Baseline year (of non-topical target)" },
+          { "value": "target_milestone_year", "label": "Milestone year (of non-topical target)" },
+          { "value": "target_target_year", "label": "Target year (of non-topical target)" }
+        ]
+      },
+      {
+        "required": true,
         "dimension_id": "dim50",
         "dimension_mode": "default",
         "dimension_title": "Reporting period",
@@ -5776,6 +5881,12 @@
           },
           { "value": "currently_stated", "label": "Currently stated" }
         ]
+      },
+      {
+        "required": true,
+        "dimension_id": "dim44",
+        "dimension_mode": "default",
+        "dimension_title": "Year"
       }
     ]
   },
@@ -5795,6 +5906,17 @@
       },
       {
         "required": true,
+        "dimension_id": "dim47",
+        "dimension_mode": "fixed",
+        "dimension_title": "Years related to target values",
+        "dimension_members": [
+          { "value": "target_baseline_year", "label": "Baseline year (of non-topical target)" },
+          { "value": "target_milestone_year", "label": "Milestone year (of non-topical target)" },
+          { "value": "target_target_year", "label": "Target year (of non-topical target)" }
+        ]
+      },
+      {
+        "required": true,
         "dimension_id": "dim50",
         "dimension_mode": "default",
         "dimension_title": "Reporting period",
@@ -5806,6 +5928,12 @@
           },
           { "value": "currently_stated", "label": "Currently stated" }
         ]
+      },
+      {
+        "required": true,
+        "dimension_id": "dim44",
+        "dimension_mode": "default",
+        "dimension_title": "Year"
       }
     ]
   },
@@ -5825,6 +5953,17 @@
       },
       {
         "required": true,
+        "dimension_id": "dim47",
+        "dimension_mode": "fixed",
+        "dimension_title": "Years related to target values",
+        "dimension_members": [
+          { "value": "target_baseline_year", "label": "Baseline year (of non-topical target)" },
+          { "value": "target_milestone_year", "label": "Milestone year (of non-topical target)" },
+          { "value": "target_target_year", "label": "Target year (of non-topical target)" }
+        ]
+      },
+      {
+        "required": true,
         "dimension_id": "dim50",
         "dimension_mode": "default",
         "dimension_title": "Reporting period",
@@ -5836,6 +5975,12 @@
           },
           { "value": "currently_stated", "label": "Currently stated" }
         ]
+      },
+      {
+        "required": true,
+        "dimension_id": "dim44",
+        "dimension_mode": "default",
+        "dimension_title": "Year"
       }
     ]
   },
