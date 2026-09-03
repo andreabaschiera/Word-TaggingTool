@@ -2638,7 +2638,7 @@
     ]
   },
   {
-    "reference": "ESRS26_GDR_IroName",
+    "reference": "ESRS26_IRO-2_IroName",
     "standard": "ESRS 2",
     "dr": "IRO-2",
     "datatype": "string",
@@ -3341,7 +3341,7 @@
     ]
   },
   {
-    "reference": "ESRS26_GDR_PolicyName",
+    "reference": "ESRS26_GDR-PolicyName",
     "standard": "ESRS 2",
     "dr": "GDR-P",
     "datatype": "string",
@@ -3530,7 +3530,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_IroToPolicy",
+    "reference": "ESRS26_GDR-P_IroToPolicy",
     "standard": "ESRS 2",
     "dr": "GDR-P",
     "datatype": "string",
@@ -3584,7 +3584,7 @@
     ]
   },
   {
-    "reference": "ESRS26_GDR_ActionName",
+    "reference": "ESRS26_GDR-ActionName",
     "standard": "ESRS 2",
     "dr": "GDR-A",
     "datatype": "string",
@@ -3862,7 +3862,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_IroToAction",
+    "reference": "ESRS26_GDR-A_IroToAction",
     "standard": "ESRS 2",
     "dr": "GDR-A",
     "datatype": "string",
@@ -3892,7 +3892,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_PolicyToAction",
+    "reference": "ESRS26_GDR-A_PolicyToAction",
     "standard": "ESRS 2",
     "dr": "GDR-A",
     "datatype": "string",
@@ -3922,7 +3922,7 @@
     ]
   },
   {
-    "reference": "ESRS26_GDR_MetricName",
+    "reference": "ESRS26_GDR-MetricName",
     "standard": "ESRS 2",
     "dr": "GDR-M",
     "datatype": "string",
@@ -4686,7 +4686,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_IroToMetric",
+    "reference": "ESRS26_GDR-M_IroToMetric",
     "standard": "ESRS 2",
     "dr": "GDR-M",
     "datatype": "string",
@@ -4854,7 +4854,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_TargetToMetric",
+    "reference": "ESRS26_GDR-M_TargetToMetric",
     "standard": "ESRS 2",
     "dr": "GDR-M",
     "datatype": "string",
@@ -4900,7 +4900,7 @@
     ]
   },
   {
-    "reference": "ESRS26_GDR_TargetName",
+    "reference": "ESRS26_GDR-TargetName",
     "standard": "ESRS 2",
     "dr": "GDR-T",
     "datatype": "string",
@@ -5754,7 +5754,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_IroToTarget",
+    "reference": "ESRS26_GDR-T_IroToTarget",
     "standard": "ESRS 2",
     "dr": "GDR-T",
     "datatype": "string",
@@ -5784,7 +5784,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_PolicyToTarget",
+    "reference": "ESRS26_GDR-T_PolicyToTarget",
     "standard": "ESRS 2",
     "dr": "GDR-T",
     "datatype": "string",
@@ -5814,7 +5814,7 @@
     ]
   },
   {
-    "reference": "ESRS26_Links_ActionToTarget",
+    "reference": "ESRS26_GDR-T_ActionToTarget",
     "standard": "ESRS 2",
     "dr": "GDR-T",
     "datatype": "string",

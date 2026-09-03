@@ -1,0 +1,416 @@
+{
+  "sourceHost": "localhost",
+  "timestamp": "2026-09-03T08:47:21.414Z",
+  "tags": {
+    "tag1": {
+      "contentControlId": -269466454,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-MetricName",
+        "name": "Name of metric(s)",
+        "qname": "esrs:NameOfMetricS",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "string"
+      },
+      "text": "Deforestation (entity-specific)",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-DEFOR"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag2": {
+      "contentControlId": -1633317098,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-M_02",
+        "name": "Disclosure of metric, its unit of measurement, calculation methodology and sources for the calculation, and estimation methodology, including significant assumptions and limitations",
+        "qname": "esrs:DisclosureOfMetricItsUnitOfMeasurementCalculationMethodologyAndSourcesForTheCalculationAndEstimationMethodologyIncludingSignificantAssumptionsAndLimitationsTextBlock",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "narrative"
+      },
+      "text": "Deforestation (M-DEFOR) is material for the company and is measured in hectares lost.",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-DEFOR"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag3": {
+      "contentControlId": -1679877280,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_Links_IroToMetric",
+        "name": "Identifier of impact, risk or opportunity related to the metric",
+        "qname": "esrs:IdentifierOfImpactRiskOrOpportunityRelatedToTheMetric",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "string"
+      },
+      "text": "IRO-CC-MIT",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-DEFOR"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag4": {
+      "contentControlId": -2093615869,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-MetricValue(1)",
+        "name": "Metric value (absolute measure)",
+        "qname": "esrs:MetricValueAbsoluteMeasure",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "decimal"
+      },
+      "value": "500",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-DEFOR"
+        },
+        "dim46": {
+          "name": "Years related to the metric",
+          "member": "metric_current_year"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        },
+        "dim44": {
+          "name": "Year",
+          "member": "2026"
+        }
+      }
+    },
+    "tag5": {
+      "contentControlId": 749771974,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_Links_TargetToMetric",
+        "name": "Identifier of target related to entity-specific metric",
+        "qname": "esrs:IdentifierOfTargetRelatedToEntitySpecificMetric",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "string"
+      },
+      "text": "T-DEFOR",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-DEFOR"
+        },
+        "dim46": {
+          "name": "Years related to the metric",
+          "member": "metric_current_year"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        },
+        "dim44": {
+          "name": "Year",
+          "member": "2026"
+        }
+      }
+    },
+    "tag6": {
+      "contentControlId": 1109936190,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-T_02(1)",
+        "name": "Defined target value (absolute measure)",
+        "qname": "esrs:DefinedTargetValueAbsoluteMeasure",
+        "standard": "ESRS 2",
+        "DR": "GDR-T",
+        "type": "decimal"
+      },
+      "value": "20",
+      "dimensions": {
+        "dim11": {
+          "name": "Identifier of target",
+          "member": "T-DEFOR"
+        },
+        "dim47": {
+          "name": "Years related to target values",
+          "member": "target_target_year"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        },
+        "dim44": {
+          "name": "Year",
+          "member": "2050"
+        }
+      }
+    },
+    "tag7": {
+      "contentControlId": 1147321616,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-T_01",
+        "name": "Description of the relationship of target to its policy objectives and actions",
+        "qname": "esrs:DescriptionOfTheRelationshipOfTargetToItsPolicyObjectivesAndActionsTextBlock",
+        "standard": "ESRS 2",
+        "DR": "GDR-T",
+        "type": "narrative"
+      },
+      "text": "The target is not linked to any policy or action yet.",
+      "dimensions": {
+        "dim11": {
+          "name": "Identifier of target",
+          "member": "T-DEFOR"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag8": {
+      "contentControlId": -1202705363,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-M_TopicalMetric",
+        "name": "Topical metric",
+        "qname": "esrs:TopicalMetric",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "enumerationset"
+      },
+      "text": "Water Consumption (topical-defined)",
+      "value": "esrs:TotalWaterConsumption",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag9": {
+      "contentControlId": 616266116,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-MetricName",
+        "name": "Name of metric(s)",
+        "qname": "esrs:NameOfMetricS",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "string"
+      },
+      "text": "Water Consumption (topical-defined)",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag10": {
+      "contentControlId": 1605534830,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-M_04",
+        "name": "Disclosure of contextual information about the metric",
+        "qname": "esrs:DisclosureOfContextualInformationAboutTheMetricTextBlock",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "narrative"
+      },
+      "text": "Water consumption (M-WATERCONS) in the current reporting period was about 300 cubic liters, since the organization uses water in its factories to cool down the reactors",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag11": {
+      "contentControlId": 233357760,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_E3-4_01",
+        "name": "Total water consumption",
+        "qname": "esrs:TotalWaterConsumption",
+        "standard": "ESRS E3",
+        "DR": "E3-4",
+        "type": "volume"
+      },
+      "value": "300",
+      "dimensions": {
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        },
+        "dim44": {
+          "name": "Year",
+          "member": "2026"
+        },
+        "dim45": {
+          "name": "Defined target years",
+          "member": "current_year"
+        }
+      }
+    },
+    "tag12": {
+      "contentControlId": 854387164,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-M_05",
+        "name": "Significant changes in the performance compared to the previous periods, including progress made in achieving the targets set by the undertaking and, in the case of major acquisitions or disposals, how the transaction affects that progress",
+        "qname": "esrs:SignificantChangesInThePerformanceComparedToThePreviousPeriodsIncludingProgressMadeInAchievingTheTargetsSetByTheUndertakingAndInTheCaseOfMajorAcquisitionsOrDisposalsHowTheTransactionAffectsThatProgressTextBlock",
+        "standard": "ESRS 2",
+        "DR": "GDR-M",
+        "type": "narrative"
+      },
+      "text": "This year consumption was particularly high because of the high demand for our product and thus the high usage factors of the factories.",
+      "dimensions": {
+        "dim10": {
+          "name": "Identifier of metric",
+          "member": "M-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag13": {
+      "contentControlId": 1316302434,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-T_TopicalMetric",
+        "name": "Topical metric related to target",
+        "qname": "esrs:TopicalMetricRelatedToTarget",
+        "standard": "ESRS 2",
+        "DR": "GDR-T",
+        "type": "enumerationset"
+      },
+      "text": "The undertaking has set itself to reduce by 60% the consumption of water by 2045 (T-WATERCONS).",
+      "value": "esrs:TotalWaterConsumption",
+      "dimensions": {
+        "dim11": {
+          "name": "Identifier of target",
+          "member": "T-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag14": {
+      "contentControlId": -1813312197,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_E3-4_01",
+        "name": "Total water consumption",
+        "qname": "esrs:TotalWaterConsumption",
+        "standard": "ESRS E3",
+        "DR": "E3-4",
+        "type": "volume"
+      },
+      "value": "60",
+      "dimensions": {
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        },
+        "dim44": {
+          "name": "Year",
+          "member": "2045"
+        },
+        "dim45": {
+          "name": "Defined target years",
+          "member": "target_year"
+        }
+      }
+    },
+    "tag15": {
+      "contentControlId": 1338119226,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-T_07",
+        "name": "Disclosure of methodologies and significant assumptions used to define target",
+        "qname": "esrs:DisclosureOfMethodologiesAndSignificantAssumptionsUsedToDefineTargetTextBlock",
+        "standard": "ESRS 2",
+        "DR": "GDR-T",
+        "type": "narrative"
+      },
+      "text": "This target was set because, as an assumption, the less water used, the more efficient the company is.",
+      "dimensions": {
+        "dim11": {
+          "name": "Identifier of target",
+          "member": "T-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag16": {
+      "contentControlId": -1874219276,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_GDR-T_08",
+        "name": "Target is required by law",
+        "qname": "esrs:TargetIsRequiredByLaw",
+        "standard": "ESRS 2",
+        "DR": "GDR-T",
+        "type": "boolean"
+      },
+      "text": "This is not required by law.",
+      "value": "False",
+      "dimensions": {
+        "dim11": {
+          "name": "Identifier of target",
+          "member": "T-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    },
+    "tag17": {
+      "contentControlId": 1199201703,
+      "taxonomyFields": {
+        "conceptId": "ESRS26_Links_IroToTarget",
+        "name": "Identifier of impact, risk or opportunity related to the target",
+        "qname": "esrs:IdentifierOfImpactRiskOrOpportunityRelatedToTheTarget",
+        "standard": "ESRS 2",
+        "DR": "GDR-T",
+        "type": "string"
+      },
+      "text": "IRO-WAT-STRESS",
+      "dimensions": {
+        "dim11": {
+          "name": "Identifier of target",
+          "member": "T-WATERCONS"
+        },
+        "dim50": {
+          "name": "Reporting period",
+          "member": "currently_stated"
+        }
+      }
+    }
+  },
+  "tagCount": 17
+}
