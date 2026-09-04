@@ -49,7 +49,7 @@
     "tag3": {
       "contentControlId": -1679877280,
       "taxonomyFields": {
-        "conceptId": "ESRS26_Links_IroToMetric",
+        "conceptId": "ESRS26_GDR-M_IroToMetric",
         "name": "Identifier of impact, risk or opportunity related to the metric",
         "qname": "esrs:IdentifierOfImpactRiskOrOpportunityRelatedToTheMetric",
         "standard": "ESRS 2",
@@ -392,7 +392,7 @@
     "tag17": {
       "contentControlId": 1199201703,
       "taxonomyFields": {
-        "conceptId": "ESRS26_Links_IroToTarget",
+        "conceptId": "ESRS26_GDR-M_IroToTarget",
         "name": "Identifier of impact, risk or opportunity related to the target",
         "qname": "esrs:IdentifierOfImpactRiskOrOpportunityRelatedToTheTarget",
         "standard": "ESRS 2",
