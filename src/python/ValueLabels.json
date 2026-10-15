@@ -1,1404 +1,2850 @@
 [
-  { "value": "metals_mining", "label": "Metals & Mining" },
-  { "value": "current_year", "label": "Current year" },
-  {
-    "value": "electronic_manufacturing_services_original_design_manufacturing",
-    "label": "Electronic Manufacturing Services & Original Design Manufacturing"
-  },
-  {
-    "value": "S4_2",
-    "label": "S4-2 – Engagement with consumers and end-users, existence of channels for consumers and end-users to raise concerns or needs and approaches to remedy"
-  },
-  {
-    "value": "deviation_from_predefined_timehorizons",
-    "label": "Deviation from pre-defined time horizons"
-  },
-  { "value": "guyana", "label": "Guyana" },
-  {
-    "value": "exclusion_of_activities_notsignificantdriversofiros_from_metriccalculation",
-    "label": "Relief to exclude from the calculation of a metric activities that are not significant drivers of IROs"
-  },
-  { "value": "belize", "label": "Belize" },
-  {
-    "value": "esrs:PercentageOfMembersOfAdministrativeManagementAndSupervisoryBoardAsAverageRatioOfFemaleToMaleBoardMembers",
-    "label": "ESRS26_GOV-1_03: Percentage of members of administrative management and supervisory board as average ratio of female to male board members"
-  },
-  {
-    "value": "esrs:NumberOfFatalitiesFromWorkRelatedAccidentsSubjectToLegalRestrictions",
-    "label": "ESRS26_S1-13_02: Number of fatalities from work-related accidents (subject to legal restrictions)"
-  },
-  { "value": "G1_6", "label": "G1-6 – Metrics related to payment practices" },
-  { "value": "liberia", "label": "Liberia" },
-  {
-    "value": "persistent,_bioaccumulative_and_toxic_or_very_persistent_very_bioaccumulative_properties",
-    "label": "Persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties"
-  },
-  {
-    "value": "esrs:TotalWeightOfSocProcuredManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_01: Total weight of SoC procured (manufacturers, formulators and importers of substances)"
-  },
-  { "value": "new_zealand", "label": "New Zealand" },
-  { "value": "workers_in_value_chain", "label": "Workers in the value chain" },
-  {
-    "value": "esrs:TotalWeightOfSocPlacedOnTheMarketManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_03: Total weight of SoC placed on the market (manufacturers, formulators and importers of substances)"
-  },
-  {
-    "value": "esrs:TotalWeightOfSocDirectlyReleasedManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_04: Total weight of SoC directly released (manufacturers, formulators and importers of substances)"
-  },
-  { "value": "S2_1", "label": "S2-1 – Policies related to workers in the value chain" },
-  { "value": "taiwan", "label": "Taiwan" },
-  { "value": "canada", "label": "Canada" },
-  { "value": "equatorial_guinea", "label": "Equatorial Guinea" },
-  { "value": "S1_3", "label": "S1-3 – Actions and resources related to own workforce" },
-  {
-    "value": "esrs:TotalWeightOfSvhcDirectlyReleasedManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_08: Total weight of SVHC directly released (manufacturers, formulators and importers of substances)"
-  },
-  { "value": "meat_poultry_dairy", "label": "Meat, Poultry & Dairy" },
-  {
-    "value": "S1_6",
-    "label": "S1-6 – Characteristics of non-employees in the undertaking’s own workforce"
-  },
-  { "value": "angola", "label": "Angola" },
-  { "value": "yemen", "label": "Yemen" },
-  { "value": "rail_transportation", "label": "Rail Transportation" },
-  { "value": "home_builders", "label": "Home Builders" },
-  { "value": "transportation_storage", "label": "H Transportation and storage" },
-  { "value": "india", "label": "India" },
-  { "value": "myanmar", "label": "Myanmar" },
-  {
-    "value": "esrs:DisclosureOfNamesOfSvhcsThatArePresentInConcentrationsAbove01WeightByWeightComponentsOrArticlesPlacedOnTheMarket",
-    "label": "ESRS26_E2-5_12: Disclosure of names of SVHCs that are present in concentrations above 0,1% weight by weight components or articles placed on the market"
-  },
-  { "value": "business_travel", "label": "Business Travel" },
-  {
-    "value": "persistent,_mobile_and_toxic_or_very_persistent_very_mobile_properties",
-    "label": "Persistent, mobile and toxic or very persistent, very mobile properties"
-  },
-  { "value": "construction", "label": "Construction" },
-  {
-    "value": "respiratory_sensitisation_category_1",
-    "label": "Respiratory sensitisation category 1"
-  },
-  { "value": "machinery_equipment", "label": "Machinery and equipment" },
-  { "value": "S2_4", "label": "S2-4 – Targets related to workers in the value chain" },
-  {
-    "value": "esrs_set1",
-    "label": "ESRS Set 1 (European Commission Delegated Regulation (EU) 2025/1416 of 11.7.2025 amending Delegated Regulation (EU) 2023/2772 as regards the postponement of the date of application of the disclosure requirements for certain undertakings)"
-  },
-  { "value": "chile", "label": "Chile" },
-  { "value": "philippines", "label": "Philippines" },
-  { "value": "bangladesh", "label": "Bangladesh" },
-  { "value": "oman", "label": "Oman" },
-  { "value": "females", "label": "Females" },
-  { "value": "males", "label": "Males" },
-  { "value": "GDR_T", "label": "GDR-T – General Disclosure Requirement for targets" },
-  { "value": "car_rental_leasing", "label": "Car Rental & Leasing" },
-  { "value": "marshall_islands", "label": "Marshall Islands" },
-  { "value": "egypt", "label": "Egypt" },
-  {
-    "value": "esrs:DisclosureOfThePercentagesOfEmployeesNotPaidAnAdequateWage",
-    "label": "ESRS26_S1-9_03: Disclosure of the percentages of employees not paid an adequate wage"
-  },
-  { "value": "libya", "label": "Libya" },
-  {
-    "value": "esrs:NumberOfSubstantiatedIncidentsOfDiscrimination",
-    "label": "ESRS26_S1-16_01: Number of substantiated incidents of discrimination"
-  },
-  {
-    "value": "GDR",
-    "label": "General Disclosure Requirements (‘GDR’) for policies, actions, metrics and targets"
-  },
-  { "value": "S4_1", "label": "S4-1 – Policies related to consumers and end-users" },
-  { "value": "S1_7", "label": "S1-7 – Collective bargaining coverage and social dialogue" },
-  {
-    "value": "lack_of_reliable_data_metricpartialreportingboundary",
-    "label": "Relief to report a partial reporting boundary for a metric due to lack of reliable data"
-  },
-  { "value": "S4_4", "label": "S4-4 – Targets related to consumers and end-users" },
-  { "value": "china", "label": "China" },
-  {
-    "value": "esrs:AmountsOfMaterialEmissionsOfPollutantsToSoilFromItsOwnOperations",
-    "label": "ESRS26_E2-4_03: Amounts of material emissions of pollutants to soil from its own operations"
-  },
-  {
-    "value": "esrs:AverageNumberOfTrainingHoursPerEmployee",
-    "label": "ESRS26_S1-12_02: Average number of training hours per employee"
-  },
-  {
-    "value": "esrs:TotalNumberOfTemporaryFullTimeEquivalentAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_04(4): Total number of temporary (full-time equivalent), at the end of the period"
-  },
-  {
-    "value": "not_in_place_but_expected_to_be_adopted",
-    "label": "Transition plan not in place but expected to be adopted"
-  },
-  { "value": "ukraine", "label": "Ukraine" },
-  {
-    "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesHeadCountAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_05(2): Total number of non-guaranteed hours employees (head count), at the end of the period"
-  },
-  { "value": "software_it_services", "label": "Software & IT Services" },
-  {
-    "value": "esrs:DesignedRecyclabilityRateOfTheKeyProducts",
-    "label": "ESRS26_E5-5_03: Designed recyclability rate of the key products"
-  },
-  { "value": "brazil", "label": "Brazil" },
-  { "value": "affected_communities", "label": "Affected communities" },
-  {
-    "value": "esrs:DisclosureOfTheGenderDistributionInPercentageAtTopManagementLevel",
-    "label": "ESRS26_S1-8_02: Disclosure of the gender distribution in percentage at top management level"
-  },
-  {
-    "value": "SoC_SVHC",
-    "label": "Substances of concern, including substances of very high concern"
-  },
-  {
-    "value": "adjustments_to_comparative_information",
-    "label": "Adjustments to comparative information"
-  },
-  {
-    "value": "specific_target_organ_toxicity_single_exposure_categories_1_and_2",
-    "label": "Specific target organ toxicity – single exposure categories 1 and 2"
-  },
-  { "value": "grenada", "label": "Grenada" },
-  {
-    "value": "esrs:TotalWeightOfWasteGenerated",
-    "label": "ESRS26_E5-5_06: Total weight of waste generated"
-  },
-  {
-    "value": "esrs:BiogenicEmissionsOfCo2FromTheCombustionOrBiodegradationOfBiomassDisclosedSeparatelyFromScope1GhgEmissions",
-    "label": "ESRS26_E1-8_06: Biogenic emissions of CO2 from the combustion or biodegradation of biomass, disclosed separately from scope 1 GHG emissions"
-  },
-  { "value": "S1_11", "label": "S1-11 – Persons with disabilities" },
-  { "value": "tuvalu", "label": "Tuvalu" },
-  { "value": "E3_4", "label": "E3-4 – Water metrics" },
-  {
-    "value": "water_supply_sewerage_waste_management_remediation_activities",
-    "label": "E Water supply; sewerage, waste management and remediation activities"
-  },
-  {
-    "value": "germ_cell_mutagenicity_categories_1_and_2",
-    "label": "Germ cell mutagenicity categories 1 and 2"
-  },
-  { "value": "own_employees", "label": "Own employees" },
-  {
-    "value": "esrs:NumberOfFatalitiesFromWorkRelatedIllHealthAmongItsEmployeesSubjectToLegalRestrictions",
-    "label": "ESRS26_S1-13_03: Number of fatalities from work-related ill health among its employees (subject to legal restrictions)"
-  },
-  { "value": "non-profit_organizations", "label": "Non-profit organizations" },
-  { "value": "others", "label": "Others" },
-  { "value": "samoa", "label": "Samoa" },
-  { "value": "denmark", "label": "Denmark" },
-  { "value": "agriculture_forestry_fishing", "label": "A Agriculture, forestry and fishing" },
-  { "value": "el_salvador", "label": "El Salvador" },
-  { "value": "incineration", "label": "Incineration" },
-  {
-    "value": "esrs:PercentageOfOwnEmployeesCoveredByCollectiveBargainingAgreementsOutsideEea",
-    "label": "ESRS26_S1-7_04: Percentage of own employees covered by collective bargaining agreements outside EEA"
-  },
-  { "value": "solomon_islands", "label": "Solomon Islands" },
-  { "value": "mitigation", "label": "Climate change mitigation" },
-  {
-    "value": "endocrine_disruption_for_human_health_categories_1_and_2",
-    "label": "Endocrine disruption for human health categories 1 and 2"
-  },
-  {
-    "value": "esrs:AbsoluteGrossLocationBasedScope2GhgEmissionsGeneratedDuringTheReportingPeriod",
-    "label": "ESRS26_E1-8_03: Absolute gross location-based scope 2 GHG emissions generated during the reporting period"
-  },
-  { "value": "electronics", "label": "Electronics" },
-  { "value": "previously_stated", "label": "Previously stated" },
-  { "value": "nigeria", "label": "Nigeria" },
-  {
-    "value": "esrs:NumberOfDaysOfStandardPaymentTermsAppliedToAllSuppliers",
-    "label": "ESRS26_G1-6_02: Number of days of standard payment terms applied to all suppliers"
-  },
-  {
-    "value": "E5_2",
-    "label": "E5-2 – Actions and resources related to resource use and circular economy"
-  },
-  { "value": "italy", "label": "Italy" },
-  { "value": "hungary", "label": "Hungary" },
-  { "value": "suriname", "label": "Suriname" },
-  {
-    "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesHeadCountAverageOfThePeriod",
-    "label": "ESRS26_S1-5_05(1): Total number of non-guaranteed hours employees (head count), average of the period"
-  },
-  { "value": "tobacco", "label": "Tobacco" },
-  { "value": "ireland", "label": "Ireland" },
-  {
-    "value": "wholesale_retail_trade_repair_of_motor_vehicles_motorcycles",
-    "label": "G Wholesale and retail trade; repair of motor vehicles and motorcycles"
-  },
-  { "value": "kuwait", "label": "Kuwait" },
-  { "value": "australia", "label": "Australia" },
-  {
-    "value": "BP_1",
-    "label": "ESRS 2 BP-1 – Basis for preparation of the sustainability statement"
-  },
-  { "value": "colombia", "label": "Colombia" },
-  { "value": "software", "label": "Software" },
-  { "value": "ghana", "label": "Ghana" },
-  { "value": "coal_operations", "label": "Coal Operations" },
-  { "value": "pollution_soil", "label": "Pollution of soil" },
-  { "value": "other_emissions", "label": "Other emissions not in consolidated accounting group" },
-  { "value": "end-of-life_treatment", "label": "End-of-Life Treatment of Sold Products" },
-  { "value": "comoros", "label": "Comoros" },
-  {
-    "value": "esrs:DisclosureOfQuantitativeAbsoluteMeasureMetricsRelatedToUndertakingSMaterialImpactsOnBiodiversityAndEcosystems",
-    "label": "ESRS26_E4-5_04(2): Disclosure of quantitative (absolute measure) metrics related to undertaking's material impacts on biodiversity and ecosystems"
-  },
-  { "value": "latvia", "label": "Latvia" },
-  { "value": "aerospace_defense", "label": "Aerospace & Defense" },
-  { "value": "consumer_finance", "label": "Consumer Finance" },
-  { "value": "guatemala", "label": "Guatemala" },
-  { "value": "belarus", "label": "Belarus" },
-  { "value": "S1_13", "label": "S1-13 – Health and safety metrics" },
-  { "value": "target_target_year", "label": "Target year (of non-topical target)" },
-  { "value": "tajikistan", "label": "Tajikistan" },
-  { "value": "target_baseline_year", "label": "Baseline year (of non-topical target)" },
-  { "value": "S1_1", "label": "S1-1 – Policies related to own workforce" },
-  { "value": "S4_3", "label": "S4-3 – Actions and resources related to consumers and end-users" },
-  {
-    "value": "esrs:EstimatedPotentialLiabilitiesThatDoNotMeetTheAccountingRecognitionCriteriaAtTheReportingDateButThatMayHaveToBeRecognisedInFinancialStatementsInFuture",
-    "label": "ESRS26_E1-11_08: Estimated potential liabilities that do not meet the accounting recognition criteria at the reporting date but that may have to be recognised in financial statements in future"
-  },
-  { "value": "monaco", "label": "Monaco" },
-  { "value": "automobiles", "label": "Automobiles" },
-  { "value": "E4_4", "label": "E4-4 – Targets related to biodiversity and ecosystems" },
-  { "value": "mali", "label": "Mali" },
-  { "value": "health_care_delivery", "label": "Health Care Delivery" },
-  { "value": "E2_5", "label": "E2-5 – Substances of concern and substances of very high concern" },
-  {
-    "value": "fuel_energy_related",
-    "label": "Fuel- and Energy-Related Activities (Not Included in scope 1 or scope 2)"
-  },
-  { "value": "afghanistan", "label": "Afghanistan" },
-  { "value": "security_commodity_exchanges", "label": "Security & Commodity Exchanges" },
-  { "value": "oil_gas_refining_marketing", "label": "Oil & Gas - Refining & Marketing" },
-  { "value": "water_utilities_services", "label": "Water Utilities & Services" },
-  { "value": "cruise_lines", "label": "Cruise Lines" },
-  {
-    "value": "esrs:DisclosureOfQualitativeMetricsRelatedToUndertakingSMaterialImpactsOnBiodiversityAndEcosystemsTextBlock",
-    "label": "ESRS26_E4-5_04(1): Disclosure of qualitative metrics related to undertaking's material impacts on biodiversity and ecosystems"
-  },
-  { "value": "pollution_air", "label": "Pollution of air" },
-  { "value": "consolidated", "label": "Consolidated" },
-  { "value": "ecosyst_services", "label": "Ecosystem services" },
-  { "value": "electrical_electronic_equipment", "label": "Electrical & Electronic Equipment" },
-  { "value": "drug_retailers", "label": "Drug Retailers" },
-  { "value": "S4", "label": "ESRS S4 Consumers and end-users" },
-  { "value": "somalia", "label": "Somalia" },
-  {
-    "value": "esrs:DescriptionOfBiodiversityOffsetsUsedIncludingTheAimOfTheOffsetsTheFinancingEffectsInMonetaryTermsTheAreaTypeAndQualityCriteriaAppliedAndTheStandardsWithWhichTheBiodiversityOffsetsComplyTextBlock",
-    "label": "ESRS26_E4-3_01: Description of biodiversity offsets used, including the aim of the offsets, the financing effects in monetary terms, the area, type and quality criteria applied, and the standards with which the biodiversity offsets comply"
-  },
-  { "value": "non_employees", "label": "Non employees" },
-  {
-    "value": "esrs:CapexAmountsInvestedDuringTheReportingPeriodRelatedToCoalOilAndGasActivities",
-    "label": "ESRS26_E1-1_02: CapEx amounts invested during the reporting period related to coal, oil and gas activities"
-  },
-  { "value": "currently_stated", "label": "Currently stated" },
-  {
-    "value": "esrs:AmountsOfPrimaryMicroplasticsManufacturedOrUsedInProducts",
-    "label": "ESRS26_E2-4_04: Amounts of primary microplastics manufactured or used in products"
-  },
-  {
-    "value": "esrs:TotalNumberOfEmployeesHeadCountAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_01(2): Total number of employees (head count), at the end of the period"
-  },
-  { "value": "S3", "label": "ESRS S3 Affected communities" },
-  { "value": "mauritania", "label": "Mauritania" },
-  { "value": "banking", "label": "Banking" },
-  {
-    "value": "IRO_2",
-    "label": "ESRS 2 IRO-2 – Material impacts, risks and opportunities and disclosure requirements included in the sustainability statement"
-  },
-  { "value": "malawi", "label": "Malawi" },
-  {
-    "value": "esrs:NumberOfDaysLostToRecordableWorkRelatedAccidentsAndRecordableWorkRelatedIllHealthForUndertakingSEmployees",
-    "label": "ESRS26_S1-13_07: Number of days lost to recordable work-related accidents and recordable work-related ill health for undertaking's employees"
-  },
-  {
-    "value": "omission_of_required_information_if_applicable",
-    "label": "Omission of required information if applicable law or regulations prohibit the disclosure of such information or allow the omission of such disclosure"
-  },
-  { "value": "armenia", "label": "Armenia" },
-  { "value": "p_education", "label": "P Education" },
-  { "value": "toys_sporting_goods", "label": "Toys & Sporting Goods" },
-  {
-    "value": "esrs:TotalWeightOfSvhcDirectlyReleasedUsersOfSubstances",
-    "label": "ESRS26_E2-5_10: Total weight of SVHC directly released (users of substances)"
-  },
-  {
-    "value": "esrs:CarryingAmountOfAssetsAtMaterialPhysicalRiskBeforeConsideringClimateChangeAdaptationActions",
-    "label": "ESRS26_E1-11_01: Carrying amount of assets at material physical risk before considering climate change adaptation actions"
-  },
-  {
-    "value": "working_conditions",
-    "label": "Working conditions (including adequate wages, work-life balance, working time, secure employment) and social protection"
-  },
-  { "value": "democratic_republic_of_the_congo", "label": "Democratic Republic of the Congo" },
-  {
-    "value": "esrs:UndertakingHasSitesLocatedInAreasWithWaterStressThatAreNotCoveredByItsWaterRelatedPolicies",
-    "label": "ESRS26_E3-1_01: Undertaking has sites located in areas with water stress that are not covered by its water-related policies"
-  },
-  { "value": "GDR_A", "label": "GDR-A – General Disclosure Requirement for actions and resources" },
-  {
-    "value": "esrs:NumberOfRecordableWorkRelatedAccidentsAmongOwnWorkforce",
-    "label": "ESRS26_S1-13_04: Number of recordable work-related accidents among own workforce"
-  },
-  { "value": "GOV_3", "label": "ESRS 2 GOV-3 – Statement on due diligence" },
-  {
-    "value": "esrs:PercentageOfTheCarryingAmountOfAssetsAtMaterialTransitionRiskAddressedByMitigationActions",
-    "label": "ESRS26_E1-11_06: Percentage of the carrying amount of assets at material transition risk addressed by mitigation actions"
-  },
-  { "value": "eswatini", "label": "Eswatini" },
-  { "value": "estonia", "label": "Estonia" },
-  {
-    "value": "esrs:CarryingAmountOfRealEstateAssetsThatHaveBeenUsedAsLoanCollaterals",
-    "label": "ESRS26_E1-11_07: Carrying amount of real estate assets that have been used as loan collaterals"
-  },
-  { "value": "S1_10", "label": "S1-10 – Social protection" },
-  { "value": "indonesia", "label": "Indonesia" },
-  { "value": "hotels_lodging", "label": "Hotels & Lodging" },
-  {
-    "value": "endocrine_disruption_for_the_environment_categories_1_and_2",
-    "label": "Endocrine disruption for the environment categories 1 and 2"
-  },
-  { "value": "target", "label": "Target" },
-  { "value": "uganda", "label": "Uganda" },
-  { "value": "dominica", "label": "Dominica" },
-  {
-    "value": "esrs:TotalNumberOfTemporaryFullTimeEquivalentAverageOfThePeriod",
-    "label": "ESRS26_S1-5_04(3): Total number of temporary (full-time equivalent), average of the period"
-  },
-  { "value": "transportation_infrastructure", "label": "Transportation infrastructure" },
-  {
-    "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesHeadCountInTheUndertakingSOwnWorkforceAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-6_01(2): Disclosure of the total number of non-employees (head count) in the undertaking’s own workforce, at the end of the period"
-  },
-  { "value": "oil_gas_exploration_production", "label": "Oil & Gas - Exploration & Production" },
-  { "value": "tonga", "label": "Tonga" },
-  { "value": "north_korea", "label": "North Korea" },
-  { "value": "E5_4", "label": "E5-4 – Resource inflows" },
-  {
-    "value": "esrs:NumberOfOutstandingLegalProceedingsForLatePayments",
-    "label": "ESRS26_G1-6_05: Number of outstanding legal proceedings for late payments"
-  },
-  { "value": "inflows", "label": "Resource inflows" },
-  {
-    "value": "esrs:FuelConsumptionFromCoalAndCoalProducts",
-    "label": "ESRS26_E1-7_05: Fuel consumption from coal and coal products"
-  },
-  { "value": "S1_14", "label": "S1-14 – Work-life balance metrics" },
-  { "value": "employee_commuting", "label": "Employee Commuting" },
-  { "value": "madagascar", "label": "Madagascar" },
-  { "value": "G1_2", "label": "G1-2 – Actions related to business conduct" },
-  { "value": "iran", "label": "Iran" },
-  { "value": "food_beverages", "label": "Food and beverages" },
-  { "value": "real_estate_uppercase", "label": "Real Estate" },
-  { "value": "france", "label": "France" },
-  { "value": "G1_3", "label": "G1-3 – Targets related to business conduct" },
-  { "value": "S3_4", "label": "S3-4 – Targets related to affected communities" },
-  {
-    "value": "GOV_4",
-    "label": "ESRS 2 GOV-4 – Risk management and internal controls over sustainability reporting"
-  },
-  { "value": "milestone", "label": "Milestone" },
-  {
-    "value": "esrs:TotalNumberOfEmployeesHeadCountAverageOfThePeriod",
-    "label": "ESRS26_S1-5_01(1): Total number of employees (head count), average of the period"
-  },
-  { "value": "united_kingdom", "label": "United Kingdom" },
-  { "value": "zambia", "label": "Zambia" },
-  { "value": "apparel,_accessories_footwear", "label": "Apparel, Accessories & Footwear" },
-  { "value": "mozambique", "label": "Mozambique" },
-  {
-    "value": "BP_2",
-    "label": "ESRS 2 BP-2 – Specific information if the undertaking uses phasing-in options"
-  },
-  { "value": "oil_gas_midstream", "label": "Oil & Gas - Midstream" },
-  { "value": "belgium", "label": "Belgium" },
-  { "value": "pollution_water", "label": "Pollution of water" },
-  { "value": "gas_utilities_distributors", "label": "Gas Utilities & Distributors" },
-  {
-    "value": "reproductive_toxicity_categories_1_and_2",
-    "label": "Reproductive toxicity categories 1 and 2"
-  },
-  {
-    "value": "electric_utilities_power_generators",
-    "label": "Electric Utilities & Power Generators"
-  },
-  { "value": "united_states", "label": "United States" },
-  { "value": "E1_3", "label": "E1-3 – Resilience in relation to climate change" },
-  {
-    "value": "esrs:TotalWaterConsumptionInAreasWithWaterStress",
-    "label": "ESRS26_E3-4_02: Total water consumption in areas with water stress"
-  },
-  {
-    "value": "water_use",
-    "label": "Water use, including withdrawal, consumption, discharges and storage"
-  },
-  { "value": "not_in_place", "label": "Transition plan not in place" },
-  { "value": "jamaica", "label": "Jamaica" },
-  { "value": "all_affected_communities", "label": "All affected communities" },
-  { "value": "e-commerce", "label": "E-Commerce" },
-  {
-    "value": "accommodation_food_service_activities",
-    "label": "I Accommodation and food service activities"
-  },
-  { "value": "E5", "label": "ESRS E5 Resource use and circular economy" },
-  { "value": "E1_1", "label": "E1-1 – Transition plan for climate change mitigation" },
-  { "value": "agriculture_aquaculture_fishing", "label": "Agriculture, aquaculture, and fishing" },
-  { "value": "coal", "label": "Coal" },
-  {
-    "value": "esrs:TotalWeightOfSvhcManufacturedManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_06: Total weight of SVHC manufactured (manufacturers, formulators and importers of substances)"
-  },
-  {
-    "value": "hazard_to_the_aquatic_environment_categories_chronic_1_to_4",
-    "label": "Hazard to the aquatic environment – categories chronic 1 to 4"
-  },
-  {
-    "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesFullTimeEquivalentAverageOfThePeriod",
-    "label": "ESRS26_S1-5_05(3): Total number of non-guaranteed hours employees (full-time equivalent), average of the period"
-  },
-  {
-    "value": "esrs:DisclosureOfQualitativeAndCombinedQuantitativeInformationAboutFinancialEffectsTextBlock",
-    "label": "ESRS26_SBM-3_07: Disclosure of qualitative and combined quantitative information about financial effects"
-  },
-  { "value": "f_construction", "label": "F Construction" },
-  {
-    "value": "esrs:GhgReversalsOccurredInTheReportingPeriod",
-    "label": "ESRS26_E1-9_04: GHG reversals occurred in the reporting period"
-  },
-  {
-    "value": "esrs:AmountOfAssetsFromBusinessActivitiesAlignedToClimateRelatedOpportunities",
-    "label": "ESRS26_E1-11_13: Amount of assets from business activities aligned to climate-related opportunities"
-  },
-  { "value": "kosovo", "label": "Kosovo" },
-  {
-    "value": "esrs:ConsumptionOfPurchasedOrAcquiredElectricityHeatSteamOrCoolingFromFossilSources",
-    "label": "ESRS26_E1-7_09: Consumption of purchased or acquired electricity, heat, steam, or cooling from fossil sources"
-  },
-  { "value": "iceland", "label": "Iceland" },
-  {
-    "value": "electricity_gas_steam_air_conditioning_supply",
-    "label": "D Electricity, gas, steam and air conditioning supply"
-  },
-  { "value": "tunisia", "label": "Tunisia" },
-  {
-    "value": "esrs:DisclosureOfQualitativeAndQuantitativeInformationOnHowTheUndertakingExpectsItsFinancialPositionFinancialPerformanceAndCashFlowsToChangeGivenToItsStrategyToManageMaterialRisksAndOpportunitiesAnticipatedFinancialEffectsTextBlock",
-    "label": "ESRS26_SBM-3_04: Disclosure of qualitative and quantitative information on how the undertaking expects its financial position, financial performance and cash flows to change, given to its strategy to manage material risks and opportunities (anticipated financial effects)"
-  },
-  { "value": "andorra", "label": "Andorra" },
-  { "value": "finland", "label": "Finland" },
-  {
-    "value": "esrs:AbsoluteSignificantGrossScope3GhgEmissionsGeneratedDuringTheReportingPeriod",
-    "label": "ESRS26_E1-8_05: Absolute significant gross scope 3 GHG emissions generated during the reporting period"
-  },
-  { "value": "medical_equipment", "label": "Medical equipment" },
-  {
-    "value": "esrs:NumberOfDaysOfStandardPaymentTermsAppliedToSmeSuppliers",
-    "label": "ESRS26_G1-6_03: Number of days of standard payment terms applied to SME suppliers"
-  },
-  { "value": "airlines", "label": "Airlines" },
-  { "value": "air_freight_logistics", "label": "Air Freight & Logistics" },
-  { "value": "waste_management", "label": "Waste Management" },
-  {
-    "value": "esrs:PercentageOfPaymentsAlignedWithStandardPaymentTerms",
-    "label": "ESRS26_G1-6_04: Percentage of payments aligned with standard payment terms"
-  },
-  { "value": "south_sudan", "label": "South Sudan" },
-  { "value": "uruguay", "label": "Uruguay" },
-  { "value": "morocco", "label": "Morocco" },
-  { "value": "chad", "label": "Chad" },
-  { "value": "czechia", "label": "Czechia" },
-  { "value": "S1", "label": "ESRS S1 Own workforce" },
-  { "value": "forestry", "label": "Forestry" },
-  { "value": "telecommunication_services", "label": "Telecommunication Services" },
-  { "value": "guinea", "label": "Guinea" },
-  {
-    "value": "esrs:RangeOfEstimatedPotentialStrandedAssetsFromTheReportingYearUntilTheMidTermAndLongTermTimeHorizonsBasedOnAScenarioAlignedWithLimitingClimateChangeTo15C",
-    "label": "ESRS26_E1-11_05: Range of estimated potential stranded assets from the reporting year until the mid-term and long-term time horizons based on a scenario aligned with limiting climate change to 1.5°C"
-  },
-  {
-    "value": "esrs:TotalNumberOfTemporaryHeadCountAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_04(2): Total number of temporary (head count), at the end of the period"
-  },
-  { "value": "agricultural_products", "label": "Agricultural Products" },
-  { "value": "other_recovery_operations", "label": "Other recovery operations" },
-  { "value": "mauritius", "label": "Mauritius" },
-  { "value": "mining_quarrying", "label": "B Mining and quarrying" },
-  {
-    "value": "esrs:TotalFinancialAndInKindPoliticalContributionsMadeDirectlyAndIndirectly",
-    "label": "ESRS26_G1-5_01: Total financial and in-kind political contributions made directly and indirectly"
-  },
-  {
-    "value": "soc_dialogue_collective_barg",
-    "label": "Social dialogue and collective bargaining, freedom of association, information and consultation rights of workers, including through works councils"
-  },
-  {
-    "value": "impacts_consumers_users",
-    "label": "Information-related impacts for consumers or users (including privacy, access to information, freedom of expression)"
-  },
-  {
-    "value": "esrs:TotalWeightOfSvhcPlacedOnTheMarketManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_07: Total weight of SVHC placed on the market (manufacturers, formulators and importers of substances)"
-  },
-  {
-    "value": "wind_technology_project_developers",
-    "label": "Wind Technology & Project Developers"
-  },
-  { "value": "biotechnology_pharmaceuticals", "label": "Biotechnology & Pharmaceuticals" },
-  { "value": "rwanda", "label": "Rwanda" },
-  {
-    "value": "currently_stated_corrected_revised",
-    "label": "Currently stated, corrected or revised"
-  },
-  { "value": "shortterm", "label": "Short term" },
-  { "value": "luxembourg", "label": "Luxembourg" },
-  { "value": "dominican_republic", "label": "Dominican Republic" },
-  { "value": "panama", "label": "Panama" },
-  { "value": "turkmenistan", "label": "Turkmenistan" },
-  { "value": "all_workers_in_value_chain", "label": "All workers in value chain" },
-  { "value": "pulp_paper_products", "label": "Pulp & Paper Products" },
-  { "value": "relative_target", "label": "Relative target" },
-  {
-    "value": "esrs:DisclosureOfTheNamesAndTypesOfBiodiversitySensitiveAreaSRelatedToTheUndertakingSMaterialNegativeImpactsForTheLocationsInUndertakingSOwnOperationsTextBlock",
-    "label": "ESRS26_E4-5_02: Disclosure of the names and types of biodiversity-sensitive area(s) related to the undertaking’s material negative impacts for the locations in undertaking's own operations"
-  },
-  { "value": "singapore", "label": "Singapore" },
-  { "value": "specific_affected_communities", "label": "Specific affected communities" },
-  { "value": "niger", "label": "Niger" },
-  { "value": "waste_generated", "label": "Waste Generated in Operations" },
-  { "value": "nitrogen_trifluoride", "label": "Nitrogen Trifluoride (NF3)" },
-  {
-    "value": "multiline_specialty_retailers_distributors",
-    "label": "Multiline and Specialty Retailers & Distributors"
-  },
-  { "value": "greece", "label": "Greece" },
-  {
-    "value": "esrs:AmountOfFinesForViolationOfAntiCorruptionAndAntiBriberyLaws",
-    "label": "ESRS26_G1-4_02: Amount of fines for violation of anti-corruption and anti-bribery laws"
-  },
-  {
-    "value": "esrs:AmountsOfPrimaryMicroplasticsDirectlyReleasedIntoTheEnvironment",
-    "label": "ESRS26_E2-4_05: Amounts of primary microplastics directly released into the environment"
-  },
-  { "value": "burkina_faso", "label": "Burkina Faso" },
-  {
-    "value": "indigenous_rights",
-    "label": "Rights of indigenous peoples (including free, prior and informed consent (FPIC), self-determination, cultural rights)"
-  },
-  { "value": "haiti", "label": "Haiti" },
-  {
-    "value": "relief_from_acquisitions_and_disposals",
-    "label": "Relief for acquisitions and disposals"
-  },
-  { "value": "franchises", "label": "Franchises" },
-  { "value": "S2", "label": "ESRS S2 Workers in value chain" },
-  { "value": "household_goods", "label": "Household goods" },
-  { "value": "russia", "label": "Russia" },
-  { "value": "kiribati", "label": "Kiribati" },
-  { "value": "gabon", "label": "Gabon" },
-  { "value": "appliance_manufacturing", "label": "Appliance Manufacturing" },
-  {
-    "value": "specific_groups_of_workers_within_value_chain",
-    "label": "Specific groups of workers within value chain"
-  },
-  { "value": "vanuatu", "label": "Vanuatu" },
-  {
-    "value": "GOV_1",
-    "label": "ESRS 2 GOV-1 – The role of the administrative, management and supervisory bodies in relation to sustainability"
-  },
-  {
-    "value": "esrs:RateOfTurnoverOfPermanentEmployees",
-    "label": "ESRS26_S1-5_06: Rate of turnover of permanent employees"
-  },
-  {
-    "value": "esrs:NetRevenueFromBusinessActivitiesAtMaterialTransitionRisk",
-    "label": "ESRS26_E1-11_09: Net revenue from business activities at material transition risk"
-  },
-  { "value": "palau", "label": "Palau" },
-  { "value": "medium-term", "label": "Medium-term" },
-  { "value": "S1_9", "label": "S1-9 – Adequate wages" },
-  {
-    "value": "esrs:FuelConsumptionFromNaturalGas",
-    "label": "ESRS26_E1-7_07: Fuel consumption from natural gas"
-  },
-  { "value": "microplastics", "label": "Microplastics" },
-  {
-    "value": "esrs:PercentageOfIndependentBoardMembers",
-    "label": "ESRS26_GOV-1_01: Percentage of independent board members"
-  },
-  {
-    "value": "diversity_eqtreatment",
-    "label": "Diversity and equal treatment (including gender equality, equal pay for work of equal value, employment and inclusion of people with disabilities, non-discrimination, anti-harassment, measures against violence)"
-  },
-  { "value": "djibouti", "label": "Djibouti" },
-  {
-    "value": "esrs:ProportionOfWasteDivertedFromDisposalPercentageOfTotalWasteGenerated",
-    "label": "ESRS26_E5-5_07: Proportion of waste diverted from disposal (percentage of total waste generated)"
-  },
-  {
-    "value": "esrs:TotalWaterRecycledAndReused",
-    "label": "ESRS26_E3-4_05: Total water recycled and reused"
-  },
-  {
-    "value": "esrs:TotalNumberOfPermanentEmployeesFullTimeEquivalentAverageOfThePeriod",
-    "label": "ESRS26_S1-5_03(3): Total number of permanent employees (full-time equivalent), average of the period"
-  },
-  {
-    "value": "changes_in_preparation_or_presentation",
-    "label": "Changes in preparation or presentation of sustainability information"
-  },
-  {
-    "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToMaternityLeave",
-    "label": "ESRS26_S1-10_04: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to maternity leave"
-  },
-  { "value": "turkey", "label": "Turkey" },
-  { "value": "cyprus", "label": "Cyprus" },
-  {
-    "value": "not_compliant_to_any_esrs",
-    "label": "Not (fully) compliant to any adopted version of ESRS / Voluntary use of ESRS"
-  },
-  { "value": "pol_influence", "label": "Political influence, including lobbying activities" },
-  { "value": "E2_4", "label": "E2-4 – Pollution of air, water and soil" },
-  { "value": "cameroon", "label": "Cameroon" },
-  {
-    "value": "esrs:TrainingOnSustainabilityIsProvidedToTheProcurementTeam",
-    "label": "ESRS26_G1-2_03: Training on sustainability is provided to the procurement team"
-  },
-  {
-    "value": "upstream_transport_distribution",
-    "label": "Upstream Transportation and Distribution"
-  },
-  {
-    "value": "power_production_energy_utilities",
-    "label": "Power production and energy utilities"
-  },
-  {
-    "value": "esrs:UndertakingSEmployeesArePaidAnAdequateWage",
-    "label": "ESRS26_S1-9_01: Undertaking's employees are paid an adequate wage"
-  },
-  { "value": "target_year", "label": "Target year" },
-  { "value": "fiji", "label": "Fiji" },
-  {
-    "value": "administrative_support_service_activities",
-    "label": "N Administrative and support service activities"
-  },
-  { "value": "E5_5", "label": "E5-5 – Resource outflows" },
-  { "value": "kenya", "label": "Kenya" },
-  {
-    "value": "esrs:TotalEnergyConsumptionFromFossilSources",
-    "label": "ESRS26_E1-7_02: Total energy consumption from fossil sources"
-  },
-  { "value": "vietnam", "label": "Vietnam" },
-  { "value": "metal_processing", "label": "Metal processing" },
-  { "value": "micronesia", "label": "Micronesia" },
-  { "value": "managed_care", "label": "Managed Care" },
-  { "value": "downstream_leased_assets", "label": "Downstream Leased Assets" },
-  { "value": "germany", "label": "Germany" },
-  { "value": "G1_1", "label": "G1-1 – Policies related to business conduct" },
-  { "value": "leisure_facilities", "label": "Leisure Facilities" },
-  {
-    "value": "E1_11",
-    "label": "E1-11 – Anticipated financial effects from material physical and transition risks and potential climate-related opportunities"
-  },
-  {
-    "value": "esrs:ProportionOfWasteForWhichFinalDestinationIsUnknownPercentageOfTotalWasteGenerated",
-    "label": "ESRS26_E5-5_09: Proportion of waste for which final destination is unknown (percentage of total waste generated)"
-  },
-  { "value": "netherlands", "label": "Netherlands" },
-  {
-    "value": "esrs:AmountsOfMaterialEmissionsOfPollutantsToWaterFromItsOwnOperations",
-    "label": "ESRS26_E2-4_02: Amounts of material emissions of pollutants to water from its own operations"
-  },
-  { "value": "albania", "label": "Albania" },
-  { "value": "E1", "label": "ESRS E1 Climate change" },
-  { "value": "S1_15", "label": "S1-15 – Remuneration metrics" },
-  { "value": "sao_tome_and_principe", "label": "Sao Tome and Principe" },
-  { "value": "esrs:GenderPayGap", "label": "ESRS26_S1-15_01: Gender pay gap" },
-  { "value": "moldova", "label": "Moldova" },
-  { "value": "processing_sold_products", "label": "Processing of Sold Products" },
-  { "value": "san_marino", "label": "San Marino" },
-  { "value": "jordan", "label": "Jordan" },
-  { "value": "hazardous_to_the_ozone_layer", "label": "Hazardous to the ozone layer" },
-  {
-    "value": "esrs:TotalWeightOfSvhcProcuredManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_05: Total weight of SVHC procured (manufacturers, formulators and importers of substances)"
-  },
-  { "value": "use_sold_products", "label": "Use of Sold Products" },
-  {
-    "value": "esrs:RenewableEnergyProduction",
-    "label": "ESRS26_E1-7_11: Renewable energy production"
-  },
-  {
-    "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesHeadCountInTheUndertakingSOwnWorkforceAverageOfThePeriod",
-    "label": "ESRS26_S1-6_01(1): Disclosure of the total number of non-employees (head count) in the undertaking’s own workforce, average of the period"
-  },
-  { "value": "E2_2", "label": "E2-2 – Actions and resources related to pollution" },
-  { "value": "educational_services", "label": "Educational services" },
-  { "value": "E2_3", "label": "E2-3 – Targets related to pollution" },
-  {
-    "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToSickness",
-    "label": "ESRS26_S1-10_01: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to sickness"
-  },
-  { "value": "cabo_verde", "label": "Cabo Verde" },
-  { "value": "mediumterm", "label": "Medium term" },
-  { "value": "preparation_for_reuse", "label": "Preparation for reuse" },
-  { "value": "S3_3", "label": "S3-3 – Actions and resources related to affected communities" },
-  { "value": "consolidated_group", "label": "Consolidated group" },
-  { "value": "adaptation", "label": "Climate change adaptation" },
-  { "value": "S1_12", "label": "S1-12 – Training and skills development metrics" },
-  { "value": "GDR_P", "label": "GDR-P General Disclosure Requirement for policies" },
-  { "value": "lesotho", "label": "Lesotho" },
-  {
-    "value": "IRO_1",
-    "label": "ESRS 2 IRO-1 – Description of the process to identify and assess material impacts, risks and opportunities and material information to be reported"
-  },
-  {
-    "value": "esrs:TotalNumberOfPermanentEmployeesFullTimeEquivalentAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_03(4): Total number of permanent employees (full-time equivalent), at the end of the period"
-  },
-  { "value": "physical_risk", "label": "Physical risk" },
-  { "value": "zimbabwe", "label": "Zimbabwe" },
-  { "value": "uzbekistan", "label": "Uzbekistan" },
-  { "value": "nicaragua", "label": "Nicaragua" },
-  { "value": "E2", "label": "ESRS E2 Pollution" },
-  {
-    "value": "esrs:DisclosureOfTheGenderDistributionInNumberHeadcountAtTopManagementLevel",
-    "label": "ESRS26_S1-8_01: Disclosure of the gender distribution in number (headcount) at top management level"
-  },
-  { "value": "energy", "label": "Energy" },
-  { "value": "road_transportation", "label": "Road Transportation" },
-  { "value": "esrs:TotalWaterStored", "label": "ESRS26_E3-4_06: Total water stored" },
-  { "value": "sudan", "label": "Sudan" },
-  { "value": "forestry_management", "label": "Forestry Management" },
-  {
-    "value": "revised_esrs",
-    "label": "Revised ESRS (Commission Delegated Regulation (EU) of 3 July 2026 amending Delegated Regulation (EU) 2023/2772 as regards the ESRS simplification)"
-  },
-  {
-    "value": "esrs:ShareOfCarbonCreditsFromRemovalProjectsPercentageOfVolume",
-    "label": "ESRS26_E1-9_07: Share of carbon credits from removal projects (percentage of volume)"
-  },
-  {
-    "value": "corporate_culture",
-    "label": "Corporate culture, including anti-corruption and bribery, the protection of whistle-blowers and animal welfare"
-  },
-  { "value": "security_services", "label": "Security services" },
-  { "value": "E3_3", "label": "E3-3 – Targets related to water" },
-  { "value": "saint_vincent_and_the_grenadines", "label": "Saint Vincent and the Grenadines" },
-  { "value": "waste", "label": "Resource outflows (waste)" },
-  { "value": "esrs:TotalWaterWithdrawals", "label": "ESRS26_E3-4_03: Total water withdrawals" },
-  {
-    "value": "esrs:NumberOfEmployeesHeadCountRepresentingTheTenLargestCountriesInTermsOfEmployeesAverageOfThePeriod",
-    "label": "ESRS26_S1-5_02(1): Number of employees (head count) representing the ten largest countries in terms of employees, average of the period"
-  },
-  { "value": "metric_previous_year", "label": "Previous year (of entity-specific metric)" },
-  {
-    "value": "S1_2",
-    "label": "S1-2 – Engagement with own workforce and workers’ representatives, existence of channels for own workforce to raise concerns or needs and approaches to remedy"
-  },
-  { "value": "water_transportation", "label": "Water transportation" },
-  { "value": "marine_transportation", "label": "Marine Transportation" },
-  {
-    "value": "esrs:AnnualTotalRemunerationRatio",
-    "label": "ESRS26_S1-15_02: Annual total remuneration ratio"
-  },
-  {
-    "value": "esrs:PercentageOfEmployeesThatParticipatedInFormalisedPerformanceAndCareerDevelopmentReviews",
-    "label": "ESRS26_S1-12_01: Percentage of employees that participated in formalised performance and career development reviews"
-  },
-  { "value": "transition_risk", "label": "Transition risk" },
-  { "value": "hydro-fluorocarbons", "label": "Hydro-fluorocarbons (HFCs)" },
-  { "value": "restaurants", "label": "Restaurants" },
-  {
-    "value": "esrs:TotalEnergyConsumptionFromNuclearSources",
-    "label": "ESRS26_E1-7_03: Total energy consumption from nuclear sources"
-  },
-  { "value": "state_species", "label": "State of species" },
-  { "value": "baseline", "label": "Baseline" },
-  { "value": "information_communication", "label": "J Information and communication" },
-  { "value": "bhutan", "label": "Bhutan" },
-  { "value": "short-term", "label": "Short-term" },
-  { "value": "professional_commercial_services", "label": "Professional & Commercial Services" },
-  { "value": "G1_4", "label": "G1-4 – Metrics related to corruption or bribery" },
-  { "value": "advertising_marketing", "label": "Advertising & Marketing" },
-  { "value": "central_african_republic", "label": "Central African Republic" },
-  {
-    "value": "esrs:PercentageOfPersonsWithDisabilitiesAmongstEmployeesSubjectToLegalRestrictionsOnCollectionOfData",
-    "label": "ESRS26_S1-11_01: Percentage of persons with disabilities amongst employees (subject to legal restrictions on collection of data)"
-  },
-  { "value": "north_macedonia", "label": "North Macedonia" },
-  {
-    "value": "human_health_social_work_activities",
-    "label": "Q Human health and social work activities"
-  },
-  {
-    "value": "esrs:PercentageOfOwnEmployeesCoveredByCollectiveBargainingAgreementsWithinTheEea",
-    "label": "ESRS26_S1-7_03: Percentage of own employees covered by collective bargaining agreements within the EEA"
-  },
-  { "value": "other_disposal_operations", "label": "Other disposal operations" },
-  { "value": "thailand", "label": "Thailand" },
-  { "value": "qatar", "label": "Qatar" },
-  {
-    "value": "esrs:TotalWeightOfSocManufacturedManufacturersFormulatorsAndImportersOfSubstances",
-    "label": "ESRS26_E2-5_02: Total weight of SoC manufactured (manufacturers, formulators and importers of substances)"
-  },
-  { "value": "esrs:TotalWaterConsumption", "label": "ESRS26_E3-4_01: Total water consumption" },
-  {
-    "value": "esrs:RateOfRecordableWorkRelatedAccidentsAmongOwnWorkforce",
-    "label": "ESRS26_S1-13_05: Rate of recordable work-related accidents among own workforce"
-  },
-  {
-    "value": "esrs:DisclosureOfOtherAspectsOfDiversityOfAdministrativeManagementAndSupervisoryBoardTextBlock",
-    "label": "ESRS26_GOV-1_04: Disclosure of other aspects of diversity of administrative management and supervisory board"
-  },
-  { "value": "capital_goods", "label": "Capital Goods" },
-  { "value": "real_estate_activities", "label": "L Real estate activities" },
-  { "value": "other_ghg", "label": "Other GHG category" },
-  { "value": "mortgage_finance", "label": "Mortgage Finance" },
-  {
-    "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToEmploymentInjuryAndAcquiredDisability",
-    "label": "ESRS26_S1-10_03: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to employment injury and acquired disability"
-  },
-  { "value": "E3", "label": "ESRS E3 Water and marine resources" },
-  {
-    "value": "S1_16",
-    "label": "S1-16 – Incidents of discrimination and other human rights incidents"
-  },
-  { "value": "arts_entertainment_recreation", "label": "R Arts, entertainment and recreation" },
-  { "value": "consumers and end-users", "label": "Consumers and end-users" },
-  {
-    "value": "esrs:TotalEnergyConsumptionFromRenewableSources",
-    "label": "ESRS26_E1-7_04: Total energy consumption from renewable sources"
-  },
-  { "value": "south_africa", "label": "South Africa" },
-  { "value": "gas", "label": "Gas" },
-  { "value": "SBM_1", "label": "ESRS 2 SBM-1 – Strategy, business model and value chain" },
-  { "value": "chemicals", "label": "Chemicals" },
-  { "value": "algeria", "label": "Algeria" },
-  {
-    "value": "esrs:TotalNumberOfPermanentEmployeesHeadCountAverageOfThePeriod",
-    "label": "ESRS26_S1-5_03(1): Total number of permanent employees (head count), average of the period"
-  },
-  { "value": "nauru", "label": "Nauru" },
-  { "value": "education", "label": "Education" },
-  { "value": "seychelles", "label": "Seychelles" },
-  { "value": "investment_banking_brokerage", "label": "Investment Banking & Brokerage" },
-  { "value": "laos", "label": "Laos" },
-  { "value": "financial_insurance_activities", "label": "K Financial and insurance activities" },
-  { "value": "non-hazardous", "label": "Non-hazardous" },
-  {
-    "value": "communities_ec_soc_cult_rights",
-    "label": "Communities’ economic, social and cultural rights (including land related impacts, security-related impacts, adequate housing and food, water and sanitation)"
-  },
-  { "value": "E5_3", "label": "E5-3 – Targets related to resource use and circular economy" },
-  { "value": "E1_10", "label": "E1-10 – Internal carbon pricing" },
-  { "value": "trinidad_and_tobago", "label": "Trinidad and Tobago" },
-  { "value": "manufacturing", "label": "C Manufacturing" },
-  {
-    "value": "esrs:AverageCarbonPricePerMetricTonneOfGhgEmissions",
-    "label": "ESRS26_E1-10_02: Average carbon price per metric tonne of GHG emissions"
-  },
-  { "value": "paraguay", "label": "Paraguay" },
-  {
-    "value": "esrs:DisclosureOfQualitativeOrQuantitativeInformationOnTheExpectedDurabilityOfUndertakingSKeyProductsTextBlock",
-    "label": "ESRS26_E5-5_01: Disclosure of qualitative or quantitative information on the expected durability of undertaking's key products"
-  },
-  { "value": "E4_1", "label": "E4-1 – Biodiversity and ecosystems transition plan" },
-  { "value": "automotive", "label": "Automotive" },
-  {
-    "value": "esrs:TotalAmountOfCarbonCreditsPurchasedInTheReportingPeriodAndNotCancelledYet",
-    "label": "ESRS26_E1-9_06: Total amount of carbon credits purchased in the reporting period and not cancelled yet"
-  },
-  { "value": "poland", "label": "Poland" },
-  { "value": "argentina", "label": "Argentina" },
-  {
-    "value": "E1_4",
-    "label": "E1-4 – Policies related to climate change mitigation and adaptation"
-  },
-  {
-    "value": "S3_2",
-    "label": "S3-2 – Engagement with affected communities, existence of channels for affected communities to raise concerns or needs and approaches to remedy"
-  },
-  {
-    "value": "E4_3",
-    "label": "E4-3 – Actions and resources related to biodiversity and ecosystems"
-  },
-  { "value": "venezuela", "label": "Venezuela" },
-  {
-    "value": "esrs:TotalAmountOfRadioactiveWasteGenerated",
-    "label": "ESRS26_E5-5_10: Total amount of radioactive waste generated"
-  },
-  { "value": "lithuania", "label": "Lithuania" },
-  { "value": "non-alcoholic_beverages", "label": "Non-Alcoholic Beverages" },
-  { "value": "investments", "label": "Investments" },
-  {
-    "value": "esrs:PercentageOfEmployeesCoveredByWorkersRepresentativesWithinTheEea",
-    "label": "ESRS26_S1-7_05: Percentage of employees covered by workers' representatives within the EEA"
-  },
-  { "value": "capital_markets", "label": "Capital markets" },
-  { "value": "guinea-bissau", "label": "Guinea-Bissau" },
-  {
-    "value": "esrs:AmountOfRevenueFromBusinessActivitiesAlignedToClimateRelatedOpportunities",
-    "label": "ESRS26_E1-11_14: Amount of revenue from business activities aligned to climate-related opportunities"
-  },
-  { "value": "E4", "label": "ESRS E4 Biodiversity and ecosystems" },
-  {
-    "value": "esrs:TotalAmountOfCarbonCreditsOutsideValueChainThatAreVerifiedAgainstRecognisedQualityStandardsAndCancelled",
-    "label": "ESRS26_E1-9_05: Total amount of carbon credits outside value chain that are verified against recognised quality standards and cancelled"
-  },
-  { "value": "pakistan", "label": "Pakistan" },
-  { "value": "semiconductors", "label": "Semiconductors" },
-  { "value": "bolivia", "label": "Bolivia" },
-  {
-    "value": "esrs:TotalWeightOfSvhcUsedDuringProductionAndDeliveryOfServicesUsersOfSubstances",
-    "label": "ESRS26_E2-5_09: Total weight of SVHC used during production and delivery of services (users of substances)"
-  },
-  { "value": "bahrain", "label": "Bahrain" },
-  { "value": "togo", "label": "Togo" },
-  {
-    "value": "esrs:FuelConsumptionFromOtherFossilSources",
-    "label": "ESRS26_E1-7_08: Fuel consumption from other fossil sources"
-  },
-  { "value": "mexico", "label": "Mexico" },
-  { "value": "individual", "label": "Individual" },
-  { "value": "malaysia", "label": "Malaysia" },
-  { "value": "internet_media_services", "label": "Internet Media & Services" },
-  { "value": "commercial_banks", "label": "Commercial Banks" },
-  { "value": "antigua_and_barbuda", "label": "Antigua and Barbuda" },
-  {
-    "value": "E1_2",
-    "label": "E1-2 – Identification of climate-related risks and scenario analysis"
-  },
-  { "value": "E4_5", "label": "E4-5 – Metrics related to biodiversity and ecosystems change" },
-  { "value": "sulphur_hexafluoride", "label": "Sulphur Hexafluoride (SF6)" },
-  { "value": "burundi", "label": "Burundi" },
-  {
-    "value": "esrs:PercentageOfPeopleInOwnWorkforceWhoAreCoveredByAHealthAndSafetyManagementSystemBasedOnLegalRequirementsAndOrOrRecognisedStandardsOrGuidelines",
-    "label": "ESRS26_S1-13_01: Percentage of people in own workforce who are covered by a health and safety management system based on legal requirements and/or recognised standards or guidelines"
-  },
-  {
-    "value": "esrs:ProportionOfWasteDirectedToDisposalPercentageOfTotalWasteGenerated",
-    "label": "ESRS26_E5-5_08: Proportion of waste directed to disposal (percentage of total waste generated)"
-  },
-  { "value": "ethiopia", "label": "Ethiopia" },
-  { "value": "media_entertainment", "label": "Media & Entertainment" },
-  { "value": "slovenia", "label": "Slovenia" },
-  { "value": "textiles_apparel", "label": "Textiles and apparel" },
-  {
-    "value": "esrs:PercentageOfItsTotalEmployeesCoveredByCollectiveBargainingAgreements",
-    "label": "ESRS26_S1-7_01: Percentage of its total employees covered by collective bargaining agreements"
-  },
-  { "value": "sweden", "label": "Sweden" },
-  {
-    "value": "S2_2",
-    "label": "S2-2 – Engagement with workers in the value chain, existence of channels for workers in the value chain to raise concerns or needs and approaches to remedy"
-  },
-  { "value": "GDR_M", "label": "GDR-M – General Disclosure Requirement for metrics" },
-  { "value": "saint_kitts_and_nevis", "label": "Saint Kitts and Nevis" },
-  {
-    "value": "esrs:NetRevenueFromUndertakingSCustomersOperatingInCoalOilAndGasRelatedActivities",
-    "label": "ESRS26_E1-11_10: Net revenue from undertaking's customers operating in coal-, oil- and gas-related activities"
-  },
-  {
-    "value": "SBM_3",
-    "label": "ESRS 2 SBM-3 – Interaction of material impacts risks and opportunities with strategy and business model, and financial effects"
-  },
-  { "value": "eritrea", "label": "Eritrea" },
-  {
-    "value": "drivers_biodiv_ecosyst",
-    "label": "Drivers of biodiversity and ecosystem change (including terrestrial and marine habitat change, invasive species)"
-  },
-  { "value": "absolute_target", "label": "Absolute target" },
-  { "value": "upstream_leased_assets", "label": "Upstream Leased Assets" },
-  { "value": "all_of_its_own_workforce", "label": "All of its own workforce" },
-  { "value": "oil_gas", "label": "Oil and gas" },
-  { "value": "benin", "label": "Benin" },
-  {
-    "value": "E1_9",
-    "label": "E1-9 – GHG removals and GHG mitigation projects financed through carbon credits"
-  },
-  { "value": "baseline_year", "label": "Baseline year" },
-  { "value": "austria", "label": "Austria" },
-  { "value": "aerospace_and_defense", "label": "Aerospace and defense" },
-  {
-    "value": "GOV_2",
-    "label": "ESRS 2 GOV-2 – Integration of sustainability-related performance in incentive schemes"
-  },
-  { "value": "real_estate_lowercase", "label": "Real estate" },
-  { "value": "romania", "label": "Romania" },
-  {
-    "value": "esrs:AmountOfFinesPenaltiesAndCompensationForDamagesRecognisedDuringTheReportingPeriodForIncidentsOfDiscriminationAndOtherHumanRightsIncidents",
-    "label": "ESRS26_S1-16_03: Amount of fines, penalties, and compensation for damages recognised during the reporting period for incidents of discrimination and other human rights incidents"
-  },
-  {
-    "value": "esrs:PercentageOfSecondaryResourcesUsedFromTotalWeightOfAllKeyMaterials",
-    "label": "ESRS26_E5-4_04(2): Percentage of secondary resources used from total weight of all key materials"
-  },
-  {
-    "value": "esrs:PercentageOfEmployeesEntitledToTakeFamilyRelatedLeave",
-    "label": "ESRS26_S1-14_01: Percentage of employees entitled to take family-related leave"
-  },
-  {
-    "value": "S2_3",
-    "label": "S2-3 – Actions and resources related to workers in the value chain"
-  },
-  {
-    "value": "specific_target_organ_toxicity_repeated_exposure_categories_1_and_2",
-    "label": "Specific target organ toxicity – repeated exposure categories 1 and 2"
-  },
-  { "value": "perfluorocarbons", "label": "Perfluorocarbons (PFCs)" },
-  { "value": "oil_gas_services", "label": "Oil & Gas - Services" },
-  { "value": "hazardous", "label": "Hazardous" },
-  { "value": "non_reported", "label": "Non reported" },
-  {
-    "value": "esrs:TotalEnergyConsumptionRelatedToTheUndertakingSOwnOperations",
-    "label": "ESRS26_E1-7_01: Total energy consumption related to the undertaking's own operations"
-  },
-  {
-    "value": "E1_5",
-    "label": "E1-5 – Actions and resources in relation to climate change mitigation and adaptation"
-  },
-  { "value": "carbon_dioxide", "label": "Carbon Dioxide (CO2)" },
-  { "value": "esrs:WeightOfKeyMaterial", "label": "ESRS26_E5-4_03(1): Weight of key material" },
-  {
-    "value": "inclusion_consumers_users",
-    "label": "Social inclusion of consumers or end-users (including, access to products and services, responsible marketing practices, non-discrimination)"
-  },
-  { "value": "S1_4", "label": "S1-4 – Targets related to own workforce" },
-  { "value": "skin_sensitisation_category_1", "label": "Skin sensitisation category 1" },
-  { "value": "republic_of_the_congo", "label": "Congo (Republic of the)" },
-  { "value": "botswana", "label": "Botswana" },
-  { "value": "portugal", "label": "Portugal" },
-  {
-    "value": "esrs:NumberOfCasesOfRecordableWorkRelatedIllHealthOfUndertakingSEmployeesSubjectToLegalRestrictions",
-    "label": "ESRS26_S1-13_06: Number of cases of recordable work-related ill health of undertaking's employees (subject to legal restrictions)"
-  },
-  { "value": "cambodia", "label": "Cambodia" },
-  { "value": "oil", "label": "Oil" },
-  { "value": "united_arab_emirates", "label": "United Arab Emirates" },
-  {
-    "value": "safety_consumers_users",
-    "label": "Personal safety of consumers or end-users (including health and safety, protection of children, security of a person)"
-  },
-  { "value": "israel", "label": "Israel" },
-  { "value": "palestine", "label": "Palestine" },
-  {
-    "value": "G1_5",
-    "label": "G1-5 – Metrics related to political influence, including lobbying activities"
-  },
-  {
-    "value": "esrs:DisclosureOfNamesOfSvhcsThatArePresentInConcentrationsAbove01WeightByWeightInProcuredComponentsOrArticles",
-    "label": "ESRS26_E2-5_11: Disclosure of names of SVHCs that are present in concentrations above 0,1% weight by weight in procured components or articles"
-  },
-  {
-    "value": "esrs:TotalWeightOfKeyMaterials",
-    "label": "ESRS26_E5-4_02: Total weight of key materials"
-  },
-  { "value": "purchased_goods_services", "label": "Purchased Goods and Services" },
-  {
-    "value": "esrs:AmountsOfMaterialEmissionsOfPollutantsToAirFromItsOwnOperations",
-    "label": "ESRS26_E2-4_01: Amounts of material emissions of pollutants to air from its own operations"
-  },
-  { "value": "processed_foods", "label": "Processed Foods" },
-  { "value": "bahamas", "label": "Bahamas" },
-  { "value": "E4_2", "label": "E4-2 – Policies related to biodiversity and ecosystems" },
-  { "value": "construction_materials_propercase", "label": "Construction Materials" },
-  { "value": "mining", "label": "Mining" },
-  {
-    "value": "esrs:DisclosureOfQualitativeOrQuantitativeInformationOnTheExtentToWhichUndertakingSKeyProductsAreRepairableTextBlock",
-    "label": "ESRS26_E5-5_02: Disclosure of qualitative or quantitative information on the extent to which undertaking's key products are repairable"
-  },
-  { "value": "longterm", "label": "Long term" },
-  { "value": "kazakhstan", "label": "Kazakhstan" },
-  { "value": "mongolia", "label": "Mongolia" },
-  { "value": "peru", "label": "Peru" },
-  {
-    "value": "esrs:WeightOfSecondaryResourcesUsed",
-    "label": "ESRS26_E5-4_04(1): Weight of secondary resources used"
-  },
-  { "value": "E1_7", "label": "E1-7 – Energy consumption and mix" },
-  { "value": "insurance", "label": "Insurance" },
-  {
-    "value": "esrs:PercentageOfKeyMaterialFromTotalWeightOfAllKeyMaterials",
-    "label": "ESRS26_E5-4_03(2): Percentage of key material from total weight of all key materials"
-  },
-  {
-    "value": "significant_limitations_undue_cost_or_effort_provision",
-    "label": "Significant limitations affecting the reported information under the undue cost or effort provision for specific datapoints"
-  },
-  { "value": "esrs:TotalWaterDischarge", "label": "ESRS26_E3-4_04: Total water discharge" },
-  { "value": "costa_rica", "label": "Costa Rica" },
-  { "value": "namibia", "label": "Namibia" },
-  { "value": "maldives", "label": "Maldives" },
-  { "value": "norway", "label": "Norway" },
-  {
-    "value": "material_judgement_and_significant_uncertainties",
-    "label": "Application of material judgement and information subject to significant uncertainties"
-  },
-  {
-    "value": "esrs:DisclosureOfQualitativeAndQuantitativeInformationAboutHowMaterialRisksAndOpportunitiesHaveAffectedItsFinancialPositionFinancialPerformanceAndCashFlowsForTheReportingPeriodCurrentFinancialEffectsTextBlock",
-    "label": "ESRS26_SBM-3_02: Disclosure of qualitative and quantitative information about how material risks and opportunities have affected its financial position, financial performance and cash flows for the reporting period (current financial effects)"
-  },
-  {
-    "value": "specific_groups_of_consumers_end-users",
-    "label": "Specific groups of consumers and end-users"
-  },
-  { "value": "saint_lucia", "label": "Saint Lucia" },
-  {
-    "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesFullTimeEquivalentAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_05(4): Total number of non-guaranteed hours employees (full-time equivalent), at the end of the period"
-  },
-  { "value": "health_safety", "label": "Health and safety" },
-  { "value": "casinos_gaming", "label": "Casinos & Gaming" },
-  { "value": "industrial_machinery_goods", "label": "Industrial Machinery & Goods" },
-  { "value": "auto_parts", "label": "Auto Parts" },
-  { "value": "bulgaria", "label": "Bulgaria" },
-  { "value": "nitrous_oxide", "label": "Nitrous Oxide (N2O)" },
-  {
-    "value": "esrs:CarryingAmountOfAssetsAtMaterialTransitionRisk",
-    "label": "ESRS26_E1-11_04: Carrying amount of assets at material transition risk"
-  },
-  { "value": "containers_packaging", "label": "Containers & Packaging" },
-  {
-    "value": "esrs:DisclosureOfBenchmarksUndertakingUsesToDetermineAdequateWagesWithAnIndicationOfTheCountriesForWhichAGivenBenchmarkIsUsedTextBlock",
-    "label": "ESRS26_S1-9_02: Disclosure of benchmarks undertaking uses to determine adequate wages with an indication of the countries for which a given benchmark is used"
-  },
-  { "value": "other_service_activities", "label": "S Other service activities" },
-  { "value": "metric_current_year", "label": "Current year (of entity-specific metric)" },
-  { "value": "fuel_cells_industrial_batteries", "label": "Fuel Cells & Industrial Batteries" },
-  { "value": "food_retailers_distributors", "label": "Food Retailers & Distributors" },
-  { "value": "japan", "label": "Japan" },
-  { "value": "serbia", "label": "Serbia" },
-  { "value": "SBM_2", "label": "ESRS 2 SBM-2 – Interests and views of stakeholders" },
-  {
-    "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToUnemploymentStartingFromWhenOwnWorkerIsWorkingForUndertaking",
-    "label": "ESRS26_S1-10_02: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to unemployment starting from when own worker is working for undertaking"
-  },
-  {
-    "value": "other_laboutrelated_rights_s2",
-    "label": "Other labour-related human rights (including child labour, forced labour, privacy and adequate housing, water and sanitation)"
-  },
-  { "value": "tanzania", "label": "Tanzania" },
-  { "value": "papua_new_guinea", "label": "Papua New Guinea" },
-  { "value": "spain", "label": "Spain" },
-  { "value": "household_personal_products", "label": "Household & Personal Products" },
-  {
-    "value": "esrs:PercentageOfTheAssetsAtMaterialPhysicalRiskAddressedByAdaptationActionsAtTheReportingDate",
-    "label": "ESRS26_E1-11_02: Percentage of the assets at material physical risk addressed by adaptation actions at the reporting date"
-  },
-  { "value": "azerbaijan", "label": "Azerbaijan" },
-  { "value": "alcoholic_beverages", "label": "Alcoholic Beverages" },
-  { "value": "G1", "label": "ESRS G1 Business conduct" },
-  {
-    "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesFullTimeEquivalentInTheUndertakingSOwnWorkforceAverageOfThePeriod",
-    "label": "ESRS26_S1-6_01(3): Disclosure of the total number of non-employees (full-time equivalent) in the undertaking’s own workforce, average of the period"
-  },
-  { "value": "target_milestone_year", "label": "Milestone year (of non-topical target)" },
-  {
-    "value": "esrs:DisclosureOfAmountOfGhgRemovalsAndStorageResultingFromTheUndertakingSProjects",
-    "label": "ESRS26_E1-9_02: Disclosure of amount of GHG removals and storage resulting from the undertaking's projects"
-  },
-  {
-    "value": "communities_civil_pol_rights",
-    "label": "Communities’ civil and political rights (including freedom of expression, freedom of assembly, impacts on human rights defenders)"
-  },
-  { "value": "media_communication", "label": "Media and communication" },
-  { "value": "health_care_distributors", "label": "Health Care Distributors" },
-  { "value": "ground_transportation", "label": "Ground transportation" },
-  { "value": "sri_lanka", "label": "Sri Lanka" },
-  { "value": "ozone", "label": "Ozone (O3)" },
-  { "value": "own_workforce", "label": "Own workforce" },
-  { "value": "wholesale_retail_trade", "label": "Wholesale and retail trade" },
-  { "value": "E1_8", "label": "E1-8 – Gross scope 1, 2, 3 GHG emissions" },
-  { "value": "recreation_leisure", "label": "Recreation and leisure" },
-  {
-    "value": "esrs:RevenueFromTheFossilFuelSector",
-    "label": "ESRS26_SBM-1_06(2): Revenue from the fossil fuel sector"
-  },
-  { "value": "S3_1", "label": "S3-1 – Policies related to affected communities" },
-  { "value": "slovakia", "label": "Slovakia" },
-  { "value": "malta", "label": "Malta" },
-  {
-    "value": "esrs:TotalNumberOfTemporaryHeadCountAverageOfThePeriod",
-    "label": "ESRS26_S1-5_04(1): Total number of temporary (head count), average of the period"
-  },
-  { "value": "building_products_furnishings", "label": "Building Products & Furnishings" },
-  {
-    "value": "esrs:DesignedRecyclabilityRateOfTheKeyProductsPackaging",
-    "label": "ESRS26_E5-5_04: Designed recyclability rate of the key products packaging"
-  },
-  { "value": "methane", "label": "Methane (CH4)" },
-  {
-    "value": "esrs:TotalNumberOfPermanentEmployeesHeadCountAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_03(2): Total number of permanent employees (head count), at the end of the period"
-  },
-  { "value": "syria", "label": "Syria" },
-  { "value": "water_waste_services", "label": "Water and waste services" },
-  {
-    "value": "esrs:RevenueMonetaryAmountFromBusinessActivitiesAtMaterialPhysicalRisk",
-    "label": "ESRS26_E1-11_03: Revenue (monetary amount) from business activities at material physical risk"
-  },
-  {
-    "value": "esrs:AbsoluteGrossMarketBasedScope2GhgEmissionsGeneratedDuringTheReportingPeriod",
-    "label": "ESRS26_E1-8_04: Absolute gross market-based scope 2 GHG emissions generated during the reporting period"
-  },
-  { "value": "recycling", "label": "Recycling" },
-  {
-    "value": "extent_cond_ecosyst",
-    "label": "The extent and condition of terrestrial and marine ecosystems"
-  },
-  { "value": "pharmaceuticals", "label": "Pharmaceuticals" },
-  { "value": "E3_1", "label": "E3-1 – Policies related to water" },
-  {
-    "value": "esrs:DisclosureOfQualitativeAndQuantitativeInformationAboutTheMaterialRisksAndOpportunitiesIdentifiedForWhichThereIsASignificantRiskOfAMaterialAdjustmentWithinTheNextAnnualReportingPeriodToTheCarryingAmountsOfAssetsAndLiabilitiesReportedInTheRelatedFinancialStatementsTextBlock",
-    "label": "ESRS26_SBM-3_03: Disclosure of qualitative and quantitative information about the material risks and opportunities identified for which there is a significant risk of a material adjustment within the next annual reporting period to the carrying amounts of assets and liabilities reported in the related financial statements"
-  },
-  { "value": "bosnia_herzegovina", "label": "Bosnia and Herzegovina" },
-  {
-    "value": "specific_groups_within_own_workforce",
-    "label": "Specific groups within own workforce"
-  },
-  { "value": "iraq", "label": "Iraq" },
-  { "value": "honduras", "label": "Honduras" },
-  {
-    "value": "downstream_transport_distribution",
-    "label": "Downstream Transportation and Distribution"
-  },
-  { "value": "saudi_arabia", "label": "Saudi Arabia" },
-  {
-    "value": "esrs:DisclosureOfUndertakingSExposureToHeightenedRiskOfIncidentsRelatedToForcedOrCompulsoryLabourAndChildLabourTextBlock",
-    "label": "ESRS26_IRO-2_07: Disclosure of undertaking's exposure to heightened risk of incidents related to forced or compulsory labour and child labour"
-  },
-  { "value": "carcinogenicity_categories_1_and_2", "label": "Carcinogenicity categories 1 and 2" },
-  {
-    "value": "esrs:AbsoluteGrossScope1GhgEmissionsGeneratedDuringTheReportingPeriod",
-    "label": "ESRS26_E1-8_01: Absolute gross scope 1 GHG emissions generated during the reporting period"
-  },
-  { "value": "hardware", "label": "Hardware" },
-  { "value": "health_services", "label": "Health services" },
-  {
-    "value": "asset_management_custody_activities",
-    "label": "Asset Management & Custody Activities"
-  },
-  {
-    "value": "esrs:FuelConsumptionFromCrudeOilAndPetroleumProducts",
-    "label": "ESRS26_E1-7_06: Fuel consumption from crude oil and petroleum products"
-  },
-  { "value": "georgia", "label": "Georgia" },
-  { "value": "liechtenstein", "label": "Liechtenstein" },
-  { "value": "milestone_year", "label": "Milestone year" },
-  { "value": "vatican_city", "label": "Vatican City (Holy See)" },
-  {
-    "value": "esrs:NumberOfEmployeesHeadCountRepresentingTheTenLargestCountriesInTermsOfEmployeesAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-5_02(2): Number of employees (head count) representing the ten largest countries in terms of employees, at the end of the period"
-  },
-  { "value": "gambia", "label": "Gambia" },
-  {
-    "value": "exclusion_joint_operations_from_environmental_metrics",
-    "label": "Relief to exclude joint operations from environmental metrics"
-  },
-  { "value": "croatia", "label": "Croatia" },
-  { "value": "senegal", "label": "Senegal" },
-  { "value": "S1_8", "label": "S1-8 – Diversity metrics" },
-  { "value": "E1_6", "label": "E1-6 – Targets related to climate change" },
-  {
-    "value": "esrs:NumberOfConvictionsAndSanctionsForViolationOfAntiCorruptionAndAntiBriberyLaws",
-    "label": "ESRS26_G1-4_01: Number of convictions and sanctions for violation of anti-corruption and anti- bribery laws"
-  },
-  { "value": "lebanon", "label": "Lebanon" },
-  { "value": "montenegro", "label": "Montenegro" },
-  { "value": "long-term", "label": "Long-term" },
-  { "value": "E3_2", "label": "E3-2 – Actions and resources related to water" },
-  { "value": "commercial_services", "label": "Commercial services" },
-  { "value": "cuba", "label": "Cuba" },
-  { "value": "switzerland", "label": "Switzerland" },
-  { "value": "S1_5", "label": "S1-5 – Characteristics of the undertaking’s employees" },
-  { "value": "air_freight_and_logistics", "label": "Air freight and logistics" },
-  {
-    "value": "esrs:NumberOfSubstantiatedHumanRightsIncidentsConnectedToTheOwnWorkforce",
-    "label": "ESRS26_S1-16_02: Number of substantiated human rights incidents connected to the own workforce"
-  },
-  {
-    "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesFullTimeEquivalentInTheUndertakingSOwnWorkforceAtTheEndOfThePeriod",
-    "label": "ESRS26_S1-6_01(4): Disclosure of the total number of non-employees (full-time equivalent) in the undertaking’s own workforce, at the end of the period"
-  },
-  { "value": "construction_materials_lowercase", "label": "Construction materials" },
-  {
-    "value": "esrs:NonRenewableEnergyProduction",
-    "label": "ESRS26_E1-7_10: Non-renewable energy production"
-  },
-  {
-    "value": "update_of_disclosures_for_events_after_reporting_period",
-    "label": "Update of disclosures for events after the end of the reporting period"
-  },
-  { "value": "ecuador", "label": "Ecuador" },
-  {
-    "value": "public_administration_defence_compulsory_social_security",
-    "label": "O Public administration and defence; compulsory social security"
-  },
-  { "value": "hotels", "label": "Hotels" },
-  { "value": "real_estate_services", "label": "Real Estate Services" },
-  {
-    "value": "activities_of_extraterritorial_organisations_bodies",
-    "label": "U Activities of extraterritorial organisations and bodies"
-  },
-  { "value": "engineering_construction_services", "label": "Engineering & Construction Services" },
-  { "value": "medical_equipment_supplies", "label": "Medical Equipment & Supplies" },
-  {
-    "value": "esrs:ProportionOfVariableRemunerationDependentOnSustainabilityRelatedTargetsOrMetrics",
-    "label": "ESRS26_GOV-2_03: Proportion of variable remuneration dependent on sustainability-related targets or metrics"
-  },
-  { "value": "iron_steel_producers", "label": "Iron & Steel Producers" },
-  { "value": "south_korea", "label": "South Korea" },
-  {
-    "value": "esrs:PercentageOfScope1GhgEmissionsFromEuEmissionsTradingSystem",
-    "label": "ESRS26_E1-8_02: Percentage of scope 1 GHG emissions from EU Emissions Trading System"
-  },
-  { "value": "all_consumers_end-users", "label": "All consumers and end-users" },
-  { "value": "landfill", "label": "Landfill" },
-  { "value": "E5_1", "label": "E5-1 – Policies related to resource use and circular economy" },
-  { "value": "outflows", "label": "Resource outflows related to products and services" },
-  {
-    "value": "professional_scientific_technical_activities",
-    "label": "M Professional, scientific and technical activities"
-  },
-  {
-    "value": "esrs:ActionsAndResourcesAreRelatedToAreasWithWaterStress",
-    "label": "ESRS26_E3-2_01: Actions and resources are related to areas with water stress"
-  },
-  { "value": "sierra_leone", "label": "Sierra Leone" },
-  {
-    "value": "activities_of_households_as_employers_undifferentiated_producing_activities_of_households_for_own_use",
-    "label": "T Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use"
-  },
-  { "value": "brunei", "label": "Brunei" },
-  { "value": "barbados", "label": "Barbados" },
-  { "value": "kyrgyzstan", "label": "Kyrgyzstan" },
-  { "value": "timor-leste", "label": "Timor-Leste" },
-  {
-    "value": "solar_technology_project_developers",
-    "label": "Solar Technology & Project Developers"
-  },
-  { "value": "biofuels", "label": "Biofuels" },
-  {
-    "value": "other_laboutrelated_rights",
-    "label": "Other labour-related human rights (including child labour, forced labour, privacy and adequate housing)"
-  },
-  { "value": "E2_1", "label": "E2-1 – Policies related to pollution" },
-  { "value": "reporting_errors_in_prior_periods", "label": "Reporting errors in prior periods" },
-  { "value": "nepal", "label": "Nepal" },
-  {
-    "value": "relationship_suppliers",
-    "label": "Management of relationships with suppliers, including payment practices especially late payment to small- and medium-sized undertakings (SMEs)"
-  }
+    {
+        "value": "gas",
+        "label": "Gas"
+    },
+    {
+        "value": "egypt",
+        "label": "Egypt"
+    },
+    {
+        "value": "alcoholic_beverages",
+        "label": "Alcoholic Beverages"
+    },
+    {
+        "value": "micronesia",
+        "label": "Micronesia"
+    },
+    {
+        "value": "barbados",
+        "label": "Barbados"
+    },
+    {
+        "value": "telecommunication_services",
+        "label": "Telecommunication Services"
+    },
+    {
+        "value": "esrs:TotalWaterConsumptionInAreasWithWaterStress",
+        "label": "ESRS26_E3-4_02: Total water consumption in areas with water stress"
+    },
+    {
+        "value": "hazard_to_the_aquatic_environment_categories_chronic_1_to_4",
+        "label": "Hazard to the aquatic environment – categories chronic 1 to 4"
+    },
+    {
+        "value": "iraq",
+        "label": "Iraq"
+    },
+    {
+        "value": "pulp_paper_products",
+        "label": "Pulp & Paper Products"
+    },
+    {
+        "value": "investment_banking_brokerage",
+        "label": "Investment Banking & Brokerage"
+    },
+    {
+        "value": "S4_1",
+        "label": "S4-1 – Policies related to consumers and end-users"
+    },
+    {
+        "value": "panama",
+        "label": "Panama"
+    },
+    {
+        "value": "tanzania",
+        "label": "Tanzania"
+    },
+    {
+        "value": "guyana",
+        "label": "Guyana"
+    },
+    {
+        "value": "norway",
+        "label": "Norway"
+    },
+    {
+        "value": "ecuador",
+        "label": "Ecuador"
+    },
+    {
+        "value": "esrs:RevenueFromTheFossilFuelSector",
+        "label": "ESRS26_SBM-1_06(2): Revenue from the fossil fuel sector"
+    },
+    {
+        "value": "milestone_year",
+        "label": "Milestone year"
+    },
+    {
+        "value": "pollution_soil",
+        "label": "Pollution of soil"
+    },
+    {
+        "value": "brazil",
+        "label": "Brazil"
+    },
+    {
+        "value": "E4",
+        "label": "ESRS E4 Biodiversity and ecosystems"
+    },
+    {
+        "value": "italy",
+        "label": "Italy"
+    },
+    {
+        "value": "spain",
+        "label": "Spain"
+    },
+    {
+        "value": "lack_of_reliable_data_metricpartialreportingboundary",
+        "label": "Relief to report a partial reporting boundary for a metric due to lack of reliable data"
+    },
+    {
+        "value": "persistent,_mobile_and_toxic_or_very_persistent_very_mobile_properties",
+        "label": "Persistent, mobile and toxic or very persistent, very mobile properties"
+    },
+    {
+        "value": "esrs:TotalNumberOfTemporaryFullTimeEquivalentAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_04(4): Total number of temporary (full-time equivalent), at the end of the period"
+    },
+    {
+        "value": "bahamas",
+        "label": "Bahamas"
+    },
+    {
+        "value": "esrs:DisclosureOfThePercentagesOfEmployeesNotPaidAnAdequateWage",
+        "label": "ESRS26_S1-9_03: Disclosure of the percentages of employees not paid an adequate wage"
+    },
+    {
+        "value": "commercial_banks",
+        "label": "Commercial Banks"
+    },
+    {
+        "value": "outflows",
+        "label": "Resource outflows related to products and services"
+    },
+    {
+        "value": "esrs:DesignedRecyclabilityRateOfTheKeyProductsPackaging",
+        "label": "ESRS26_E5-5_04: Designed recyclability rate of the key products packaging"
+    },
+    {
+        "value": "consolidated",
+        "label": "Consolidated"
+    },
+    {
+        "value": "persistent,_bioaccumulative_and_toxic_or_very_persistent_very_bioaccumulative_properties",
+        "label": "Persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties"
+    },
+    {
+        "value": "GDR",
+        "label": "General Disclosure Requirements (‘GDR’) for policies, actions, metrics and targets"
+    },
+    {
+        "value": "maldives",
+        "label": "Maldives"
+    },
+    {
+        "value": "esrs:TotalWeightOfSocDirectlyReleasedManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_04: Total weight of SoC directly released (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "oil",
+        "label": "Oil"
+    },
+    {
+        "value": "adaptation",
+        "label": "Climate change adaptation"
+    },
+    {
+        "value": "not_in_place_but_expected_to_be_adopted",
+        "label": "Transition plan not in place but expected to be adopted"
+    },
+    {
+        "value": "denmark",
+        "label": "Denmark"
+    },
+    {
+        "value": "skin_sensitisation_category_1",
+        "label": "Skin sensitisation category 1"
+    },
+    {
+        "value": "esrs:ConsumptionOfPurchasedOrAcquiredElectricityHeatSteamOrCoolingFromFossilSources",
+        "label": "ESRS26_E1-7_09: Consumption of purchased or acquired electricity, heat, steam, or cooling from fossil sources"
+    },
+    {
+        "value": "f_construction",
+        "label": "F Construction"
+    },
+    {
+        "value": "switzerland",
+        "label": "Switzerland"
+    },
+    {
+        "value": "semiconductors",
+        "label": "Semiconductors"
+    },
+    {
+        "value": "vietnam",
+        "label": "Vietnam"
+    },
+    {
+        "value": "peru",
+        "label": "Peru"
+    },
+    {
+        "value": "processing_sold_products",
+        "label": "Processing of Sold Products"
+    },
+    {
+        "value": "palau",
+        "label": "Palau"
+    },
+    {
+        "value": "waste_management",
+        "label": "Waste Management"
+    },
+    {
+        "value": "esrs:TotalNumberOfEmployeesHeadCountAverageOfThePeriod",
+        "label": "ESRS26_S1-5_01(1): Total number of employees (head count), average of the period"
+    },
+    {
+        "value": "nepal",
+        "label": "Nepal"
+    },
+    {
+        "value": "home_builders",
+        "label": "Home Builders"
+    },
+    {
+        "value": "pollution_air",
+        "label": "Pollution of air"
+    },
+    {
+        "value": "esrs:TotalWeightOfSvhcDirectlyReleasedManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_08: Total weight of SVHC directly released (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "esrs:DisclosureOfQuantitativeAbsoluteMeasureMetricsRelatedToUndertakingSMaterialImpactsOnBiodiversityAndEcosystems",
+        "label": "ESRS26_E4-5_04(2): Disclosure of quantitative (absolute measure) metrics related to undertaking's material impacts on biodiversity and ecosystems"
+    },
+    {
+        "value": "health_services",
+        "label": "Health services"
+    },
+    {
+        "value": "nauru",
+        "label": "Nauru"
+    },
+    {
+        "value": "S1_13",
+        "label": "S1-13 – Health and safety metrics"
+    },
+    {
+        "value": "tunisia",
+        "label": "Tunisia"
+    },
+    {
+        "value": "antigua_and_barbuda",
+        "label": "Antigua and Barbuda"
+    },
+    {
+        "value": "construction_materials_lowercase",
+        "label": "Construction materials"
+    },
+    {
+        "value": "esrs:TotalNumberOfTemporaryHeadCountAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_04(2): Total number of temporary (head count), at the end of the period"
+    },
+    {
+        "value": "uzbekistan",
+        "label": "Uzbekistan"
+    },
+    {
+        "value": "S1_16",
+        "label": "S1-16 – Incidents of discrimination and other human rights incidents"
+    },
+    {
+        "value": "fuel_cells_industrial_batteries",
+        "label": "Fuel Cells & Industrial Batteries"
+    },
+    {
+        "value": "water_utilities_services",
+        "label": "Water Utilities & Services"
+    },
+    {
+        "value": "esrs:TotalEnergyConsumptionRelatedToTheUndertakingSOwnOperations",
+        "label": "ESRS26_E1-7_01: Total energy consumption related to the undertaking's own operations"
+    },
+    {
+        "value": "electronics",
+        "label": "Electronics"
+    },
+    {
+        "value": "household_goods",
+        "label": "Household goods"
+    },
+    {
+        "value": "esrs:EstimatedPotentialLiabilitiesThatDoNotMeetTheAccountingRecognitionCriteriaAtTheReportingDateButThatMayHaveToBeRecognisedInFinancialStatementsInFuture",
+        "label": "ESRS26_E1-11_08: Estimated potential liabilities that do not meet the accounting recognition criteria at the reporting date but that may have to be recognised in financial statements in future"
+    },
+    {
+        "value": "other_service_activities",
+        "label": "S Other service activities"
+    },
+    {
+        "value": "burkina_faso",
+        "label": "Burkina Faso"
+    },
+    {
+        "value": "slovenia",
+        "label": "Slovenia"
+    },
+    {
+        "value": "downstream_leased_assets",
+        "label": "Downstream Leased Assets"
+    },
+    {
+        "value": "E2_3",
+        "label": "E2-3 – Targets related to pollution"
+    },
+    {
+        "value": "metric_current_year",
+        "label": "Current year (of entity-specific metric)"
+    },
+    {
+        "value": "changes_in_preparation_or_presentation",
+        "label": "Changes in preparation or presentation of sustainability information"
+    },
+    {
+        "value": "currently_stated",
+        "label": "Currently stated"
+    },
+    {
+        "value": "specific_target_organ_toxicity_repeated_exposure_categories_1_and_2",
+        "label": "Specific target organ toxicity – repeated exposure categories 1 and 2"
+    },
+    {
+        "value": "longterm",
+        "label": "Long term"
+    },
+    {
+        "value": "medical_equipment",
+        "label": "Medical equipment"
+    },
+    {
+        "value": "rwanda",
+        "label": "Rwanda"
+    },
+    {
+        "value": "esrs:TotalNumberOfPermanentEmployeesHeadCountAverageOfThePeriod",
+        "label": "ESRS26_S1-5_03(1): Total number of permanent employees (head count), average of the period"
+    },
+    {
+        "value": "health_safety",
+        "label": "Health and safety"
+    },
+    {
+        "value": "esrs:RevenueMonetaryAmountFromBusinessActivitiesAtMaterialPhysicalRisk",
+        "label": "ESRS26_E1-11_03: Revenue (monetary amount) from business activities at material physical risk"
+    },
+    {
+        "value": "all_workers_in_value_chain",
+        "label": "All workers in value chain"
+    },
+    {
+        "value": "baseline",
+        "label": "Baseline"
+    },
+    {
+        "value": "esrs:TotalAmountOfCarbonCreditsPurchasedInTheReportingPeriodAndNotCancelledYet",
+        "label": "ESRS26_E1-9_06: Total amount of carbon credits purchased in the reporting period and not cancelled yet"
+    },
+    {
+        "value": "esrs:NumberOfConvictionsAndSanctionsForViolationOfAntiCorruptionAndAntiBriberyLaws",
+        "label": "ESRS26_G1-4_01: Number of convictions and sanctions for violation of anti-corruption and anti- bribery laws"
+    },
+    {
+        "value": "revised_esrs",
+        "label": "Revised ESRS (Commission Delegated Regulation (EU) of 3 July 2026 amending Delegated Regulation (EU) 2023/2772 as regards the ESRS simplification)"
+    },
+    {
+        "value": "building_products_furnishings",
+        "label": "Building Products & Furnishings"
+    },
+    {
+        "value": "esrs:TotalWeightOfSocProcuredManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_01: Total weight of SoC procured (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "S1_3",
+        "label": "S1-3 – Actions and resources related to own workforce"
+    },
+    {
+        "value": "S1_6",
+        "label": "S1-6 – Characteristics of non-employees in the undertaking’s own workforce"
+    },
+    {
+        "value": "ozone",
+        "label": "Ozone (O3)"
+    },
+    {
+        "value": "relative_target",
+        "label": "Relative target"
+    },
+    {
+        "value": "south_sudan",
+        "label": "South Sudan"
+    },
+    {
+        "value": "guinea",
+        "label": "Guinea"
+    },
+    {
+        "value": "exclusion_joint_operations_from_environmental_metrics",
+        "label": "Relief to exclude joint operations from environmental metrics"
+    },
+    {
+        "value": "mexico",
+        "label": "Mexico"
+    },
+    {
+        "value": "arts_entertainment_recreation",
+        "label": "R Arts, entertainment and recreation"
+    },
+    {
+        "value": "esrs:PercentageOfTheCarryingAmountOfAssetsAtMaterialTransitionRiskAddressedByMitigationActions",
+        "label": "ESRS26_E1-11_06: Percentage of the carrying amount of assets at material transition risk addressed by mitigation actions"
+    },
+    {
+        "value": "gas_utilities_distributors",
+        "label": "Gas Utilities & Distributors"
+    },
+    {
+        "value": "angola",
+        "label": "Angola"
+    },
+    {
+        "value": "finland",
+        "label": "Finland"
+    },
+    {
+        "value": "democratic_republic_of_the_congo",
+        "label": "Democratic Republic of the Congo"
+    },
+    {
+        "value": "E2_5",
+        "label": "E2-5 – Substances of concern and substances of very high concern"
+    },
+    {
+        "value": "E5_3",
+        "label": "E5-3 – Targets related to resource use and circular economy"
+    },
+    {
+        "value": "construction_materials_propercase",
+        "label": "Construction Materials"
+    },
+    {
+        "value": "E3_1",
+        "label": "E3-1 – Policies related to water"
+    },
+    {
+        "value": "esrs:NumberOfOutstandingLegalProceedingsForLatePayments",
+        "label": "ESRS26_G1-6_05: Number of outstanding legal proceedings for late payments"
+    },
+    {
+        "value": "SBM_1",
+        "label": "ESRS 2 SBM-1 – Strategy, business model and value chain"
+    },
+    {
+        "value": "senegal",
+        "label": "Senegal"
+    },
+    {
+        "value": "aerospace_and_defense",
+        "label": "Aerospace and defense"
+    },
+    {
+        "value": "esrs:AverageNumberOfTrainingHoursPerEmployee",
+        "label": "ESRS26_S1-12_02: Average number of training hours per employee"
+    },
+    {
+        "value": "esrs:TotalFinancialAndInKindPoliticalContributionsMadeDirectlyAndIndirectly",
+        "label": "ESRS26_G1-5_01: Total financial and in-kind political contributions made directly and indirectly"
+    },
+    {
+        "value": "esrs:AmountOfFinesForViolationOfAntiCorruptionAndAntiBriberyLaws",
+        "label": "ESRS26_G1-4_02: Amount of fines for violation of anti-corruption and anti-bribery laws"
+    },
+    {
+        "value": "esrs:RateOfTurnoverOfPermanentEmployees",
+        "label": "ESRS26_S1-5_06: Rate of turnover of permanent employees"
+    },
+    {
+        "value": "E4_5",
+        "label": "E4-5 – Metrics related to biodiversity and ecosystems change"
+    },
+    {
+        "value": "toys_sporting_goods",
+        "label": "Toys & Sporting Goods"
+    },
+    {
+        "value": "SoC_SVHC",
+        "label": "Substances of concern, including substances of very high concern"
+    },
+    {
+        "value": "financial_insurance_activities",
+        "label": "K Financial and insurance activities"
+    },
+    {
+        "value": "safety_consumers_users",
+        "label": "Personal safety of consumers or end-users (including health and safety, protection of children, security of a person)"
+    },
+    {
+        "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesFullTimeEquivalentInTheUndertakingSOwnWorkforceAverageOfThePeriod",
+        "label": "ESRS26_S1-6_01(3): Disclosure of the total number of non-employees (full-time equivalent) in the undertaking’s own workforce, average of the period"
+    },
+    {
+        "value": "canada",
+        "label": "Canada"
+    },
+    {
+        "value": "esrs:PercentageOfItsTotalEmployeesCoveredByCollectiveBargainingAgreements",
+        "label": "ESRS26_S1-7_01: Percentage of its total employees covered by collective bargaining agreements"
+    },
+    {
+        "value": "consumer_finance",
+        "label": "Consumer Finance"
+    },
+    {
+        "value": "kosovo",
+        "label": "Kosovo"
+    },
+    {
+        "value": "lesotho",
+        "label": "Lesotho"
+    },
+    {
+        "value": "media_communication",
+        "label": "Media and communication"
+    },
+    {
+        "value": "non_employees",
+        "label": "Non employees"
+    },
+    {
+        "value": "laos",
+        "label": "Laos"
+    },
+    {
+        "value": "S1_11",
+        "label": "S1-11 – Persons with disabilities"
+    },
+    {
+        "value": "portugal",
+        "label": "Portugal"
+    },
+    {
+        "value": "myanmar",
+        "label": "Myanmar"
+    },
+    {
+        "value": "el_salvador",
+        "label": "El Salvador"
+    },
+    {
+        "value": "montenegro",
+        "label": "Montenegro"
+    },
+    {
+        "value": "netherlands",
+        "label": "Netherlands"
+    },
+    {
+        "value": "tonga",
+        "label": "Tonga"
+    },
+    {
+        "value": "esrs:PercentageOfPeopleInOwnWorkforceWhoAreCoveredByAHealthAndSafetyManagementSystemBasedOnLegalRequirementsAndOrOrRecognisedStandardsOrGuidelines",
+        "label": "ESRS26_S1-13_01: Percentage of people in own workforce who are covered by a health and safety management system based on legal requirements and/or recognised standards or guidelines"
+    },
+    {
+        "value": "long-term",
+        "label": "Long-term"
+    },
+    {
+        "value": "solomon_islands",
+        "label": "Solomon Islands"
+    },
+    {
+        "value": "tuvalu",
+        "label": "Tuvalu"
+    },
+    {
+        "value": "education",
+        "label": "Education"
+    },
+    {
+        "value": "esrs:AmountOfRevenueFromBusinessActivitiesAlignedToClimateRelatedOpportunities",
+        "label": "ESRS26_E1-11_14: Amount of revenue from business activities aligned to climate-related opportunities"
+    },
+    {
+        "value": "coal",
+        "label": "Coal"
+    },
+    {
+        "value": "milestone",
+        "label": "Milestone"
+    },
+    {
+        "value": "esrs:DisclosureOfOtherAspectsOfDiversityOfAdministrativeManagementAndSupervisoryBoardTextBlock",
+        "label": "ESRS26_GOV-1_04: Disclosure of other aspects of diversity of administrative management and supervisory board"
+    },
+    {
+        "value": "agriculture_aquaculture_fishing",
+        "label": "Agriculture, aquaculture, and fishing"
+    },
+    {
+        "value": "specific_groups_of_workers_within_value_chain",
+        "label": "Specific groups of workers within value chain"
+    },
+    {
+        "value": "ghana",
+        "label": "Ghana"
+    },
+    {
+        "value": "mediumterm",
+        "label": "Medium term"
+    },
+    {
+        "value": "S2_1",
+        "label": "S2-1 – Policies related to workers in the value chain"
+    },
+    {
+        "value": "hazardous",
+        "label": "Hazardous"
+    },
+    {
+        "value": "electric_utilities_power_generators",
+        "label": "Electric Utilities & Power Generators"
+    },
+    {
+        "value": "aerospace_defense",
+        "label": "Aerospace & Defense"
+    },
+    {
+        "value": "hydro-fluorocarbons",
+        "label": "Hydro-fluorocarbons (HFCs)"
+    },
+    {
+        "value": "esrs:FuelConsumptionFromNaturalGas",
+        "label": "ESRS26_E1-7_07: Fuel consumption from natural gas"
+    },
+    {
+        "value": "S1_10",
+        "label": "S1-10 – Social protection"
+    },
+    {
+        "value": "taiwan",
+        "label": "Taiwan"
+    },
+    {
+        "value": "esrs:NumberOfFatalitiesFromWorkRelatedIllHealthAmongItsEmployeesSubjectToLegalRestrictions",
+        "label": "ESRS26_S1-13_03: Number of fatalities from work-related ill health among its employees (subject to legal restrictions)"
+    },
+    {
+        "value": "own_workforce",
+        "label": "Own workforce"
+    },
+    {
+        "value": "electricity_gas_steam_air_conditioning_supply",
+        "label": "D Electricity, gas, steam and air conditioning supply"
+    },
+    {
+        "value": "esrs:NumberOfFatalitiesFromWorkRelatedAccidentsSubjectToLegalRestrictions",
+        "label": "ESRS26_S1-13_02: Number of fatalities from work-related accidents (subject to legal restrictions)"
+    },
+    {
+        "value": "carbon_dioxide",
+        "label": "Carbon Dioxide (CO2)"
+    },
+    {
+        "value": "north_macedonia",
+        "label": "North Macedonia"
+    },
+    {
+        "value": "south_korea",
+        "label": "South Korea"
+    },
+    {
+        "value": "S1_5",
+        "label": "S1-5 – Characteristics of the undertaking’s employees"
+    },
+    {
+        "value": "S2_4",
+        "label": "S2-4 – Targets related to workers in the value chain"
+    },
+    {
+        "value": "target_baseline_year",
+        "label": "Baseline year (of non-topical target)"
+    },
+    {
+        "value": "cambodia",
+        "label": "Cambodia"
+    },
+    {
+        "value": "esrs:WeightOfKeyMaterial",
+        "label": "ESRS26_E5-4_03(1): Weight of key material"
+    },
+    {
+        "value": "esrs:NumberOfSubstantiatedIncidentsOfDiscrimination",
+        "label": "ESRS26_S1-16_01: Number of substantiated incidents of discrimination"
+    },
+    {
+        "value": "exclusion_of_activities_notsignificantdriversofiros_from_metriccalculation",
+        "label": "Relief to exclude from the calculation of a metric activities that are not significant drivers of IROs"
+    },
+    {
+        "value": "E3_4",
+        "label": "E3-4 – Water metrics"
+    },
+    {
+        "value": "nitrogen_trifluoride",
+        "label": "Nitrogen Trifluoride (NF3)"
+    },
+    {
+        "value": "esrs:TotalNumberOfEmployeesHeadCountAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_01(2): Total number of employees (head count), at the end of the period"
+    },
+    {
+        "value": "jordan",
+        "label": "Jordan"
+    },
+    {
+        "value": "S1_4",
+        "label": "S1-4 – Targets related to own workforce"
+    },
+    {
+        "value": "workers_in_value_chain",
+        "label": "Workers in the value chain"
+    },
+    {
+        "value": "esrs:TotalWeightOfSvhcPlacedOnTheMarketManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_07: Total weight of SVHC placed on the market (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "comoros",
+        "label": "Comoros"
+    },
+    {
+        "value": "esrs:TotalNumberOfPermanentEmployeesHeadCountAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_03(2): Total number of permanent employees (head count), at the end of the period"
+    },
+    {
+        "value": "esrs:DisclosureOfQualitativeAndQuantitativeInformationAboutHowMaterialRisksAndOpportunitiesHaveAffectedItsFinancialPositionFinancialPerformanceAndCashFlowsForTheReportingPeriodCurrentFinancialEffectsTextBlock",
+        "label": "ESRS26_SBM-3_02: Disclosure of qualitative and quantitative information about how material risks and opportunities have affected its financial position, financial performance and cash flows for the reporting period (current financial effects)"
+    },
+    {
+        "value": "esrs:CarryingAmountOfAssetsAtMaterialPhysicalRiskBeforeConsideringClimateChangeAdaptationActions",
+        "label": "ESRS26_E1-11_01: Carrying amount of assets at material physical risk before considering climate change adaptation actions"
+    },
+    {
+        "value": "estonia",
+        "label": "Estonia"
+    },
+    {
+        "value": "esrs:DescriptionOfBiodiversityOffsetsUsedIncludingTheAimOfTheOffsetsTheFinancingEffectsInMonetaryTermsTheAreaTypeAndQualityCriteriaAppliedAndTheStandardsWithWhichTheBiodiversityOffsetsComplyTextBlock",
+        "label": "ESRS26_E4-3_01: Description of biodiversity offsets used, including the aim of the offsets, the financing effects in monetary terms, the area, type and quality criteria applied, and the standards with which the biodiversity offsets comply"
+    },
+    {
+        "value": "esrs:ShareOfCarbonCreditsFromRemovalProjectsPercentageOfVolume",
+        "label": "ESRS26_E1-9_07: Share of carbon credits from removal projects (percentage of volume)"
+    },
+    {
+        "value": "car_rental_leasing",
+        "label": "Car Rental & Leasing"
+    },
+    {
+        "value": "india",
+        "label": "India"
+    },
+    {
+        "value": "central_african_republic",
+        "label": "Central African Republic"
+    },
+    {
+        "value": "bangladesh",
+        "label": "Bangladesh"
+    },
+    {
+        "value": "liberia",
+        "label": "Liberia"
+    },
+    {
+        "value": "singapore",
+        "label": "Singapore"
+    },
+    {
+        "value": "liechtenstein",
+        "label": "Liechtenstein"
+    },
+    {
+        "value": "downstream_transport_distribution",
+        "label": "Downstream Transportation and Distribution"
+    },
+    {
+        "value": "deviation_from_predefined_timehorizons",
+        "label": "Deviation from pre-defined time horizons"
+    },
+    {
+        "value": "consolidated_group",
+        "label": "Consolidated group"
+    },
+    {
+        "value": "sulphur_hexafluoride",
+        "label": "Sulphur Hexafluoride (SF6)"
+    },
+    {
+        "value": "somalia",
+        "label": "Somalia"
+    },
+    {
+        "value": "real_estate_lowercase",
+        "label": "Real estate"
+    },
+    {
+        "value": "marine_transportation",
+        "label": "Marine Transportation"
+    },
+    {
+        "value": "corporate_culture",
+        "label": "Corporate culture, including anti-corruption and bribery, the protection of whistle-blowers and animal welfare"
+    },
+    {
+        "value": "security_commodity_exchanges",
+        "label": "Security & Commodity Exchanges"
+    },
+    {
+        "value": "esrs:CarryingAmountOfAssetsAtMaterialTransitionRisk",
+        "label": "ESRS26_E1-11_04: Carrying amount of assets at material transition risk"
+    },
+    {
+        "value": "not_stated",
+        "label": "Not stated (phasing-in)"
+    },
+    {
+        "value": "S3_1",
+        "label": "S3-1 – Policies related to affected communities"
+    },
+    {
+        "value": "qatar",
+        "label": "Qatar"
+    },
+    {
+        "value": "kuwait",
+        "label": "Kuwait"
+    },
+    {
+        "value": "E5_4",
+        "label": "E5-4 – Resource inflows"
+    },
+    {
+        "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToEmploymentInjuryAndAcquiredDisability",
+        "label": "ESRS26_S1-10_03: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to employment injury and acquired disability"
+    },
+    {
+        "value": "oil_gas_refining_marketing",
+        "label": "Oil & Gas - Refining & Marketing"
+    },
+    {
+        "value": "landfill",
+        "label": "Landfill"
+    },
+    {
+        "value": "E1_1",
+        "label": "E1-1 – Transition plan for climate change mitigation"
+    },
+    {
+        "value": "belize",
+        "label": "Belize"
+    },
+    {
+        "value": "air_freight_and_logistics",
+        "label": "Air freight and logistics"
+    },
+    {
+        "value": "E1_3",
+        "label": "E1-3 – Resilience in relation to climate change"
+    },
+    {
+        "value": "esrs:TotalWaterWithdrawals",
+        "label": "ESRS26_E3-4_03: Total water withdrawals"
+    },
+    {
+        "value": "monaco",
+        "label": "Monaco"
+    },
+    {
+        "value": "non-hazardous",
+        "label": "Non-hazardous"
+    },
+    {
+        "value": "botswana",
+        "label": "Botswana"
+    },
+    {
+        "value": "non_reported",
+        "label": "Non reported"
+    },
+    {
+        "value": "microplastics",
+        "label": "Microplastics"
+    },
+    {
+        "value": "esrs:NumberOfCasesOfRecordableWorkRelatedIllHealthOfUndertakingSEmployeesSubjectToLegalRestrictions",
+        "label": "ESRS26_S1-13_06: Number of cases of recordable work-related ill health of undertaking's employees (subject to legal restrictions)"
+    },
+    {
+        "value": "thailand",
+        "label": "Thailand"
+    },
+    {
+        "value": "zimbabwe",
+        "label": "Zimbabwe"
+    },
+    {
+        "value": "currently_stated_corrected_revised",
+        "label": "Currently stated, corrected or revised"
+    },
+    {
+        "value": "S1_7",
+        "label": "S1-7 – Collective bargaining coverage and social dialogue"
+    },
+    {
+        "value": "software",
+        "label": "Software"
+    },
+    {
+        "value": "esrs:AmountOfFinesPenaltiesAndCompensationForDamagesRecognisedDuringTheReportingPeriodForIncidentsOfDiscriminationAndOtherHumanRightsIncidents",
+        "label": "ESRS26_S1-16_03: Amount of fines, penalties, and compensation for damages recognised during the reporting period for incidents of discrimination and other human rights incidents"
+    },
+    {
+        "value": "lithuania",
+        "label": "Lithuania"
+    },
+    {
+        "value": "suriname",
+        "label": "Suriname"
+    },
+    {
+        "value": "SBM_2",
+        "label": "ESRS 2 SBM-2 – Interests and views of stakeholders"
+    },
+    {
+        "value": "IRO_1",
+        "label": "ESRS 2 IRO-1 – Description of the process to identify and assess material impacts, risks and opportunities and material information to be reported"
+    },
+    {
+        "value": "all_affected_communities",
+        "label": "All affected communities"
+    },
+    {
+        "value": "esrs:UndertakingSEmployeesArePaidAnAdequateWage",
+        "label": "ESRS26_S1-9_01: Undertaking's employees are paid an adequate wage"
+    },
+    {
+        "value": "road_transportation",
+        "label": "Road Transportation"
+    },
+    {
+        "value": "administrative_support_service_activities",
+        "label": "N Administrative and support service activities"
+    },
+    {
+        "value": "not_compliant_to_any_esrs",
+        "label": "Not (fully) compliant to any adopted version of ESRS / Voluntary use of ESRS"
+    },
+    {
+        "value": "esrs:PercentageOfScope1GhgEmissionsFromEuEmissionsTradingSystem",
+        "label": "ESRS26_E1-8_02: Percentage of scope 1 GHG emissions from EU Emissions Trading System"
+    },
+    {
+        "value": "purchased_goods_services",
+        "label": "Purchased Goods and Services"
+    },
+    {
+        "value": "energy",
+        "label": "Energy"
+    },
+    {
+        "value": "e-commerce",
+        "label": "E-Commerce"
+    },
+    {
+        "value": "E1_5",
+        "label": "E1-5 – Actions and resources in relation to climate change mitigation and adaptation"
+    },
+    {
+        "value": "E2_4",
+        "label": "E2-4 – Pollution of air, water and soil"
+    },
+    {
+        "value": "E3_3",
+        "label": "E3-3 – Targets related to water"
+    },
+    {
+        "value": "esrs:PercentageOfEmployeesThatParticipatedInFormalisedPerformanceAndCareerDevelopmentReviews",
+        "label": "ESRS26_S1-12_01: Percentage of employees that participated in formalised performance and career development reviews"
+    },
+    {
+        "value": "esrs:TotalNumberOfTemporaryFullTimeEquivalentAverageOfThePeriod",
+        "label": "ESRS26_S1-5_04(3): Total number of temporary (full-time equivalent), average of the period"
+    },
+    {
+        "value": "insurance",
+        "label": "Insurance"
+    },
+    {
+        "value": "all_of_its_own_workforce",
+        "label": "All of its own workforce"
+    },
+    {
+        "value": "benin",
+        "label": "Benin"
+    },
+    {
+        "value": "transportation_infrastructure",
+        "label": "Transportation infrastructure"
+    },
+    {
+        "value": "sri_lanka",
+        "label": "Sri Lanka"
+    },
+    {
+        "value": "forestry",
+        "label": "Forestry"
+    },
+    {
+        "value": "turkey",
+        "label": "Turkey"
+    },
+    {
+        "value": "S2_3",
+        "label": "S2-3 – Actions and resources related to workers in the value chain"
+    },
+    {
+        "value": "esrs:TotalWeightOfSvhcDirectlyReleasedUsersOfSubstances",
+        "label": "ESRS26_E2-5_10: Total weight of SVHC directly released (users of substances)"
+    },
+    {
+        "value": "S1_2",
+        "label": "S1-2 – Engagement with own workforce and workers’ representatives, existence of channels for own workforce to raise concerns or needs and approaches to remedy"
+    },
+    {
+        "value": "target_milestone_year",
+        "label": "Milestone year (of non-topical target)"
+    },
+    {
+        "value": "casinos_gaming",
+        "label": "Casinos & Gaming"
+    },
+    {
+        "value": "south_africa",
+        "label": "South Africa"
+    },
+    {
+        "value": "colombia",
+        "label": "Colombia"
+    },
+    {
+        "value": "E5_1",
+        "label": "E5-1 – Policies related to resource use and circular economy"
+    },
+    {
+        "value": "armenia",
+        "label": "Armenia"
+    },
+    {
+        "value": "oil_gas_services",
+        "label": "Oil & Gas - Services"
+    },
+    {
+        "value": "manufacturing",
+        "label": "C Manufacturing"
+    },
+    {
+        "value": "other_emissions",
+        "label": "Other emissions not in consolidated accounting group"
+    },
+    {
+        "value": "esrs:AmountsOfMaterialEmissionsOfPollutantsToAirFromItsOwnOperations",
+        "label": "ESRS26_E2-4_01: Amounts of material emissions of pollutants to air from its own operations"
+    },
+    {
+        "value": "auto_parts",
+        "label": "Auto Parts"
+    },
+    {
+        "value": "esrs:CarryingAmountOfRealEstateAssetsThatHaveBeenUsedAsLoanCollaterals",
+        "label": "ESRS26_E1-11_07: Carrying amount of real estate assets that have been used as loan collaterals"
+    },
+    {
+        "value": "hotels_lodging",
+        "label": "Hotels & Lodging"
+    },
+    {
+        "value": "germany",
+        "label": "Germany"
+    },
+    {
+        "value": "mauritius",
+        "label": "Mauritius"
+    },
+    {
+        "value": "esrs:TotalEnergyConsumptionFromFossilSources",
+        "label": "ESRS26_E1-7_02: Total energy consumption from fossil sources"
+    },
+    {
+        "value": "malaysia",
+        "label": "Malaysia"
+    },
+    {
+        "value": "metric_previous_year",
+        "label": "Previous year (of entity-specific metric)"
+    },
+    {
+        "value": "uruguay",
+        "label": "Uruguay"
+    },
+    {
+        "value": "venezuela",
+        "label": "Venezuela"
+    },
+    {
+        "value": "gabon",
+        "label": "Gabon"
+    },
+    {
+        "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesHeadCountAverageOfThePeriod",
+        "label": "ESRS26_S1-5_05(1): Total number of non-guaranteed hours employees (head count), average of the period"
+    },
+    {
+        "value": "working_conditions",
+        "label": "Working conditions (including adequate wages, work-life balance, working time, secure employment) and social protection"
+    },
+    {
+        "value": "mali",
+        "label": "Mali"
+    },
+    {
+        "value": "commercial_services",
+        "label": "Commercial services"
+    },
+    {
+        "value": "grenada",
+        "label": "Grenada"
+    },
+    {
+        "value": "recycling",
+        "label": "Recycling"
+    },
+    {
+        "value": "saint_kitts_and_nevis",
+        "label": "Saint Kitts and Nevis"
+    },
+    {
+        "value": "indonesia",
+        "label": "Indonesia"
+    },
+    {
+        "value": "esrs:PercentageOfSecondaryResourcesUsedFromTotalWeightOfAllKeyMaterials",
+        "label": "ESRS26_E5-4_04(2): Percentage of secondary resources used from total weight of all key materials"
+    },
+    {
+        "value": "esrs:AmountsOfMaterialEmissionsOfPollutantsToSoilFromItsOwnOperations",
+        "label": "ESRS26_E2-4_03: Amounts of material emissions of pollutants to soil from its own operations"
+    },
+    {
+        "value": "not_material",
+        "label": "Not material (not applicable)"
+    },
+    {
+        "value": "esrs:AmountsOfPrimaryMicroplasticsDirectlyReleasedIntoTheEnvironment",
+        "label": "ESRS26_E2-4_05: Amounts of primary microplastics directly released into the environment"
+    },
+    {
+        "value": "software_it_services",
+        "label": "Software & IT Services"
+    },
+    {
+        "value": "restaurants",
+        "label": "Restaurants"
+    },
+    {
+        "value": "esrs:TotalWeightOfSocPlacedOnTheMarketManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_03: Total weight of SoC placed on the market (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "internet_media_services",
+        "label": "Internet Media & Services"
+    },
+    {
+        "value": "S4_4",
+        "label": "S4-4 – Targets related to consumers and end-users"
+    },
+    {
+        "value": "own_employees",
+        "label": "Own employees"
+    },
+    {
+        "value": "fuel_energy_related",
+        "label": "Fuel- and Energy-Related Activities (Not Included in scope 1 or scope 2)"
+    },
+    {
+        "value": "saint_vincent_and_the_grenadines",
+        "label": "Saint Vincent and the Grenadines"
+    },
+    {
+        "value": "oil_gas_exploration_production",
+        "label": "Oil & Gas - Exploration & Production"
+    },
+    {
+        "value": "SBM_3",
+        "label": "ESRS 2 SBM-3 – Interaction of material impacts risks and opportunities with strategy and business model, and financial effects"
+    },
+    {
+        "value": "biofuels",
+        "label": "Biofuels"
+    },
+    {
+        "value": "individual",
+        "label": "Individual"
+    },
+    {
+        "value": "accommodation_food_service_activities",
+        "label": "I Accommodation and food service activities"
+    },
+    {
+        "value": "esrs:NonRenewableEnergyProduction",
+        "label": "ESRS26_E1-7_10: Non-renewable energy production"
+    },
+    {
+        "value": "S2",
+        "label": "ESRS S2 Workers in value chain"
+    },
+    {
+        "value": "consumers and end-users",
+        "label": "Consumers and end-users"
+    },
+    {
+        "value": "esrs:PercentageOfMembersOfAdministrativeManagementAndSupervisoryBoardAsAverageRatioOfFemaleToMaleBoardMembers",
+        "label": "ESRS26_GOV-1_03: Percentage of members of administrative management and supervisory board as average ratio of female to male board members"
+    },
+    {
+        "value": "machinery_equipment",
+        "label": "Machinery and equipment"
+    },
+    {
+        "value": "equatorial_guinea",
+        "label": "Equatorial Guinea"
+    },
+    {
+        "value": "yemen",
+        "label": "Yemen"
+    },
+    {
+        "value": "iron_steel_producers",
+        "label": "Iron & Steel Producers"
+    },
+    {
+        "value": "australia",
+        "label": "Australia"
+    },
+    {
+        "value": "mining",
+        "label": "Mining"
+    },
+    {
+        "value": "guinea-bissau",
+        "label": "Guinea-Bissau"
+    },
+    {
+        "value": "esrs:DisclosureOfTheNamesAndTypesOfBiodiversitySensitiveAreaSRelatedToTheUndertakingSMaterialNegativeImpactsForTheLocationsInUndertakingSOwnOperationsTextBlock",
+        "label": "ESRS26_E4-5_02: Disclosure of the names and types of biodiversity-sensitive area(s) related to the undertaking’s material negative impacts for the locations in undertaking's own operations"
+    },
+    {
+        "value": "kazakhstan",
+        "label": "Kazakhstan"
+    },
+    {
+        "value": "esrs:PercentageOfEmployeesEntitledToTakeFamilyRelatedLeave",
+        "label": "ESRS26_S1-14_01: Percentage of employees entitled to take family-related leave"
+    },
+    {
+        "value": "meat_poultry_dairy",
+        "label": "Meat, Poultry & Dairy"
+    },
+    {
+        "value": "san_marino",
+        "label": "San Marino"
+    },
+    {
+        "value": "hardware",
+        "label": "Hardware"
+    },
+    {
+        "value": "esrs:ProportionOfVariableRemunerationDependentOnSustainabilityRelatedTargetsOrMetrics",
+        "label": "ESRS26_GOV-2_03: Proportion of variable remuneration dependent on sustainability-related targets or metrics"
+    },
+    {
+        "value": "E1",
+        "label": "ESRS E1 Climate change"
+    },
+    {
+        "value": "turkmenistan",
+        "label": "Turkmenistan"
+    },
+    {
+        "value": "esrs:TotalWaterConsumption",
+        "label": "ESRS26_E3-4_01: Total water consumption"
+    },
+    {
+        "value": "mozambique",
+        "label": "Mozambique"
+    },
+    {
+        "value": "libya",
+        "label": "Libya"
+    },
+    {
+        "value": "slovakia",
+        "label": "Slovakia"
+    },
+    {
+        "value": "new_zealand",
+        "label": "New Zealand"
+    },
+    {
+        "value": "esrs:RangeOfEstimatedPotentialStrandedAssetsFromTheReportingYearUntilTheMidTermAndLongTermTimeHorizonsBasedOnAScenarioAlignedWithLimitingClimateChangeTo15C",
+        "label": "ESRS26_E1-11_05: Range of estimated potential stranded assets from the reporting year until the mid-term and long-term time horizons based on a scenario aligned with limiting climate change to 1.5°C"
+    },
+    {
+        "value": "albania",
+        "label": "Albania"
+    },
+    {
+        "value": "esrs:TotalEnergyConsumptionFromRenewableSources",
+        "label": "ESRS26_E1-7_04: Total energy consumption from renewable sources"
+    },
+    {
+        "value": "E3",
+        "label": "ESRS E3 Water and marine resources"
+    },
+    {
+        "value": "real_estate_activities",
+        "label": "L Real estate activities"
+    },
+    {
+        "value": "E1_9",
+        "label": "E1-9 – GHG removals and GHG mitigation projects financed through carbon credits"
+    },
+    {
+        "value": "use_sold_products",
+        "label": "Use of Sold Products"
+    },
+    {
+        "value": "esrs:PercentageOfIndependentBoardMembers",
+        "label": "ESRS26_GOV-1_01: Percentage of independent board members"
+    },
+    {
+        "value": "eritrea",
+        "label": "Eritrea"
+    },
+    {
+        "value": "medical_equipment_supplies",
+        "label": "Medical Equipment & Supplies"
+    },
+    {
+        "value": "asset_management_custody_activities",
+        "label": "Asset Management & Custody Activities"
+    },
+    {
+        "value": "esrs:PercentageOfKeyMaterialFromTotalWeightOfAllKeyMaterials",
+        "label": "ESRS26_E5-4_03(2): Percentage of key material from total weight of all key materials"
+    },
+    {
+        "value": "esrs:TotalNumberOfTemporaryHeadCountAverageOfThePeriod",
+        "label": "ESRS26_S1-5_04(1): Total number of temporary (head count), average of the period"
+    },
+    {
+        "value": "water_waste_services",
+        "label": "Water and waste services"
+    },
+    {
+        "value": "security_services",
+        "label": "Security services"
+    },
+    {
+        "value": "esrs:FuelConsumptionFromOtherFossilSources",
+        "label": "ESRS26_E1-7_08: Fuel consumption from other fossil sources"
+    },
+    {
+        "value": "males",
+        "label": "Males"
+    },
+    {
+        "value": "oil_gas_midstream",
+        "label": "Oil & Gas - Midstream"
+    },
+    {
+        "value": "czechia",
+        "label": "Czechia"
+    },
+    {
+        "value": "G1",
+        "label": "ESRS G1 Business conduct"
+    },
+    {
+        "value": "metal_processing",
+        "label": "Metal processing"
+    },
+    {
+        "value": "haiti",
+        "label": "Haiti"
+    },
+    {
+        "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesFullTimeEquivalentInTheUndertakingSOwnWorkforceAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-6_01(4): Disclosure of the total number of non-employees (full-time equivalent) in the undertaking’s own workforce, at the end of the period"
+    },
+    {
+        "value": "saudi_arabia",
+        "label": "Saudi Arabia"
+    },
+    {
+        "value": "drivers_biodiv_ecosyst",
+        "label": "Drivers of biodiversity and ecosystem change (including terrestrial and marine habitat change, invasive species)"
+    },
+    {
+        "value": "professional_scientific_technical_activities",
+        "label": "M Professional, scientific and technical activities"
+    },
+    {
+        "value": "solar_technology_project_developers",
+        "label": "Solar Technology & Project Developers"
+    },
+    {
+        "value": "significant_limitations_undue_cost_or_effort_provision",
+        "label": "Significant limitations affecting the reported information under the undue cost or effort provision for specific datapoints"
+    },
+    {
+        "value": "tobacco",
+        "label": "Tobacco"
+    },
+    {
+        "value": "esrs:DisclosureOfTheGenderDistributionInPercentageAtTopManagementLevel",
+        "label": "ESRS26_S1-8_02: Disclosure of the gender distribution in percentage at top management level"
+    },
+    {
+        "value": "romania",
+        "label": "Romania"
+    },
+    {
+        "value": "S3_2",
+        "label": "S3-2 – Engagement with affected communities, existence of channels for affected communities to raise concerns or needs and approaches to remedy"
+    },
+    {
+        "value": "business_travel",
+        "label": "Business Travel"
+    },
+    {
+        "value": "IRO_2",
+        "label": "ESRS 2 IRO-2 – Material impacts, risks and opportunities and disclosure requirements included in the sustainability statement"
+    },
+    {
+        "value": "affected_communities",
+        "label": "Affected communities"
+    },
+    {
+        "value": "forestry_management",
+        "label": "Forestry Management"
+    },
+    {
+        "value": "S3",
+        "label": "ESRS S3 Affected communities"
+    },
+    {
+        "value": "G1_4",
+        "label": "G1-4 – Metrics related to corruption or bribery"
+    },
+    {
+        "value": "esrs:AbsoluteGrossLocationBasedScope2GhgEmissionsGeneratedDuringTheReportingPeriod",
+        "label": "ESRS26_E1-8_03: Absolute gross location-based scope 2 GHG emissions generated during the reporting period"
+    },
+    {
+        "value": "esrs:PercentageOfPersonsWithDisabilitiesAmongstEmployeesSubjectToLegalRestrictionsOnCollectionOfData",
+        "label": "ESRS26_S1-11_01: Percentage of persons with disabilities amongst employees (subject to legal restrictions on collection of data)"
+    },
+    {
+        "value": "upstream_transport_distribution",
+        "label": "Upstream Transportation and Distribution"
+    },
+    {
+        "value": "esrs:CapexAmountsInvestedDuringTheReportingPeriodRelatedToCoalOilAndGasActivities",
+        "label": "ESRS26_E1-1_02: CapEx amounts invested during the reporting period related to coal, oil and gas activities"
+    },
+    {
+        "value": "E2",
+        "label": "ESRS E2 Pollution"
+    },
+    {
+        "value": "guatemala",
+        "label": "Guatemala"
+    },
+    {
+        "value": "hungary",
+        "label": "Hungary"
+    },
+    {
+        "value": "esrs:NetRevenueFromBusinessActivitiesAtMaterialTransitionRisk",
+        "label": "ESRS26_E1-11_09: Net revenue from business activities at material transition risk"
+    },
+    {
+        "value": "industrial_machinery_goods",
+        "label": "Industrial Machinery & Goods"
+    },
+    {
+        "value": "mitigation",
+        "label": "Climate change mitigation"
+    },
+    {
+        "value": "esrs:DisclosureOfBenchmarksUndertakingUsesToDetermineAdequateWagesWithAnIndicationOfTheCountriesForWhichAGivenBenchmarkIsUsedTextBlock",
+        "label": "ESRS26_S1-9_02: Disclosure of benchmarks undertaking uses to determine adequate wages with an indication of the countries for which a given benchmark is used"
+    },
+    {
+        "value": "esrs:FuelConsumptionFromCoalAndCoalProducts",
+        "label": "ESRS26_E1-7_05: Fuel consumption from coal and coal products"
+    },
+    {
+        "value": "sierra_leone",
+        "label": "Sierra Leone"
+    },
+    {
+        "value": "esrs:AmountsOfMaterialEmissionsOfPollutantsToWaterFromItsOwnOperations",
+        "label": "ESRS26_E2-4_02: Amounts of material emissions of pollutants to water from its own operations"
+    },
+    {
+        "value": "esrs:DisclosureOfQualitativeOrQuantitativeInformationOnTheExtentToWhichUndertakingSKeyProductsAreRepairableTextBlock",
+        "label": "ESRS26_E5-5_02: Disclosure of qualitative or quantitative information on the extent to which undertaking's key products are repairable"
+    },
+    {
+        "value": "cruise_lines",
+        "label": "Cruise Lines"
+    },
+    {
+        "value": "others",
+        "label": "Others"
+    },
+    {
+        "value": "E1_4",
+        "label": "E1-4 – Policies related to climate change mitigation and adaptation"
+    },
+    {
+        "value": "S2_2",
+        "label": "S2-2 – Engagement with workers in the value chain, existence of channels for workers in the value chain to raise concerns or needs and approaches to remedy"
+    },
+    {
+        "value": "cabo_verde",
+        "label": "Cabo Verde"
+    },
+    {
+        "value": "hotels",
+        "label": "Hotels"
+    },
+    {
+        "value": "pol_influence",
+        "label": "Political influence, including lobbying activities"
+    },
+    {
+        "value": "kenya",
+        "label": "Kenya"
+    },
+    {
+        "value": "burundi",
+        "label": "Burundi"
+    },
+    {
+        "value": "sudan",
+        "label": "Sudan"
+    },
+    {
+        "value": "seychelles",
+        "label": "Seychelles"
+    },
+    {
+        "value": "cameroon",
+        "label": "Cameroon"
+    },
+    {
+        "value": "republic_of_the_congo",
+        "label": "Congo (Republic of the)"
+    },
+    {
+        "value": "wholesale_retail_trade",
+        "label": "Wholesale and retail trade"
+    },
+    {
+        "value": "specific_affected_communities",
+        "label": "Specific affected communities"
+    },
+    {
+        "value": "esrs:NumberOfDaysOfStandardPaymentTermsAppliedToSmeSuppliers",
+        "label": "ESRS26_G1-6_03: Number of days of standard payment terms applied to SME suppliers"
+    },
+    {
+        "value": "austria",
+        "label": "Austria"
+    },
+    {
+        "value": "esrs:DesignedRecyclabilityRateOfTheKeyProducts",
+        "label": "ESRS26_E5-5_03: Designed recyclability rate of the key products"
+    },
+    {
+        "value": "wholesale_retail_trade_repair_of_motor_vehicles_motorcycles",
+        "label": "G Wholesale and retail trade; repair of motor vehicles and motorcycles"
+    },
+    {
+        "value": "previously_stated",
+        "label": "Previously stated"
+    },
+    {
+        "value": "ecosyst_services",
+        "label": "Ecosystem services"
+    },
+    {
+        "value": "leisure_facilities",
+        "label": "Leisure Facilities"
+    },
+    {
+        "value": "human_health_social_work_activities",
+        "label": "Q Human health and social work activities"
+    },
+    {
+        "value": "esrs:PercentageOfPaymentsAlignedWithStandardPaymentTerms",
+        "label": "ESRS26_G1-6_04: Percentage of payments aligned with standard payment terms"
+    },
+    {
+        "value": "E1_2",
+        "label": "E1-2 – Identification of climate-related risks and scenario analysis"
+    },
+    {
+        "value": "real_estate_uppercase",
+        "label": "Real Estate"
+    },
+    {
+        "value": "esrs:RateOfRecordableWorkRelatedAccidentsAmongOwnWorkforce",
+        "label": "ESRS26_S1-13_05: Rate of recordable work-related accidents among own workforce"
+    },
+    {
+        "value": "E5_5",
+        "label": "E5-5 – Resource outflows"
+    },
+    {
+        "value": "G1_6",
+        "label": "G1-6 – Metrics related to payment practices"
+    },
+    {
+        "value": "honduras",
+        "label": "Honduras"
+    },
+    {
+        "value": "health_care_distributors",
+        "label": "Health Care Distributors"
+    },
+    {
+        "value": "kiribati",
+        "label": "Kiribati"
+    },
+    {
+        "value": "esrs:TotalWaterStored",
+        "label": "ESRS26_E3-4_06: Total water stored"
+    },
+    {
+        "value": "containers_packaging",
+        "label": "Containers & Packaging"
+    },
+    {
+        "value": "iceland",
+        "label": "Iceland"
+    },
+    {
+        "value": "mortgage_finance",
+        "label": "Mortgage Finance"
+    },
+    {
+        "value": "recreation_leisure",
+        "label": "Recreation and leisure"
+    },
+    {
+        "value": "esrs:AbsoluteGrossScope1GhgEmissionsGeneratedDuringTheReportingPeriod",
+        "label": "ESRS26_E1-8_01: Absolute gross scope 1 GHG emissions generated during the reporting period"
+    },
+    {
+        "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesFullTimeEquivalentAverageOfThePeriod",
+        "label": "ESRS26_S1-5_05(3): Total number of non-guaranteed hours employees (full-time equivalent), average of the period"
+    },
+    {
+        "value": "costa_rica",
+        "label": "Costa Rica"
+    },
+    {
+        "value": "vanuatu",
+        "label": "Vanuatu"
+    },
+    {
+        "value": "communities_civil_pol_rights",
+        "label": "Communities’ civil and political rights (including freedom of expression, freedom of assembly, impacts on human rights defenders)"
+    },
+    {
+        "value": "soc_dialogue_collective_barg",
+        "label": "Social dialogue and collective bargaining, freedom of association, information and consultation rights of workers, including through works councils"
+    },
+    {
+        "value": "esrs:TotalWeightOfKeyMaterials",
+        "label": "ESRS26_E5-4_02: Total weight of key materials"
+    },
+    {
+        "value": "esrs:TotalEnergyConsumptionFromNuclearSources",
+        "label": "ESRS26_E1-7_03: Total energy consumption from nuclear sources"
+    },
+    {
+        "value": "esrs:TotalWaterDischarge",
+        "label": "ESRS26_E3-4_04: Total water discharge"
+    },
+    {
+        "value": "E4_4",
+        "label": "E4-4 – Targets related to biodiversity and ecosystems"
+    },
+    {
+        "value": "bosnia_herzegovina",
+        "label": "Bosnia and Herzegovina"
+    },
+    {
+        "value": "investments",
+        "label": "Investments"
+    },
+    {
+        "value": "brunei",
+        "label": "Brunei"
+    },
+    {
+        "value": "physical_risk",
+        "label": "Physical risk"
+    },
+    {
+        "value": "electrical_electronic_equipment",
+        "label": "Electrical & Electronic Equipment"
+    },
+    {
+        "value": "serbia",
+        "label": "Serbia"
+    },
+    {
+        "value": "esrs:PercentageOfOwnEmployeesCoveredByCollectiveBargainingAgreementsOutsideEea",
+        "label": "ESRS26_S1-7_04: Percentage of own employees covered by collective bargaining agreements outside EEA"
+    },
+    {
+        "value": "E1_11",
+        "label": "E1-11 – Anticipated financial effects from material physical and transition risks and potential climate-related opportunities"
+    },
+    {
+        "value": "non-alcoholic_beverages",
+        "label": "Non-Alcoholic Beverages"
+    },
+    {
+        "value": "esrs:NumberOfEmployeesHeadCountRepresentingTheTenLargestCountriesInTermsOfEmployeesAverageOfThePeriod",
+        "label": "ESRS26_S1-5_02(1): Number of employees (head count) representing the ten largest countries in terms of employees, average of the period"
+    },
+    {
+        "value": "other_recovery_operations",
+        "label": "Other recovery operations"
+    },
+    {
+        "value": "GOV_2",
+        "label": "ESRS 2 GOV-2 – Integration of sustainability-related performance in incentive schemes"
+    },
+    {
+        "value": "esrs:AbsoluteSignificantGrossScope3GhgEmissionsGeneratedDuringTheReportingPeriod",
+        "label": "ESRS26_E1-8_05: Absolute significant gross scope 3 GHG emissions generated during the reporting period"
+    },
+    {
+        "value": "bolivia",
+        "label": "Bolivia"
+    },
+    {
+        "value": "processed_foods",
+        "label": "Processed Foods"
+    },
+    {
+        "value": "E5_2",
+        "label": "E5-2 – Actions and resources related to resource use and circular economy"
+    },
+    {
+        "value": "GDR_M",
+        "label": "GDR-M – General Disclosure Requirement for metrics"
+    },
+    {
+        "value": "public_administration_defence_compulsory_social_security",
+        "label": "O Public administration and defence; compulsory social security"
+    },
+    {
+        "value": "other_ghg",
+        "label": "Other GHG category"
+    },
+    {
+        "value": "specific_target_organ_toxicity_single_exposure_categories_1_and_2",
+        "label": "Specific target organ toxicity – single exposure categories 1 and 2"
+    },
+    {
+        "value": "S3_3",
+        "label": "S3-3 – Actions and resources related to affected communities"
+    },
+    {
+        "value": "respiratory_sensitisation_category_1",
+        "label": "Respiratory sensitisation category 1"
+    },
+    {
+        "value": "capital_goods",
+        "label": "Capital Goods"
+    },
+    {
+        "value": "construction",
+        "label": "Construction"
+    },
+    {
+        "value": "G1_5",
+        "label": "G1-5 – Metrics related to political influence, including lobbying activities"
+    },
+    {
+        "value": "sao_tome_and_principe",
+        "label": "Sao Tome and Principe"
+    },
+    {
+        "value": "bhutan",
+        "label": "Bhutan"
+    },
+    {
+        "value": "pharmaceuticals",
+        "label": "Pharmaceuticals"
+    },
+    {
+        "value": "ethiopia",
+        "label": "Ethiopia"
+    },
+    {
+        "value": "transition_risk",
+        "label": "Transition risk"
+    },
+    {
+        "value": "electronic_manufacturing_services_original_design_manufacturing",
+        "label": "Electronic Manufacturing Services & Original Design Manufacturing"
+    },
+    {
+        "value": "extent_cond_ecosyst",
+        "label": "The extent and condition of terrestrial and marine ecosystems"
+    },
+    {
+        "value": "perfluorocarbons",
+        "label": "Perfluorocarbons (PFCs)"
+    },
+    {
+        "value": "G1_1",
+        "label": "G1-1 – Policies related to business conduct"
+    },
+    {
+        "value": "engineering_construction_services",
+        "label": "Engineering & Construction Services"
+    },
+    {
+        "value": "esrs:TotalNumberOfPermanentEmployeesFullTimeEquivalentAverageOfThePeriod",
+        "label": "ESRS26_S1-5_03(3): Total number of permanent employees (full-time equivalent), average of the period"
+    },
+    {
+        "value": "automotive",
+        "label": "Automotive"
+    },
+    {
+        "value": "georgia",
+        "label": "Georgia"
+    },
+    {
+        "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesHeadCountInTheUndertakingSOwnWorkforceAverageOfThePeriod",
+        "label": "ESRS26_S1-6_01(1): Disclosure of the total number of non-employees (head count) in the undertaking’s own workforce, average of the period"
+    },
+    {
+        "value": "latvia",
+        "label": "Latvia"
+    },
+    {
+        "value": "esrs:DisclosureOfNamesOfSvhcsThatArePresentInConcentrationsAbove01WeightByWeightComponentsOrArticlesPlacedOnTheMarket",
+        "label": "ESRS26_E2-5_12: Disclosure of names of SVHCs that are present in concentrations above 0,1% weight by weight components or articles placed on the market"
+    },
+    {
+        "value": "jamaica",
+        "label": "Jamaica"
+    },
+    {
+        "value": "esrs:NumberOfEmployeesHeadCountRepresentingTheTenLargestCountriesInTermsOfEmployeesAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_02(2): Number of employees (head count) representing the ten largest countries in terms of employees, at the end of the period"
+    },
+    {
+        "value": "papua_new_guinea",
+        "label": "Papua New Guinea"
+    },
+    {
+        "value": "algeria",
+        "label": "Algeria"
+    },
+    {
+        "value": "water_use",
+        "label": "Water use, including withdrawal, consumption, discharges and storage"
+    },
+    {
+        "value": "incineration",
+        "label": "Incineration"
+    },
+    {
+        "value": "textiles_apparel",
+        "label": "Textiles and apparel"
+    },
+    {
+        "value": "communities_ec_soc_cult_rights",
+        "label": "Communities’ economic, social and cultural rights (including land related impacts, security-related impacts, adequate housing and food, water and sanitation)"
+    },
+    {
+        "value": "specific_groups_within_own_workforce",
+        "label": "Specific groups within own workforce"
+    },
+    {
+        "value": "esrs_set1",
+        "label": "ESRS Set 1 (European Commission Delegated Regulation (EU) 2025/1416 of 11.7.2025 amending Delegated Regulation (EU) 2023/2772 as regards the postponement of the date of application of the disclosure requirements for certain undertakings)"
+    },
+    {
+        "value": "esrs:TotalWeightOfSvhcProcuredManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_05: Total weight of SVHC procured (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "E4_2",
+        "label": "E4-2 – Policies related to biodiversity and ecosystems"
+    },
+    {
+        "value": "esrs:AbsoluteGrossMarketBasedScope2GhgEmissionsGeneratedDuringTheReportingPeriod",
+        "label": "ESRS26_E1-8_04: Absolute gross market-based scope 2 GHG emissions generated during the reporting period"
+    },
+    {
+        "value": "zambia",
+        "label": "Zambia"
+    },
+    {
+        "value": "rail_transportation",
+        "label": "Rail Transportation"
+    },
+    {
+        "value": "E1_10",
+        "label": "E1-10 – Internal carbon pricing"
+    },
+    {
+        "value": "update_of_disclosures_for_events_after_reporting_period",
+        "label": "Update of disclosures for events after the end of the reporting period"
+    },
+    {
+        "value": "S4_2",
+        "label": "S4-2 – Engagement with consumers and end-users, existence of channels for consumers and end-users to raise concerns or needs and approaches to remedy"
+    },
+    {
+        "value": "esrs:PercentageOfEmployeesCoveredByWorkersRepresentativesWithinTheEea",
+        "label": "ESRS26_S1-7_05: Percentage of employees covered by workers' representatives within the EEA"
+    },
+    {
+        "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToSickness",
+        "label": "ESRS26_S1-10_01: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to sickness"
+    },
+    {
+        "value": "chemicals",
+        "label": "Chemicals"
+    },
+    {
+        "value": "esrs:NetRevenueFromUndertakingSCustomersOperatingInCoalOilAndGasRelatedActivities",
+        "label": "ESRS26_E1-11_10: Net revenue from undertaking's customers operating in coal-, oil- and gas-related activities"
+    },
+    {
+        "value": "advertising_marketing",
+        "label": "Advertising & Marketing"
+    },
+    {
+        "value": "chad",
+        "label": "Chad"
+    },
+    {
+        "value": "oman",
+        "label": "Oman"
+    },
+    {
+        "value": "esrs:DisclosureOfTheGenderDistributionInNumberHeadcountAtTopManagementLevel",
+        "label": "ESRS26_S1-8_01: Disclosure of the gender distribution in number (headcount) at top management level"
+    },
+    {
+        "value": "educational_services",
+        "label": "Educational services"
+    },
+    {
+        "value": "household_personal_products",
+        "label": "Household & Personal Products"
+    },
+    {
+        "value": "esrs:TotalAmountOfCarbonCreditsOutsideValueChainThatAreVerifiedAgainstRecognisedQualityStandardsAndCancelled",
+        "label": "ESRS26_E1-9_05: Total amount of carbon credits outside value chain that are verified against recognised quality standards and cancelled"
+    },
+    {
+        "value": "esrs:ActionsAndResourcesAreRelatedToAreasWithWaterStress",
+        "label": "ESRS26_E3-2_01: Actions and resources are related to areas with water stress"
+    },
+    {
+        "value": "water_supply_sewerage_waste_management_remediation_activities",
+        "label": "E Water supply; sewerage, waste management and remediation activities"
+    },
+    {
+        "value": "esrs:DisclosureOfQualitativeAndCombinedQuantitativeInformationAboutFinancialEffectsTextBlock",
+        "label": "ESRS26_SBM-3_07: Disclosure of qualitative and combined quantitative information about financial effects"
+    },
+    {
+        "value": "esrs:DisclosureOfQualitativeAndQuantitativeInformationAboutTheMaterialRisksAndOpportunitiesIdentifiedForWhichThereIsASignificantRiskOfAMaterialAdjustmentWithinTheNextAnnualReportingPeriodToTheCarryingAmountsOfAssetsAndLiabilitiesReportedInTheRelatedFinancialStatementsTextBlock",
+        "label": "ESRS26_SBM-3_03: Disclosure of qualitative and quantitative information about the material risks and opportunities identified for which there is a significant risk of a material adjustment within the next annual reporting period to the carrying amounts of assets and liabilities reported in the related financial statements"
+    },
+    {
+        "value": "shortterm",
+        "label": "Short term"
+    },
+    {
+        "value": "S1_15",
+        "label": "S1-15 – Remuneration metrics"
+    },
+    {
+        "value": "mongolia",
+        "label": "Mongolia"
+    },
+    {
+        "value": "impacts_consumers_users",
+        "label": "Information-related impacts for consumers or users (including privacy, access to information, freedom of expression)"
+    },
+    {
+        "value": "belarus",
+        "label": "Belarus"
+    },
+    {
+        "value": "indigenous_rights",
+        "label": "Rights of indigenous peoples (including free, prior and informed consent (FPIC), self-determination, cultural rights)"
+    },
+    {
+        "value": "transportation_storage",
+        "label": "H Transportation and storage"
+    },
+    {
+        "value": "france",
+        "label": "France"
+    },
+    {
+        "value": "esrs:PercentageOfOwnEmployeesCoveredByCollectiveBargainingAgreementsWithinTheEea",
+        "label": "ESRS26_S1-7_03: Percentage of own employees covered by collective bargaining agreements within the EEA"
+    },
+    {
+        "value": "coal_operations",
+        "label": "Coal Operations"
+    },
+    {
+        "value": "china",
+        "label": "China"
+    },
+    {
+        "value": "employee_commuting",
+        "label": "Employee Commuting"
+    },
+    {
+        "value": "activities_of_extraterritorial_organisations_bodies",
+        "label": "U Activities of extraterritorial organisations and bodies"
+    },
+    {
+        "value": "G1_3",
+        "label": "G1-3 – Targets related to business conduct"
+    },
+    {
+        "value": "malta",
+        "label": "Malta"
+    },
+    {
+        "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToMaternityLeave",
+        "label": "ESRS26_S1-10_04: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to maternity leave"
+    },
+    {
+        "value": "E2_1",
+        "label": "E2-1 – Policies related to pollution"
+    },
+    {
+        "value": "esrs:DisclosureOfQualitativeOrQuantitativeInformationOnTheExpectedDurabilityOfUndertakingSKeyProductsTextBlock",
+        "label": "ESRS26_E5-5_01: Disclosure of qualitative or quantitative information on the expected durability of undertaking's key products"
+    },
+    {
+        "value": "fiji",
+        "label": "Fiji"
+    },
+    {
+        "value": "madagascar",
+        "label": "Madagascar"
+    },
+    {
+        "value": "mining_quarrying",
+        "label": "B Mining and quarrying"
+    },
+    {
+        "value": "automobiles",
+        "label": "Automobiles"
+    },
+    {
+        "value": "food_retailers_distributors",
+        "label": "Food Retailers & Distributors"
+    },
+    {
+        "value": "multiline_specialty_retailers_distributors",
+        "label": "Multiline and Specialty Retailers & Distributors"
+    },
+    {
+        "value": "air_freight_logistics",
+        "label": "Air Freight & Logistics"
+    },
+    {
+        "value": "eswatini",
+        "label": "Eswatini"
+    },
+    {
+        "value": "females",
+        "label": "Females"
+    },
+    {
+        "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesHeadCountAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_05(2): Total number of non-guaranteed hours employees (head count), at the end of the period"
+    },
+    {
+        "value": "carcinogenicity_categories_1_and_2",
+        "label": "Carcinogenicity categories 1 and 2"
+    },
+    {
+        "value": "pollution_water",
+        "label": "Pollution of water"
+    },
+    {
+        "value": "apparel,_accessories_footwear",
+        "label": "Apparel, Accessories & Footwear"
+    },
+    {
+        "value": "other_disposal_operations",
+        "label": "Other disposal operations"
+    },
+    {
+        "value": "croatia",
+        "label": "Croatia"
+    },
+    {
+        "value": "BP_2",
+        "label": "ESRS 2 BP-2 – Specific information if the undertaking uses phasing-in options"
+    },
+    {
+        "value": "S4_3",
+        "label": "S4-3 – Actions and resources related to consumers and end-users"
+    },
+    {
+        "value": "current_year",
+        "label": "Current year"
+    },
+    {
+        "value": "esrs:CountriesWhereEmployeesWhoAreNotCoveredBySocialProtectionThroughPublicProgramsOrThroughBenefitsOfferedAgainstLossOfIncomeDueToUnemploymentStartingFromWhenOwnWorkerIsWorkingForUndertaking",
+        "label": "ESRS26_S1-10_02: Countries where employees who are not covered by social protection, through public programs or through benefits offered, against loss of income due to unemployment starting from when own worker is working for undertaking"
+    },
+    {
+        "value": "russia",
+        "label": "Russia"
+    },
+    {
+        "value": "information_communication",
+        "label": "J Information and communication"
+    },
+    {
+        "value": "bahrain",
+        "label": "Bahrain"
+    },
+    {
+        "value": "esrs:WeightOfSecondaryResourcesUsed",
+        "label": "ESRS26_E5-4_04(1): Weight of secondary resources used"
+    },
+    {
+        "value": "moldova",
+        "label": "Moldova"
+    },
+    {
+        "value": "chile",
+        "label": "Chile"
+    },
+    {
+        "value": "samoa",
+        "label": "Samoa"
+    },
+    {
+        "value": "professional_commercial_services",
+        "label": "Professional & Commercial Services"
+    },
+    {
+        "value": "S1_12",
+        "label": "S1-12 – Training and skills development metrics"
+    },
+    {
+        "value": "esrs:TotalWeightOfSocManufacturedManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_02: Total weight of SoC manufactured (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "ground_transportation",
+        "label": "Ground transportation"
+    },
+    {
+        "value": "lebanon",
+        "label": "Lebanon"
+    },
+    {
+        "value": "food_beverages",
+        "label": "Food and beverages"
+    },
+    {
+        "value": "esrs:AmountOfAssetsFromBusinessActivitiesAlignedToClimateRelatedOpportunities",
+        "label": "ESRS26_E1-11_13: Amount of assets from business activities aligned to climate-related opportunities"
+    },
+    {
+        "value": "S1_9",
+        "label": "S1-9 – Adequate wages"
+    },
+    {
+        "value": "E4_3",
+        "label": "E4-3 – Actions and resources related to biodiversity and ecosystems"
+    },
+    {
+        "value": "hazardous_to_the_ozone_layer",
+        "label": "Hazardous to the ozone layer"
+    },
+    {
+        "value": "endocrine_disruption_for_the_environment_categories_1_and_2",
+        "label": "Endocrine disruption for the environment categories 1 and 2"
+    },
+    {
+        "value": "specific_groups_of_consumers_end-users",
+        "label": "Specific groups of consumers and end-users"
+    },
+    {
+        "value": "GDR_A",
+        "label": "GDR-A – General Disclosure Requirement for actions and resources"
+    },
+    {
+        "value": "metals_mining",
+        "label": "Metals & Mining"
+    },
+    {
+        "value": "S3_4",
+        "label": "S3-4 – Targets related to affected communities"
+    },
+    {
+        "value": "malawi",
+        "label": "Malawi"
+    },
+    {
+        "value": "greece",
+        "label": "Greece"
+    },
+    {
+        "value": "esrs:PercentageOfTheAssetsAtMaterialPhysicalRiskAddressedByAdaptationActionsAtTheReportingDate",
+        "label": "ESRS26_E1-11_02: Percentage of the assets at material physical risk addressed by adaptation actions at the reporting date"
+    },
+    {
+        "value": "S1_1",
+        "label": "S1-1 – Policies related to own workforce"
+    },
+    {
+        "value": "adjustments_to_comparative_information",
+        "label": "Adjustments to comparative information"
+    },
+    {
+        "value": "E3_2",
+        "label": "E3-2 – Actions and resources related to water"
+    },
+    {
+        "value": "esrs:DisclosureOfQualitativeMetricsRelatedToUndertakingSMaterialImpactsOnBiodiversityAndEcosystemsTextBlock",
+        "label": "ESRS26_E4-5_04(1): Disclosure of qualitative metrics related to undertaking's material impacts on biodiversity and ecosystems"
+    },
+    {
+        "value": "reporting_errors_in_prior_periods",
+        "label": "Reporting errors in prior periods"
+    },
+    {
+        "value": "not_in_place",
+        "label": "Transition plan not in place"
+    },
+    {
+        "value": "agriculture_forestry_fishing",
+        "label": "A Agriculture, forestry and fishing"
+    },
+    {
+        "value": "esrs:RenewableEnergyProduction",
+        "label": "ESRS26_E1-7_11: Renewable energy production"
+    },
+    {
+        "value": "togo",
+        "label": "Togo"
+    },
+    {
+        "value": "israel",
+        "label": "Israel"
+    },
+    {
+        "value": "capital_markets",
+        "label": "Capital markets"
+    },
+    {
+        "value": "nitrous_oxide",
+        "label": "Nitrous Oxide (N2O)"
+    },
+    {
+        "value": "omission_of_required_information_if_applicable",
+        "label": "Omission of required information if applicable law or regulations prohibit the disclosure of such information or allow the omission of such disclosure"
+    },
+    {
+        "value": "nicaragua",
+        "label": "Nicaragua"
+    },
+    {
+        "value": "luxembourg",
+        "label": "Luxembourg"
+    },
+    {
+        "value": "esrs:NumberOfDaysOfStandardPaymentTermsAppliedToAllSuppliers",
+        "label": "ESRS26_G1-6_02: Number of days of standard payment terms applied to all suppliers"
+    },
+    {
+        "value": "S1_14",
+        "label": "S1-14 – Work-life balance metrics"
+    },
+    {
+        "value": "E5",
+        "label": "ESRS E5 Resource use and circular economy"
+    },
+    {
+        "value": "north_korea",
+        "label": "North Korea"
+    },
+    {
+        "value": "niger",
+        "label": "Niger"
+    },
+    {
+        "value": "biotechnology_pharmaceuticals",
+        "label": "Biotechnology & Pharmaceuticals"
+    },
+    {
+        "value": "esrs:BiogenicEmissionsOfCo2FromTheCombustionOrBiodegradationOfBiomassDisclosedSeparatelyFromScope1GhgEmissions",
+        "label": "ESRS26_E1-8_06: Biogenic emissions of CO2 from the combustion or biodegradation of biomass, disclosed separately from scope 1 GHG emissions"
+    },
+    {
+        "value": "E4_1",
+        "label": "E4-1 – Biodiversity and ecosystems transition plan"
+    },
+    {
+        "value": "sweden",
+        "label": "Sweden"
+    },
+    {
+        "value": "kyrgyzstan",
+        "label": "Kyrgyzstan"
+    },
+    {
+        "value": "airlines",
+        "label": "Airlines"
+    },
+    {
+        "value": "power_production_energy_utilities",
+        "label": "Power production and energy utilities"
+    },
+    {
+        "value": "G1_2",
+        "label": "G1-2 – Actions related to business conduct"
+    },
+    {
+        "value": "real_estate_services",
+        "label": "Real Estate Services"
+    },
+    {
+        "value": "S1_8",
+        "label": "S1-8 – Diversity metrics"
+    },
+    {
+        "value": "E1_8",
+        "label": "E1-8 – Gross scope 1, 2, 3 GHG emissions"
+    },
+    {
+        "value": "esrs:ProportionOfWasteDirectedToDisposalPercentageOfTotalWasteGenerated",
+        "label": "ESRS26_E5-5_08: Proportion of waste directed to disposal (percentage of total waste generated)"
+    },
+    {
+        "value": "mauritania",
+        "label": "Mauritania"
+    },
+    {
+        "value": "poland",
+        "label": "Poland"
+    },
+    {
+        "value": "franchises",
+        "label": "Franchises"
+    },
+    {
+        "value": "paraguay",
+        "label": "Paraguay"
+    },
+    {
+        "value": "end-of-life_treatment",
+        "label": "End-of-Life Treatment of Sold Products"
+    },
+    {
+        "value": "activities_of_households_as_employers_undifferentiated_producing_activities_of_households_for_own_use",
+        "label": "T Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use"
+    },
+    {
+        "value": "syria",
+        "label": "Syria"
+    },
+    {
+        "value": "esrs:AmountsOfPrimaryMicroplasticsManufacturedOrUsedInProducts",
+        "label": "ESRS26_E2-4_04: Amounts of primary microplastics manufactured or used in products"
+    },
+    {
+        "value": "gambia",
+        "label": "Gambia"
+    },
+    {
+        "value": "p_education",
+        "label": "P Education"
+    },
+    {
+        "value": "GOV_1",
+        "label": "ESRS 2 GOV-1 – The role of the administrative, management and supervisory bodies in relation to sustainability"
+    },
+    {
+        "value": "cyprus",
+        "label": "Cyprus"
+    },
+    {
+        "value": "dominica",
+        "label": "Dominica"
+    },
+    {
+        "value": "esrs:ProportionOfWasteForWhichFinalDestinationIsUnknownPercentageOfTotalWasteGenerated",
+        "label": "ESRS26_E5-5_09: Proportion of waste for which final destination is unknown (percentage of total waste generated)"
+    },
+    {
+        "value": "esrs:TotalWeightOfWasteGenerated",
+        "label": "ESRS26_E5-5_06: Total weight of waste generated"
+    },
+    {
+        "value": "tajikistan",
+        "label": "Tajikistan"
+    },
+    {
+        "value": "esrs:NumberOfSubstantiatedHumanRightsIncidentsConnectedToTheOwnWorkforce",
+        "label": "ESRS26_S1-16_02: Number of substantiated human rights incidents connected to the own workforce"
+    },
+    {
+        "value": "waste",
+        "label": "Resource outflows (waste)"
+    },
+    {
+        "value": "material",
+        "label": "Material"
+    },
+    {
+        "value": "pakistan",
+        "label": "Pakistan"
+    },
+    {
+        "value": "uganda",
+        "label": "Uganda"
+    },
+    {
+        "value": "upstream_leased_assets",
+        "label": "Upstream Leased Assets"
+    },
+    {
+        "value": "GOV_3",
+        "label": "ESRS 2 GOV-3 – Statement on due diligence"
+    },
+    {
+        "value": "esrs:GenderPayGap",
+        "label": "ESRS26_S1-15_01: Gender pay gap"
+    },
+    {
+        "value": "united_kingdom",
+        "label": "United Kingdom"
+    },
+    {
+        "value": "banking",
+        "label": "Banking"
+    },
+    {
+        "value": "material_judgement_and_significant_uncertainties",
+        "label": "Application of material judgement and information subject to significant uncertainties"
+    },
+    {
+        "value": "appliance_manufacturing",
+        "label": "Appliance Manufacturing"
+    },
+    {
+        "value": "GOV_4",
+        "label": "ESRS 2 GOV-4 – Risk management and internal controls over sustainability reporting"
+    },
+    {
+        "value": "all_consumers_end-users",
+        "label": "All consumers and end-users"
+    },
+    {
+        "value": "marshall_islands",
+        "label": "Marshall Islands"
+    },
+    {
+        "value": "GDR_P",
+        "label": "GDR-P General Disclosure Requirement for policies"
+    },
+    {
+        "value": "esrs:TotalNumberOfPermanentEmployeesFullTimeEquivalentAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_03(4): Total number of permanent employees (full-time equivalent), at the end of the period"
+    },
+    {
+        "value": "non-profit_organizations",
+        "label": "Non-profit organizations"
+    },
+    {
+        "value": "wind_technology_project_developers",
+        "label": "Wind Technology & Project Developers"
+    },
+    {
+        "value": "ukraine",
+        "label": "Ukraine"
+    },
+    {
+        "value": "afghanistan",
+        "label": "Afghanistan"
+    },
+    {
+        "value": "esrs:DisclosureOfNamesOfSvhcsThatArePresentInConcentrationsAbove01WeightByWeightInProcuredComponentsOrArticles",
+        "label": "ESRS26_E2-5_11: Disclosure of names of SVHCs that are present in concentrations above 0,1% weight by weight in procured components or articles"
+    },
+    {
+        "value": "bulgaria",
+        "label": "Bulgaria"
+    },
+    {
+        "value": "health_care_delivery",
+        "label": "Health Care Delivery"
+    },
+    {
+        "value": "target",
+        "label": "Target"
+    },
+    {
+        "value": "palestine",
+        "label": "Palestine"
+    },
+    {
+        "value": "water_transportation",
+        "label": "Water transportation"
+    },
+    {
+        "value": "nigeria",
+        "label": "Nigeria"
+    },
+    {
+        "value": "inclusion_consumers_users",
+        "label": "Social inclusion of consumers or end-users (including, access to products and services, responsible marketing practices, non-discrimination)"
+    },
+    {
+        "value": "japan",
+        "label": "Japan"
+    },
+    {
+        "value": "esrs:TotalWeightOfSvhcUsedDuringProductionAndDeliveryOfServicesUsersOfSubstances",
+        "label": "ESRS26_E2-5_09: Total weight of SVHC used during production and delivery of services (users of substances)"
+    },
+    {
+        "value": "belgium",
+        "label": "Belgium"
+    },
+    {
+        "value": "methane",
+        "label": "Methane (CH4)"
+    },
+    {
+        "value": "agricultural_products",
+        "label": "Agricultural Products"
+    },
+    {
+        "value": "esrs:DisclosureOfUndertakingSExposureToHeightenedRiskOfIncidentsRelatedToForcedOrCompulsoryLabourAndChildLabourTextBlock",
+        "label": "ESRS26_IRO-2_07: Disclosure of undertaking's exposure to heightened risk of incidents related to forced or compulsory labour and child labour"
+    },
+    {
+        "value": "iran",
+        "label": "Iran"
+    },
+    {
+        "value": "ireland",
+        "label": "Ireland"
+    },
+    {
+        "value": "morocco",
+        "label": "Morocco"
+    },
+    {
+        "value": "cuba",
+        "label": "Cuba"
+    },
+    {
+        "value": "esrs:NumberOfDaysLostToRecordableWorkRelatedAccidentsAndRecordableWorkRelatedIllHealthForUndertakingSEmployees",
+        "label": "ESRS26_S1-13_07: Number of days lost to recordable work-related accidents and recordable work-related ill health for undertaking's employees"
+    },
+    {
+        "value": "philippines",
+        "label": "Philippines"
+    },
+    {
+        "value": "saint_lucia",
+        "label": "Saint Lucia"
+    },
+    {
+        "value": "united_arab_emirates",
+        "label": "United Arab Emirates"
+    },
+    {
+        "value": "esrs:TotalAmountOfRadioactiveWasteGenerated",
+        "label": "ESRS26_E5-5_10: Total amount of radioactive waste generated"
+    },
+    {
+        "value": "managed_care",
+        "label": "Managed Care"
+    },
+    {
+        "value": "target_year",
+        "label": "Target year"
+    },
+    {
+        "value": "timor-leste",
+        "label": "Timor-Leste"
+    },
+    {
+        "value": "esrs:TrainingOnSustainabilityIsProvidedToTheProcurementTeam",
+        "label": "ESRS26_G1-2_03: Training on sustainability is provided to the procurement team"
+    },
+    {
+        "value": "diversity_eqtreatment",
+        "label": "Diversity and equal treatment (including gender equality, equal pay for work of equal value, employment and inclusion of people with disabilities, non-discrimination, anti-harassment, measures against violence)"
+    },
+    {
+        "value": "relief_from_acquisitions_and_disposals",
+        "label": "Relief for acquisitions and disposals"
+    },
+    {
+        "value": "endocrine_disruption_for_human_health_categories_1_and_2",
+        "label": "Endocrine disruption for human health categories 1 and 2"
+    },
+    {
+        "value": "GDR_T",
+        "label": "GDR-T – General Disclosure Requirement for targets"
+    },
+    {
+        "value": "argentina",
+        "label": "Argentina"
+    },
+    {
+        "value": "E2_2",
+        "label": "E2-2 – Actions and resources related to pollution"
+    },
+    {
+        "value": "BP_1",
+        "label": "ESRS 2 BP-1 – Basis for preparation of the sustainability statement"
+    },
+    {
+        "value": "waste_generated",
+        "label": "Waste Generated in Operations"
+    },
+    {
+        "value": "esrs:DisclosureOfAmountOfGhgRemovalsAndStorageResultingFromTheUndertakingSProjects",
+        "label": "ESRS26_E1-9_02: Disclosure of amount of GHG removals and storage resulting from the undertaking's projects"
+    },
+    {
+        "value": "reproductive_toxicity_categories_1_and_2",
+        "label": "Reproductive toxicity categories 1 and 2"
+    },
+    {
+        "value": "esrs:TotalWeightOfSvhcManufacturedManufacturersFormulatorsAndImportersOfSubstances",
+        "label": "ESRS26_E2-5_06: Total weight of SVHC manufactured (manufacturers, formulators and importers of substances)"
+    },
+    {
+        "value": "united_states",
+        "label": "United States"
+    },
+    {
+        "value": "E1_7",
+        "label": "E1-7 – Energy consumption and mix"
+    },
+    {
+        "value": "medium-term",
+        "label": "Medium-term"
+    },
+    {
+        "value": "relationship_suppliers",
+        "label": "Management of relationships with suppliers, including payment practices especially late payment to small- and medium-sized undertakings (SMEs)"
+    },
+    {
+        "value": "esrs:UndertakingHasSitesLocatedInAreasWithWaterStressThatAreNotCoveredByItsWaterRelatedPolicies",
+        "label": "ESRS26_E3-1_01: Undertaking has sites located in areas with water stress that are not covered by its water-related policies"
+    },
+    {
+        "value": "oil_gas",
+        "label": "Oil and gas"
+    },
+    {
+        "value": "esrs:TotalWaterRecycledAndReused",
+        "label": "ESRS26_E3-4_05: Total water recycled and reused"
+    },
+    {
+        "value": "azerbaijan",
+        "label": "Azerbaijan"
+    },
+    {
+        "value": "esrs:GhgReversalsOccurredInTheReportingPeriod",
+        "label": "ESRS26_E1-9_04: GHG reversals occurred in the reporting period"
+    },
+    {
+        "value": "E1_6",
+        "label": "E1-6 – Targets related to climate change"
+    },
+    {
+        "value": "trinidad_and_tobago",
+        "label": "Trinidad and Tobago"
+    },
+    {
+        "value": "vatican_city",
+        "label": "Vatican City (Holy See)"
+    },
+    {
+        "value": "esrs:NumberOfRecordableWorkRelatedAccidentsAmongOwnWorkforce",
+        "label": "ESRS26_S1-13_04: Number of recordable work-related accidents among own workforce"
+    },
+    {
+        "value": "absolute_target",
+        "label": "Absolute target"
+    },
+    {
+        "value": "preparation_for_reuse",
+        "label": "Preparation for reuse"
+    },
+    {
+        "value": "esrs:AverageCarbonPricePerMetricTonneOfGhgEmissions",
+        "label": "ESRS26_E1-10_02: Average carbon price per metric tonne of GHG emissions"
+    },
+    {
+        "value": "S4",
+        "label": "ESRS S4 Consumers and end-users"
+    },
+    {
+        "value": "dominican_republic",
+        "label": "Dominican Republic"
+    },
+    {
+        "value": "germ_cell_mutagenicity_categories_1_and_2",
+        "label": "Germ cell mutagenicity categories 1 and 2"
+    },
+    {
+        "value": "esrs:DisclosureOfQualitativeAndQuantitativeInformationOnHowTheUndertakingExpectsItsFinancialPositionFinancialPerformanceAndCashFlowsToChangeGivenToItsStrategyToManageMaterialRisksAndOpportunitiesAnticipatedFinancialEffectsTextBlock",
+        "label": "ESRS26_SBM-3_04: Disclosure of qualitative and quantitative information on how the undertaking expects its financial position, financial performance and cash flows to change, given to its strategy to manage material risks and opportunities (anticipated financial effects)"
+    },
+    {
+        "value": "target_target_year",
+        "label": "Target year (of non-topical target)"
+    },
+    {
+        "value": "short-term",
+        "label": "Short-term"
+    },
+    {
+        "value": "andorra",
+        "label": "Andorra"
+    },
+    {
+        "value": "inflows",
+        "label": "Resource inflows"
+    },
+    {
+        "value": "other_laboutrelated_rights",
+        "label": "Other labour-related human rights (including child labour, forced labour, privacy and adequate housing)"
+    },
+    {
+        "value": "esrs:DisclosureOfTheTotalNumberOfNonEmployeesHeadCountInTheUndertakingSOwnWorkforceAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-6_01(2): Disclosure of the total number of non-employees (head count) in the undertaking’s own workforce, at the end of the period"
+    },
+    {
+        "value": "esrs:FuelConsumptionFromCrudeOilAndPetroleumProducts",
+        "label": "ESRS26_E1-7_06: Fuel consumption from crude oil and petroleum products"
+    },
+    {
+        "value": "state_species",
+        "label": "State of species"
+    },
+    {
+        "value": "djibouti",
+        "label": "Djibouti"
+    },
+    {
+        "value": "baseline_year",
+        "label": "Baseline year"
+    },
+    {
+        "value": "esrs:TotalNumberOfNonGuaranteedHoursEmployeesFullTimeEquivalentAtTheEndOfThePeriod",
+        "label": "ESRS26_S1-5_05(4): Total number of non-guaranteed hours employees (full-time equivalent), at the end of the period"
+    },
+    {
+        "value": "esrs:ProportionOfWasteDivertedFromDisposalPercentageOfTotalWasteGenerated",
+        "label": "ESRS26_E5-5_07: Proportion of waste diverted from disposal (percentage of total waste generated)"
+    },
+    {
+        "value": "namibia",
+        "label": "Namibia"
+    },
+    {
+        "value": "other_laboutrelated_rights_s2",
+        "label": "Other labour-related human rights (including child labour, forced labour, privacy and adequate housing, water and sanitation)"
+    },
+    {
+        "value": "S1",
+        "label": "ESRS S1 Own workforce"
+    },
+    {
+        "value": "esrs:AnnualTotalRemunerationRatio",
+        "label": "ESRS26_S1-15_02: Annual total remuneration ratio"
+    },
+    {
+        "value": "media_entertainment",
+        "label": "Media & Entertainment"
+    },
+    {
+        "value": "drug_retailers",
+        "label": "Drug Retailers"
+    }
 ]
