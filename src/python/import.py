@@ -149,7 +149,7 @@ def build_dimensions(
 
     if default_ids:
         for dimension_id in (part.strip() for part in default_ids.split(",")):
-            single_dim = build_single_dimension(dimension_id, True)
+            single_dim = build_single_dimension(dimension_id, False)
             if single_dim:
                 parsed_dimensions.append(single_dim)
             else:

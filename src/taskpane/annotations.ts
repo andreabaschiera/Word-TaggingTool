@@ -1,3 +1,5 @@
+import { getDefaultChoices } from "./word"
+
 export interface TagAnnotation {
   tagId: string;
   valueChosen?: string | string[];
@@ -31,7 +33,11 @@ export function serializeAnnotation(
   const dimensions = annotation.dimensions;
 
   dimensions?.forEach((dimension) => {
-    if ((dimension.mode === "fixed" && dimension.memberValue) || (dimension.mode === "default" && dimension.memberValue)) {
+    if (
+      dimension.memberValue &&
+        (dimension.mode === "fixed" ||
+        (dimension.mode === "default" && !getDefaultChoices().includes(dimension.memberValue)))
+    ) {
       parts.push(
         `${dimension.id}_memberValue=${encodeURIComponent(
           dimension.memberValue
@@ -39,7 +45,11 @@ export function serializeAnnotation(
       );
     }
 
-    if ((dimension.mode === "typed" && dimension.memberLabel) || (dimension.mode === "default" && dimension.memberLabel)) {
+    if (
+      dimension.memberLabel &&
+        (dimension.mode === "typed" ||
+        (dimension.mode === "default" && !getDefaultChoices().includes(dimension.memberLabel)))
+    ) {
       parts.push(
         `${dimension.id}_memberLabel=${encodeURIComponent(
           dimension.memberLabel

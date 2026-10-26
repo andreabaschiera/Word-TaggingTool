@@ -4,8 +4,9 @@ import {
 } from "./annotations";
 
 import { taxonomy, Datatype } from "./datamodel";
-
 import showFlashMessage from "./flashmessage";
+import { getDefaultChoices } from "./word";
+
 
 
 // build fast lookup dict
@@ -19,6 +20,7 @@ interface ExportFile {
     sourceHost: string;
     timestamp: string;
     tagCount?: number;
+    validationErrors?: string[];
     tags: {
         [tagName: string]: Tag;
     };
@@ -79,6 +81,7 @@ export default function Export() {
         timestamp: new Date().toISOString(),
         tags: {}
     };
+    const validationErrors: string[] = [];
 
     Word.run(async (context) => {
         const { contentControls } = context.document // object destructuring
@@ -86,6 +89,7 @@ export default function Export() {
         contentControls.load('items');
 
         let tagIndex = 1
+        let annotatedTagCount = 0;
         const seenTagKeys = new Set<string>();
 
         await context.sync();
@@ -97,10 +101,11 @@ export default function Export() {
             if (annotation === undefined) {
                 continue;
             }
+            annotatedTagCount += 1;
 
             const currentTaxonomyFields = taxonomyMap.get(annotation.tagId);
             if (!currentTaxonomyFields) {
-                showFlashMessage(`Invalid datapoint: '${annotation.tagId}'`);
+                validationErrors.push(`Invalid datapoint: '${annotation.tagId}'`);
                 continue;
             }
 
@@ -119,8 +124,9 @@ export default function Export() {
             // adding CC text to value only when it's a number 
             const text = contentControl.text.trim()
             if ((numericTypes as readonly string[]).includes(tag.taxonomyFields.type)) {
-                if (isNaN(Number(text))) {
-                    showFlashMessage(`'${text}' is not a valid number`);
+                const numericValue = Number(text);
+                if (text === "" || !Number.isFinite(numericValue)) {
+                    validationErrors.push(`'${text}' is not a valid number for '${annotation.tagId}'`);
                     continue;
                 }
                 tag.value = text;
@@ -148,7 +154,7 @@ export default function Export() {
                     dims.forEach(dim => {
                         const dimFields = dimMap.get(dim.id);
                         if(!dimFields) {
-                            showFlashMessage(`'${dim.id}' is an invalid dimension for datapoint '${annotation.tagId}'`);
+                            validationErrors.push(`'${dim.id}' is an invalid dimension for datapoint '${annotation.tagId}'`);
                             return;
                         }
 
@@ -156,6 +162,9 @@ export default function Export() {
                         const member = (dim.memberValue) ? dim.memberValue : ((dim.memberLabel) ? dim.memberLabel : undefined);
 
                         if (title && member) {
+                            if (dim.mode === "default" && getDefaultChoices().includes(member)) {
+                                return;
+                            }
                             tag.dimensions ??= {};
                             tag.dimensions[dim.id] = {
                                 name: title,
@@ -168,8 +177,8 @@ export default function Export() {
 
             const uniquenessKey = getTagUniquenessKey(tag);
             if (seenTagKeys.has(uniquenessKey)) {
-                showFlashMessage(`Duplicate tag detected for ${tag.taxonomyFields.conceptId}`);
-                return;
+                validationErrors.push(`Duplicate tag detected for ${tag.taxonomyFields.conceptId}`);
+                continue;
             }
 
             seenTagKeys.add(uniquenessKey);
@@ -181,11 +190,25 @@ export default function Export() {
         const tagCount = Object.keys(exportData.tags).length;
             
         if (tagCount === 0) {
-            showFlashMessage("No tags have been applied yet.")
+            if (annotatedTagCount > 0 && validationErrors.length > 0) {
+                console.error("Export could not produce any valid tags:", validationErrors);
+                showFlashMessage(
+                    `No valid tags could be exported. Found ${validationErrors.length} validation error(s). See the console for details.`
+                );
+            } else {
+                showFlashMessage("No tags have been applied yet.")
+            }
             return;
         }
 
         exportData.tagCount = tagCount;
+        if (validationErrors.length > 0) {
+            exportData.validationErrors = validationErrors;
+            console.error("Export completed with validation errors:", validationErrors);
+            showFlashMessage(
+                `Export completed with ${validationErrors.length} validation error(s). See the downloaded file and console for details.`
+            );
+        }
 
         // turns object into JSON string, and then into something the browser can treat as a file (blob)
         const blob = new Blob([JSON.stringify(exportData, null, 2)], {type: 'application/json'});

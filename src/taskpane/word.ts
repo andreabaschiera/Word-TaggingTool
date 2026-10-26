@@ -177,7 +177,7 @@ function getSelectedDimensionMembers(dp: Datapoint):
         }
       }
 
-      if (!selectedValue) {
+      if (!selectedValue || getDefaultChoices().includes(selectedValue)) {
         return;
       }
 
@@ -893,6 +893,15 @@ function updateOptionalDimensionSelector() {
   });
 }
 
+export function getDefaultChoices(): [string, string, string, string] {
+  const default_targetYearsCategory = "current_year";
+  const default_targetYear = "2026";
+  const default_previousReportingErrors = "currently_stated";
+  const default_materialityEUdatapoints = "material";
+
+  return [default_targetYearsCategory, default_targetYear, default_previousReportingErrors, default_materialityEUdatapoints]
+}
+
 function updateDefaultDimensionSelector() {
   const dp = getSelectedDatapoint();
   const container = document.getElementById("dimensions-container");
@@ -978,7 +987,7 @@ function renderDefaultDimension(
     radio.value = member.value;
 
     // Check default values
-    if (member.value === "current_year" || member.value === "_2026" || member.value === "currently_stated") {
+    if (getDefaultChoices().includes(member.value)) {
       radio.checked = true;
     }
 
